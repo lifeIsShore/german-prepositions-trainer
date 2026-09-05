@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DE Präpositionen Trainer</title>
+  <meta name="description" content="Practice German verb prepositions with Akkusativ and Dativ cases using interactive flashcards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-de">DE</span>
+          <span class="logo-text">Präpositionen Trainer</span>
+        </div>
+        <div class="header-stats">
+          <div class="stat-badge" id="stat-total">
+            <span class="stat-num" id="total-count">200</span>
+            <span class="stat-label">Total</span>
+          </div>
+          <div class="stat-badge correct" id="stat-correct">
+            <span class="stat-num" id="correct-count">0</span>
+            <span class="stat-label">Correct</span>
+          </div>
+          <div class="stat-badge wrong" id="stat-wrong">
+            <span class="stat-num" id="wrong-count">0</span>
+            <span class="stat-label">Wrong</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Controls Bar -->
+    <div class="controls-bar">
+      <div class="controls-inner">
+        <div class="filter-group">
+          <label class="filter-label">Filter by case:</label>
+          <div class="filter-btns">
+            <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+            <button class="filter-btn akk" data-filter="akk" id="filter-akk">Akkusativ</button>
+            <button class="filter-btn dat" data-filter="dat" id="filter-dat">Dativ</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Mode:</label>
+          <div class="filter-btns">
+            <button class="filter-btn active" data-mode="sequential" id="mode-seq">In order</button>
+            <button class="filter-btn" data-mode="random" id="mode-rand">Random</button>
+          </div>
+        </div>
+        <button class="btn-restart" id="btn-restart">↺ Restart</button>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progress-bar"></div>
+      <span class="progress-text" id="progress-text">1 / 200</span>
+    </div>
+
+    <!-- Main Card Area -->
+    <main class="main">
+      <div class="card-container">
+        <div class="card" id="card" tabindex="0">
+          <div class="card-front" id="card-front">
+            <div class="card-hint">Click card or press Space to reveal</div>
+            <div class="verb-display" id="verb-display">achten</div>
+            <div class="card-number" id="card-number">#1</div>
+          </div>
+          <div class="card-back" id="card-back">
+            <div class="back-top">
+              <div class="back-verb" id="back-verb">achten</div>
+              <div class="prep-kasus">
+                <div class="prep-tag" id="back-prep">auf</div>
+                <div class="kasus-badge" id="back-kasus">Akk.</div>
+              </div>
+            </div>
+            <div class="example-sentence" id="back-example">
+              Bitte achte auf die Aussprache.
+            </div>
+            <div class="answer-btns">
+              <button class="btn-wrong" id="btn-wrong">✗ Didn't know</button>
+              <button class="btn-correct" id="btn-correct">✓ Got it!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="nav-btns">
+        <button class="nav-btn" id="btn-prev">← Prev</button>
+        <button class="nav-btn primary" id="btn-next">Next →</button>
+      </div>
+    </main>
+
+    <!-- Done screen -->
+    <div class="done-screen" id="done-screen" style="display:none;">
+      <div class="done-card">
+        <div class="done-emoji">🎉</div>
+        <h2>Session Complete!</h2>
+        <p>You went through all cards in this set.</p>
+        <div class="done-stats">
+          <div class="done-stat correct">
+            <span id="done-correct">0</span>
+            <small>Correct</small>
+          </div>
+          <div class="done-stat wrong">
+            <span id="done-wrong">0</span>
+            <small>Wrong</small>
+          </div>
+          <div class="done-stat pct">
+            <span id="done-pct">0%</span>
+            <small>Score</small>
+          </div>
+        </div>
+        <button class="btn-restart big" id="btn-done-restart">↺ Practice Again</button>
+        <button class="btn-wrong-only" id="btn-wrong-only">Practice wrong ones only</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
