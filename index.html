@@ -20,40 +20,59 @@
         </div>
         <div class="header-stats">
           <div class="stat-badge" id="stat-total">
-            <span class="stat-num" id="total-count">200</span>
-            <span class="stat-label">Total</span>
+            <span class="stat-num" id="total-count">0</span>
+            <span class="stat-label">GESAMT</span>
           </div>
           <div class="stat-badge correct" id="stat-correct">
             <span class="stat-num" id="correct-count">0</span>
-            <span class="stat-label">Correct</span>
+            <span class="stat-label">RICHTIG</span>
           </div>
           <div class="stat-badge wrong" id="stat-wrong">
             <span class="stat-num" id="wrong-count">0</span>
-            <span class="stat-label">Wrong</span>
+            <span class="stat-label">FALSCH</span>
           </div>
         </div>
       </div>
+      <!-- Global Navigation -->
+      <nav class="nav-bar">
+        <a href="index.html" class="nav-link active">Trainer Home</a>
+        <a href="pages/tenses.html" class="nav-link">Die 8 Zeitformen</a>
+        <a href="pages/word-order.html" class="nav-link">Word Order Rules</a>
+        <a href="pages/connectors.html" class="nav-link">Connectors</a>
+      </nav>
     </header>
 
     <!-- Controls Bar -->
     <div class="controls-bar">
       <div class="controls-inner">
         <div class="filter-group">
-          <label class="filter-label">Filter by case:</label>
-          <div class="filter-btns">
-            <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
-            <button class="filter-btn akk" data-filter="akk" id="filter-akk">Akkusativ</button>
-            <button class="filter-btn dat" data-filter="dat" id="filter-dat">Dativ</button>
-          </div>
+          <label class="filter-label">Kategorie:</label>
+          <select id="filter-type" class="filter-select">
+            <option value="all">Alle</option>
+            <option value="vocabulary">Wortschatz</option>
+            <option value="verb_preposition">Verben + Präpositionen</option>
+            <option value="konnektor">Konnektoren</option>
+            <option value="phrase">Redewendungen</option>
+          </select>
         </div>
         <div class="filter-group">
-          <label class="filter-label">Mode:</label>
+          <label class="filter-label">Niveau:</label>
+          <select id="filter-level" class="filter-select">
+            <option value="all">Alle</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="B1">B1</option>
+            <option value="B2">B2</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Modus:</label>
           <div class="filter-btns">
-            <button class="filter-btn active" data-mode="sequential" id="mode-seq">In order</button>
-            <button class="filter-btn" data-mode="random" id="mode-rand">Random</button>
+            <button class="filter-btn active" data-mode="sequential" id="mode-seq">Der Reihe nach</button>
+            <button class="filter-btn" data-mode="random" id="mode-rand">Zufällig</button>
           </div>
         </div>
-        <button class="btn-restart" id="btn-restart">↺ Restart</button>
+        <button class="btn-restart" id="btn-restart">Neustart</button>
       </div>
     </div>
 
@@ -68,7 +87,7 @@
       <div class="card-container">
         <div class="card" id="card" tabindex="0">
           <div class="card-front" id="card-front">
-            <div class="card-hint">Click card or press Space to reveal</div>
+            <div class="card-hint">Karte anklicken oder Leertaste drücken</div>
             <div class="verb-display" id="verb-display">achten</div>
             <div class="card-number" id="card-number">#1</div>
           </div>
@@ -80,28 +99,28 @@
                 <div class="kasus-badge" id="back-kasus">Akk.</div>
               </div>
             </div>
-            <div class="example-sentence" id="back-example">
-              Bitte achte auf die Aussprache.
-            </div>
+            <div class="example-sentence" id="back-example"></div>
+            <!-- Extra info section for translations, auxiliary verbs, or connector effects -->
+            <div class="back-extra" id="back-extra"></div>
             <div class="answer-btns">
-              <button class="btn-wrong" id="btn-wrong">✗ Didn't know</button>
-              <button class="btn-correct" id="btn-correct">✓ Got it!</button>
+              <button class="btn-wrong" id="btn-wrong">Nicht gewusst</button>
+              <button class="btn-correct" id="btn-correct">Gewusst!</button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Navigation -->
-      <div class="nav-btns">
-        <button class="nav-btn" id="btn-prev">← Prev</button>
-        <button class="nav-btn primary" id="btn-next">Next →</button>
+      <!-- Navigation Buttons -->
+      <div class="card-nav">
+        <button class="nav-btn" id="btn-prev">Zurück</button>
+        <button class="nav-btn" id="btn-next">Weiter</button>
       </div>
     </main>
 
     <!-- Done screen -->
     <div class="done-screen" id="done-screen" style="display:none;">
       <div class="done-card">
-        <div class="done-emoji">🎉</div>
+        <div class="done-emoji"></div>
         <h2>Session Complete!</h2>
         <p>You went through all cards in this set.</p>
         <div class="done-stats">
@@ -118,7 +137,7 @@
             <small>Score</small>
           </div>
         </div>
-        <button class="btn-restart big" id="btn-done-restart">↺ Practice Again</button>
+        <button class="btn-restart big" id="btn-done-restart">Practice Again</button>
         <button class="btn-wrong-only" id="btn-wrong-only">Practice wrong ones only</button>
       </div>
     </div>

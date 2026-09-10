@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>German Connectors Master Guide (Konnektoren & Konjunktionen) | DE Trainer</title>
+  <meta name="description" content="Complete reference for German connectors and conjunctions: ADUSO position 0, Nebensatz verb-end, position 1 inversion adverbs, and double conjunctions with verb highlighting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .page-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      transition: all 0.2s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--bg);
+      border-color: var(--text);
+      background: var(--text);
+    }
+    .nav-link.active {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .hero-banner {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      padding: 36px 32px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-dim);
+      max-width: 720px;
+      line-height: 1.6;
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .filter-tab {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 18px;
+      border-radius: 0px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-tab:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+    .filter-tab.active {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .group-header {
+      margin: 36px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .group-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .effect-pill {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 0px;
+    }
+    .effect-pill.pos0 {
+      background: transparent;
+      color: var(--correct);
+      border: 1px solid var(--correct);
+    }
+    .effect-pill.pos1 {
+      background: transparent;
+      color: var(--akk);
+      border: 1px solid var(--akk);
+    }
+    .effect-pill.end {
+      background: transparent;
+      color: var(--wrong);
+      border: 1px solid var(--wrong);
+    }
+
+    .connector-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .connector-card {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      padding: 24px;
+      transition: transform 0.2s, border-color 0.2s;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .connector-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      gap: 10px;
+    }
+    .term-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .level-tag {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 0px;
+    }
+    .sense-text {
+      font-size: 13px;
+      color: var(--dat-light);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .translation-text {
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+    }
+    .example-box {
+      background: transparent;
+      border-radius: 0px;
+      padding: 12px 0px;
+      font-size: 13.5px;
+      line-height: 1.6;
+      border-left: 3px solid var(--accent);
+    }
+    .example-de {
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .example-de mark {
+      background: transparent;
+      color: var(--akk);
+      font-weight: 800;
+      padding: 0;
+      border-radius: 0px;
+      border-bottom: 2px solid var(--akk);
+    }
+    .example-en {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-de">DE</span>
+        <span class="logo-text">German Grammar Hub</span>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <a href="../index.html" class="nav-link">Trainer Home</a>
+      <a href="tenses.html" class="nav-link">Die 8 Zeitformen</a>
+      <a href="word-order.html" class="nav-link">Word Order Rules</a>
+      <a href="connectors.html" class="nav-link active">Connectors (Konnektoren)</a>
+    </nav>
+  </header>
+
+  <div class="page-container">
+
+    <header class="hero-banner">
+      <h1 class="hero-title">Konnektoren & Konjunktionen Master Guide</h1>
+      <p class="hero-subtitle">
+        Categorized by exact verb position effect: Position 0 (ADUSO), Subordinate Verb-End (Nebensatz), Position 1 Inversion (Conjunctive Adverbs), and Two-Part Connectors.
+      </p>
+    </header>
+
+    <div class="filter-bar">
+      <button class="filter-tab active" onclick="filterGroup('all')">All Groups</button>
+      <button class="filter-tab" onclick="filterGroup('group1')">Group 1: ADUSO (Position 0)</button>
+      <button class="filter-tab" onclick="filterGroup('group2')">Group 2: Nebensatz (Verb-End)</button>
+      <button class="filter-tab" onclick="filterGroup('group3')">Group 3: Inversion (Position 1)</button>
+      <button class="filter-tab" onclick="filterGroup('group4')">Group 4: Doppelkonjunktionen</button>
+    </div>
+
+    <!-- Group 1: ADUSO -->
+    <section class="group-section" id="group1">
+      <div class="group-header">
+        <h2 class="group-title">Group 1: ADUSO (Coordinating Conjunctions)</h2>
+        <span class="effect-pill pos0">Position 0 Effect (Verb stays in Position 2)</span>
+      </div>
+      <div class="connector-grid">
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">aber</h3>
+              <span class="level-tag">A1</span>
+            </div>
+            <div class="sense-text">Adversative Contrast</div>
+            <div class="translation-text">but / however</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Ich möchte kommen, aber ich <mark>habe</mark> keine Zeit.</div>
+            <div class="example-en">I want to come, but I have no time.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">denn</h3>
+              <span class="level-tag">A1</span>
+            </div>
+            <div class="sense-text">Causal Explanation</div>
+            <div class="translation-text">because / for</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Er bleibt zu Hause, denn er <mark>ist</mark> krank.</div>
+            <div class="example-en">He is staying home, because he is sick.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">und</h3>
+              <span class="level-tag">A1</span>
+            </div>
+            <div class="sense-text">Additive Connection</div>
+            <div class="translation-text">and</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Sie liest ein Buch und er <mark>hört</mark> Musik.</div>
+            <div class="example-en">She reads a book and he listens to music.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">sondern</h3>
+              <span class="level-tag">A2</span>
+            </div>
+            <div class="sense-text">Adversative Correction</div>
+            <div class="translation-text">but rather / but instead</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Er fährt nicht nach Berlin, sondern er <mark>fliegt</mark> nach München.</div>
+            <div class="example-en">He isn't driving to Berlin, but rather flying to Munich.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">oder</h3>
+              <span class="level-tag">A1</span>
+            </div>
+            <div class="sense-text">Alternative Choice</div>
+            <div class="translation-text">or</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Trinkst du Kaffee oder <mark>möchtest</mark> du Tee?</div>
+            <div class="example-en">Do you drink coffee or would you like tea?</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Group 2: Subordinating -->
+    <section class="group-section" id="group2">
+      <div class="group-header">
+        <h2 class="group-title">Group 2: Subordinating Conjunctions (Nebensatz)</h2>
+        <span class="effect-pill end">Subordinate Clause (Verb at End)</span>
+      </div>
+      <div class="connector-grid">
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">weil</h3>
+              <span class="level-tag">A2</span>
+            </div>
+            <div class="sense-text">Causal Reason</div>
+            <div class="translation-text">because</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Er bleibt zu Hause, weil er krank <mark>ist</mark>.</div>
+            <div class="example-en">He stays home because he is sick.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">dass</h3>
+              <span class="level-tag">A2</span>
+            </div>
+            <div class="sense-text">Subordinating Content Clause</div>
+            <div class="translation-text">that</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Ich weiß, dass du recht <mark>hast</mark>.</div>
+            <div class="example-en">I know that you are right.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">obwohl</h3>
+              <span class="level-tag">B1</span>
+            </div>
+            <div class="sense-text">Concessive Contrast</div>
+            <div class="translation-text">although / even though</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Er geht spazieren, obwohl es stark <mark>regnet</mark>.</div>
+            <div class="example-en">He goes for a walk even though it rains heavily.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">wenn</h3>
+              <span class="level-tag">A2</span>
+            </div>
+            <div class="sense-text">Conditional / Repeated Time</div>
+            <div class="translation-text">if / whenever</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Wenn du Zeit <mark>hast</mark>, rufen wir uns an.</div>
+            <div class="example-en">If you have time, we will call each other.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">als</h3>
+              <span class="level-tag">A2</span>
+            </div>
+            <div class="sense-text">Single Past Event Time</div>
+            <div class="translation-text">when (one-time past event)</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Als ich ein Kind <mark>war</mark>, wohnte ich auf dem Land.</div>
+            <div class="example-en">When I was a child, I lived in the countryside.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Group 3: Conjunctive Adverbs -->
+    <section class="group-section" id="group3">
+      <div class="group-header">
+        <h2 class="group-title">Group 3: Conjunctive Adverbs (Inversion)</h2>
+        <span class="effect-pill pos1">Position 1 Inversion (Verb = Pos 2, Subject = Pos 3)</span>
+      </div>
+      <div class="connector-grid">
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">deshalb / darum / deswegen</h3>
+              <span class="level-tag">A2/B1</span>
+            </div>
+            <div class="sense-text">Consecutive Consequence</div>
+            <div class="translation-text">therefore / that's why</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Er ist krank, deshalb <mark>bleibt</mark> er zu Hause.</div>
+            <div class="example-en">He is sick, therefore he stays home.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">trotzdem</h3>
+              <span class="level-tag">A2/B1</span>
+            </div>
+            <div class="sense-text">Concessive Opposition</div>
+            <div class="translation-text">nevertheless / despite that</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Es regnet stark, trotzdem <mark>geht</mark> er spazieren.</div>
+            <div class="example-en">It is raining heavily, nevertheless he goes for a walk.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">außerdem</h3>
+              <span class="level-tag">B1</span>
+            </div>
+            <div class="sense-text">Additive Extension</div>
+            <div class="translation-text">furthermore / besides</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Das Hotel ist günstig, außerdem <mark>liegt</mark> es im Zentrum.</div>
+            <div class="example-en">The hotel is cheap; furthermore, it is located in the center.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Group 4: Double Conjunctions -->
+    <section class="group-section" id="group4">
+      <div class="group-header">
+        <h2 class="group-title">Group 4: Doppelkonjunktionen (Two-Part Connectors)</h2>
+        <span class="effect-pill pos1">Correlative / Paired Structures</span>
+      </div>
+      <div class="connector-grid">
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">zwar ... aber</h3>
+              <span class="level-tag">B1</span>
+            </div>
+            <div class="sense-text">Concessive Contrast</div>
+            <div class="translation-text">admittedly ... but</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Das Auto <mark>ist</mark> zwar alt, aber es <mark>fährt</mark> noch gut.</div>
+            <div class="example-en">The car is admittedly old, but it still drives well.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">nicht nur ... sondern auch</h3>
+              <span class="level-tag">B1</span>
+            </div>
+            <div class="sense-text">Emphatic Addition</div>
+            <div class="translation-text">not only ... but also</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Sie <mark>ist</mark> nicht nur klug, sondern sie <mark>ist</mark> auch fleißig.</div>
+            <div class="example-en">She is not only smart, but she is also hardworking.</div>
+          </div>
+        </article>
+
+        <article class="connector-card">
+          <div>
+            <div class="card-top">
+              <h3 class="term-title">je ... desto</h3>
+              <span class="level-tag">B1</span>
+            </div>
+            <div class="sense-text">Proportional Comparative</div>
+            <div class="translation-text">the [more] ... the [more]</div>
+          </div>
+          <div class="example-box">
+            <div class="example-de">Je mehr du <mark>lernst</mark>, desto besser <mark>verstehst</mark> du es.</div>
+            <div class="example-en">The more you study, the better you understand it.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function filterGroup(groupId) {
+      document.querySelectorAll('.filter-tab').forEach(tab => tab.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      const sections = document.querySelectorAll('.group-section');
+      sections.forEach(sec => {
+        if (groupId === 'all' || sec.id === groupId) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

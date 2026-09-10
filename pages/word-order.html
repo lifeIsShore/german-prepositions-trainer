@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>German Word Order Master Guide (Satzbau & TeKaMoLo) | DE Trainer</title>
+  <meta name="description" content="Master German sentence structure: V2 rule, Subject-Verb inversion, Subordinate verb-end clauses, TeKaMoLo rule, questions, and imperatives with visual sentence diagrams." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .page-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      transition: all 0.2s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--bg);
+      border-color: var(--text);
+      background: var(--text);
+    }
+    .nav-link.active {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .hero-banner {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      padding: 36px 32px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-dim);
+      max-width: 720px;
+      line-height: 1.6;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: none;
+    }
+    .section-title-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .badge-v2 {
+      background: transparent;
+      border: 1px solid var(--akk);
+      color: var(--akk);
+      padding: 4px 12px;
+      border-radius: 0px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .badge-end {
+      background: transparent;
+      border: 1px solid var(--wrong);
+      color: var(--wrong);
+      padding: 4px 12px;
+      border-radius: 0px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* Diagram Spaces Layout */
+    .sentence-diagram {
+      display: flex;
+      gap: 16px;
+      margin: 24px 0;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      border-left: 2px solid var(--border);
+      padding-left: 20px;
+    }
+    .block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .block-pos {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+    }
+    .block.pos1 .block-pos { color: var(--dat); }
+    .block.pos2 .block-pos { color: var(--akk); }
+    .block.end .block-pos  { color: var(--wrong); }
+    
+    .block-text {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text);
+    }
+    .block.pos2 .block-text { color: var(--akk); border-bottom: 2px solid var(--akk); display: inline-block; }
+
+    .tekamolo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .tekamolo-card {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      padding: 16px;
+    }
+    .tekamolo-letter {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--akk);
+      margin-bottom: 4px;
+    }
+    .tekamolo-type {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .tekamolo-question {
+      font-size: 12px;
+      color: var(--dat);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .tekamolo-example {
+      font-size: 13px;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    .rule-box {
+      background: transparent;
+      border-left: 4px solid var(--accent);
+      border-radius: 0px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      color: var(--text-dim);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .rule-box strong { color: var(--text); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-de">DE</span>
+        <span class="logo-text">German Grammar Hub</span>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <a href="../index.html" class="nav-link">Trainer Home</a>
+      <a href="tenses.html" class="nav-link">Die 8 Zeitformen</a>
+      <a href="word-order.html" class="nav-link active">Word Order Rules</a>
+      <a href="connectors.html" class="nav-link">Connectors (Konnektoren)</a>
+    </nav>
+  </header>
+
+  <div class="page-container">
+
+    <header class="hero-banner">
+      <h1 class="hero-title">German Sentence Structure & Word Order</h1>
+      <p class="hero-subtitle">
+        Understand the core architecture of German sentences: the golden V2 rule, position 1 inversion, subordinate clause verb-end rules, and the TeKaMoLo formula.
+      </p>
+    </header>
+
+    <!-- Rule 1: Main Clause V2 -->
+    <section class="section-card">
+      <div class="section-title-wrap">
+        <h2 class="section-title">1. Main Clause: The V2 Rule (Verb Position 2)</h2>
+        <span class="badge-v2">Golden Rule: Verb = Position 2</span>
+      </div>
+      <p class="rule-box">
+        In standard German declarative main clauses, the conjugated verb is <strong>ALWAYS in Position 2</strong>. Position 1 can be occupied by the Subject, a Time expression, a Location, or an Object. Position 1 counts as ONE grammatical element (not necessarily a single word!).
+      </p>
+
+      <div class="sentence-diagram">
+        <div class="block pos1">
+          <span class="block-pos">Position 1 (Subject)</span>
+          <span class="block-text">Ich</span>
+        </div>
+        <div class="block pos2">
+          <span class="block-pos">Position 2 (Verb)</span>
+          <span class="block-text">kaufe</span>
+        </div>
+        <div class="block middle">
+          <span class="block-pos">Middle (Object)</span>
+          <span class="block-text">heute einen Apfel</span>
+        </div>
+        <div class="block end">
+          <span class="block-pos">End (Satzklammer)</span>
+          <span class="block-text">.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rule 2: Inversion -->
+    <section class="section-card">
+      <div class="section-title-wrap">
+        <h2 class="section-title">2. Position 1 Inversion (Subject-Verb Swap)</h2>
+        <span class="badge-v2">Inversion: Subject moves to Position 3</span>
+      </div>
+      <p class="rule-box">
+        If any element other than the Subject is placed in Position 1 (such as a time element, location, or prepositional phrase), the verb STAYS in Position 2, and the Subject moves immediately to <strong>Position 3</strong>.
+      </p>
+
+      <div class="sentence-diagram">
+        <div class="block pos1">
+          <span class="block-pos">Position 1 (Time)</span>
+          <span class="block-text">Heute</span>
+        </div>
+        <div class="block pos2">
+          <span class="block-pos">Position 2 (Verb)</span>
+          <span class="block-text">kaufe</span>
+        </div>
+        <div class="block middle">
+          <span class="block-pos">Position 3 (Subject)</span>
+          <span class="block-text">ich</span>
+        </div>
+        <div class="block middle">
+          <span class="block-pos">Middle (Object)</span>
+          <span class="block-text">einen Apfel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rule 3: Subordinate Clause Verb-End -->
+    <section class="section-card">
+      <div class="section-title-wrap">
+        <h2 class="section-title">3. Subordinate Clause (Nebensatz): Verb-End Rule</h2>
+        <span class="badge-end">Subordinating Conjunction → Verb at End</span>
+      </div>
+      <p class="rule-box">
+        Subordinating conjunctions (e.g. <i>weil, dass, obwohl, wenn, als, da</i>) kick the conjugated verb to the <strong>very end of the clause</strong>.
+      </p>
+
+      <div class="sentence-diagram">
+        <div class="block pos1">
+          <span class="block-pos">Conjunction</span>
+          <span class="block-text">... weil</span>
+        </div>
+        <div class="block middle">
+          <span class="block-pos">Subject</span>
+          <span class="block-text">ich</span>
+        </div>
+        <div class="block middle">
+          <span class="block-pos">Object</span>
+          <span class="block-text">Hunger</span>
+        </div>
+        <div class="block end">
+          <span class="block-pos">Clause End (Verb)</span>
+          <span class="block-text">habe.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rule 4: TeKaMoLo -->
+    <section class="section-card">
+      <div class="section-title-wrap">
+        <h2 class="section-title">4. TeKaMoLo Rule (Adverbial Order)</h2>
+        <span class="badge-v2">Temporal → Kausal → Modal → Lokal</span>
+      </div>
+      <p class="rule-box">
+        When a sentence has multiple adverbial phrases (time, reason, manner, place), native speakers arrange them in the strict <strong>TeKaMoLo</strong> sequence:
+      </p>
+
+      <div class="tekamolo-grid">
+        <div class="tekamolo-card">
+          <div class="tekamolo-letter">Te</div>
+          <div class="tekamolo-type">Temporal</div>
+          <div class="tekamolo-question">Wann? (When?)</div>
+          <div class="tekamolo-example">heute, um 8 Uhr</div>
+        </div>
+        <div class="tekamolo-card">
+          <div class="tekamolo-letter">Ka</div>
+          <div class="tekamolo-type">Kausal</div>
+          <div class="tekamolo-question">Warum? (Why?)</div>
+          <div class="tekamolo-example">wegen des Regens</div>
+        </div>
+        <div class="tekamolo-card">
+          <div class="tekamolo-letter">Mo</div>
+          <div class="tekamolo-type">Modal</div>
+          <div class="tekamolo-question">Wie? (How?)</div>
+          <div class="tekamolo-example">mit dem Auto, schnell</div>
+        </div>
+        <div class="tekamolo-card">
+          <div class="tekamolo-letter">Lo</div>
+          <div class="tekamolo-type">Lokal</div>
+          <div class="tekamolo-question">Wo / Wohin? (Where?)</div>
+          <div class="tekamolo-example">nach Berlin, im Park</div>
+        </div>
+      </div>
+
+      <div class="sentence-diagram">
+        <div class="block pos1"><span class="block-pos">Subj</span><span class="block-text">Ich</span></div>
+        <div class="block pos2"><span class="block-pos">Verb</span><span class="block-text">fahre</span></div>
+        <div class="block middle"><span class="block-pos">Temporal (Te)</span><span class="block-text">heute</span></div>
+        <div class="block middle"><span class="block-pos">Kausal (Ka)</span><span class="block-text">aus Freude</span></div>
+        <div class="block middle"><span class="block-pos">Modal (Mo)</span><span class="block-text">mit dem Fahrrad</span></div>
+        <div class="block end"><span class="block-pos">Lokal (Lo)</span><span class="block-text">in den Park.</span></div>
+      </div>
+    </section>
+
+    <!-- Rule 5: Questions & Imperatives -->
+    <section class="section-card">
+      <div class="section-title-wrap">
+        <h2 class="section-title">5. Questions & Imperatives (V1 vs V2)</h2>
+        <span class="badge-v2">W-Frage = V2 | Ja/Nein & Imperativ = V1</span>
+      </div>
+
+      <div class="sentence-diagram">
+        <div class="block pos1"><span class="block-pos">W-Wort (Pos 1)</span><span class="block-text">Wo</span></div>
+        <div class="block pos2"><span class="block-pos">Verb (Pos 2)</span><span class="block-text">wohnst</span></div>
+        <div class="block middle"><span class="block-pos">Subject</span><span class="block-text">du?</span></div>
+      </div>
+
+      <div class="sentence-diagram">
+        <div class="block pos2"><span class="block-pos">Position 1 (Verb)</span><span class="block-text">Kommst</span></div>
+        <div class="block middle"><span class="block-pos">Subject</span><span class="block-text">du</span></div>
+        <div class="block middle"><span class="block-pos">Middle</span><span class="block-text">heute Abend mit?</span></div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

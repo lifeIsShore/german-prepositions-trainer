@@ -6,6 +6,7 @@ All work happens on the `dev` branch. Merge to `main` only when a feature is com
 
 ## ✅ Done (this session)
 
+- [x] **UI Overhaul**: Redesigned app to dark red, black, and white. Removed rounded borders, gradients, and blocky designs in favor of flat sections.
 - [x] Created `.gitignore`
 - [x] Created `dev` git branch (production stays on `main`)
 - [x] Extended schema with 3 new content types: `konnektor`, `konjunktion`, `reflexive_verb`
@@ -16,14 +17,18 @@ All work happens on the `dev` branch. Merge to `main` only when a feature is com
 - [x] Changed `nativeFrequencyLabel` from free string to controlled enum (`essential / very_common / common / occasional / rare`)
 - [x] Updated `entries.csv` and `overrides.csv` headers with all new columns
 - [x] Updated `database/schema.sql` with new types and `editorial_json` column
-- [x] Build confirmed: 2,376 entries, no errors
+- [x] Restored `Konjunktionen.md` and `reflesivverben.md` and populated 56 manual entries in `data/manual/entries.csv`
+- [x] Cleaned column alignment shifts in `data/a1-all.csv`, `data/a2-all.csv`, `data/b1-all.csv`
+- [x] Integrated level CSVs into `scripts/build-content.mjs` with robust gender, valency, and frequency parsing
+- [x] Build confirmed: 5,420 entries cleanly built into `data/generated/content.json` and `content.seed.sql`
+- [x] Created standalone grammar guide pages: `/pages/tenses.html`, `/pages/word-order.html`, and `/pages/connectors.html`
 
 ---
 
 ## 🔵 Data Entry — High Priority
 
 ### Konnektoren CSV
-- [ ] Convert `data/manual/Konnektoren .md` into structured CSV rows in `data/manual/entries.csv`
+- [x] Convert `data/manual/Konnektoren .md` into structured CSV rows in `data/manual/entries.csv`
   - Use `type: konnektor`, `part_of_speech: connector`
   - Fill `connector_function` (causal / adversative / additive / temporal / concessive / conditional)
   - Fill `verb_position_effect` (`position_0_normal` / `position_1_inversion` / `subordinate_verb_end`)
@@ -32,13 +37,13 @@ All work happens on the `dev` branch. Merge to `main` only when a feature is com
   - Fill `native_frequency_rating` manually (you or a native speaker friend)
 
 ### Konjunktionen CSV
-- [ ] Convert `data/manual/Konjunktionen.md` into structured CSV rows in `data/manual/entries.csv`
+- [x] Convert `data/manual/Konjunktionen.md` into structured CSV rows in `data/manual/entries.csv`
   - Use `type: konjunktion`, `part_of_speech: connector`
   - Same attributes as above — `verb_position_effect` is always `subordinate_verb_end` for Group 2
   - Group 4 (Doppelkonjunktionen) get `type: konjunktion`, tag `double_conjunction`
 
 ### Reflexive Verbs CSV
-- [ ] Convert `data/manual/reflesivverben.md` into structured CSV rows in `data/manual/entries.csv`
+- [x] Convert `data/manual/reflesivverben.md` into structured CSV rows in `data/manual/entries.csv`
   - Use `type: reflexive_verb`, `part_of_speech: verb`, `is_reflexive: true`
   - Fill `auxiliary` (`haben` or `sein`) — this is the Perfekt auxiliary ← **important attribute**
   - Fill `partizip_ii` (Partizip II form, e.g. `gewaschen`)
@@ -51,7 +56,7 @@ All work happens on the `dev` branch. Merge to `main` only when a feature is com
 
 ## 🟡 Data Enrichment — Medium Priority
 
-- [ ] Add `part_of_speech` to the 2,076 `unknown` vocabulary items via `data/manual/overrides.csv`
+- [ ] Add `part_of_speech` to the remaining `unknown` vocabulary items via `data/manual/overrides.csv`
   - Start with the top 200–300 most frequent B2 words
   - Use `node scripts/find-content.mjs "<term>"` to get the stable ID
 - [ ] Add `native_frequency_rating` (1–5) for B2 vocab top 200 words via `overrides.csv`
@@ -66,32 +71,26 @@ All work happens on the `dev` branch. Merge to `main` only when a feature is com
 
 > These will be standalone HTML files, not part of the JSON catalogue. Link to them from the main app.
 
-- [ ] **Tenses page** (`/pages/tenses.html`)
+- [x] **Tenses page** (`/pages/tenses.html`)
   - All 8 tenses: Präsens, Perfekt, Präteritum, Futur I, Konjunktiv II, Passiv, Plusquamperfekt, Futur II
   - Each tense: 1-line "when to use" rule + 3 example sentences + usage frequency label
   - Mark tenses as very common / occasional / formal only
-  - TODO: create the HTML file and wire up from main nav
-
-- [ ] **Word order page** (`/pages/word-order.html`)
+- [x] **Word order page** (`/pages/word-order.html`)
   - Verb position rules: main clause, subordinate clause, question, imperative
   - TeKaMoLo rule with examples
   - Verb-second rule with examples
-  - TODO: create the HTML file
-
-- [ ] **Konnektoren & Konjunktionen visual page** (`/pages/connectors.html`)
+- [x] **Konnektoren & Konjunktionen visual page** (`/pages/connectors.html`)
   - Show each connector with its verb-position rule highlighted visually
   - Verb in example highlighted (uses `highlightedExample` field)
   - Group by effect: Position 0 / Position 1 / Verb-end
-  - TODO: once CSV data is entered, build this page
 
 ---
 
 ## 🟣 A1 / A2 / B1 Content
 
-- [ ] Locate PDF source material for A1, A2, B1 levels
-- [ ] Convert PDFs to CSV format matching `b2-all.csv` headers: `German Word, English Meaning, German Example Sentence, English Translation`
-- [ ] Place files as `data/a1-all.csv`, `data/a2-all.csv`, `data/b1-all.csv`
-- [ ] Add them to `build-content.mjs` `importVocabulary()` function (same pattern as B2)
+- [x] Clean and format `data/a1-all.csv`, `data/a2-all.csv`, `data/b1-all.csv`
+- [x] Add them to `build-content.mjs` `importLevelCSVs()` function
+- [x] Verify clean build of all 5,420 entries into `data/generated/content.json` and `content.seed.sql`
 
 ---
 

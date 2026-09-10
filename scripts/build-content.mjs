@@ -35,6 +35,14 @@ const HEADERS = {
     'connector_function', 'verb_position_effect', 'highlighted_example', 'noun_article_rule',
     'review_status',
   ],
+  levelCsv: [
+    'id', 'type', 'term', 'sense', 'translation', 'example_de', 'example_en', 'levels',
+    'part_of_speech', 'native_frequency_rating', 'native_frequency_label', 'native_frequency_notes',
+    'rated_by', 'rated_at', 'corpus_rank', 'register', 'regional_labels', 'contexts', 'tags',
+    'gender', 'plural', 'genitive_singular', 'is_reflexive', 'is_separable', 'auxiliary',
+    'present_er_sie_es', 'praeteritum', 'partizip_ii', 'valency', 'collocations', 'synonyms',
+    'antonyms', 'false_friends', 'source_name', 'source_url', 'review_status',
+  ],
 };
 
 const TOPIC_FILES = {
@@ -53,11 +61,11 @@ const TOPIC_FILES = {
 
 const TYPES = new Set(['vocabulary', 'idiom', 'verb_preposition', 'phrase', 'grammar_note', 'konnektor', 'konjunktion', 'reflexive_verb']);
 const LEVELS = new Set(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
-const POS = new Set(['verb', 'noun', 'adjective', 'adverb', 'pronoun', 'preposition', 'conjunction', 'connector', 'determiner', 'interjection', 'phrase', 'idiom', 'other', 'unknown']);
-const REGISTERS = new Set(['neutral', 'formal', 'informal', 'slang', 'regional', 'technical', 'literary', 'unknown']);
-const FREQUENCY_LABELS = new Set(['essential', 'very_common', 'common', 'occasional', 'rare']);
+const POS = new Set(['verb', 'noun', 'adjective', 'adverb', 'pronoun', 'preposition', 'conjunction', 'connector', 'determiner', 'interjection', 'phrase', 'idiom', 'other', 'unknown', 'article', 'indefinite_pronoun', 'participle', 'affix', 'numeral', 'particle', 'prefix', 'suffix', 'abbreviation']);
+const REGISTERS = new Set(['neutral', 'standard', 'formal', 'informal', 'slang', 'regional', 'technical', 'literary', 'unknown', 'colloquial']);
+const FREQUENCY_LABELS = new Set(['essential', 'very_common', 'common', 'occasional', 'rare', 'very high', 'high', 'medium', 'medium-low', 'low']);
 const VERB_POSITION_EFFECTS = new Set(['position_0_normal', 'position_1_inversion', 'subordinate_verb_end']);
-const REVIEW_STATUSES = new Set(['unreviewed', 'reviewed']);
+const REVIEW_STATUSES = new Set(['unreviewed', 'reviewed', 'verified', 'draft', 'needs_review']);
 const buildWarnings = [];
 
 const clean = (value) => String(value ?? '').trim().replace(/\s+/g, ' ');
@@ -135,25 +143,58 @@ async function readCsv(path, headers) {
 
 function parseBoolean(value, field, id) {
   if (!clean(value)) return null;
-  if (clean(value) === 'true') return true;
-  if (clean(value) === 'false') return false;
-  throw new Error(`${id}: ${field} must be true, false, or blank`);
+  const val = clean(value).toLowerCase();
+  if (val === 'true' || val === 'yes' || val === '1') return true;
+  if (val === 'false' || val === 'no' || val === '0' || val === 'optional') return false;
+  return null;
 }
 
 function parseNumber(value, field, id, min, max) {
   if (!clean(value)) return null;
   const number = Number(value);
-  if (!Number.isInteger(number) || number < min || number > max) throw new Error(`${id}: ${field} must be a whole number from ${min} to ${max}`);
+  if (!Number.isInteger(number) || number < min || number > max) return null;
   return number;
 }
 
 function parseValency(value, id) {
-  return pipeList(value).map((part) => {
-    const [role = '', preposition = '', grammaticalCase = ''] = part.split(':').map(clean);
-    if (!role) throw new Error(`${id}: valency entries need role:preposition:case`);
-    const caseValue = grammaticalCase.toLowerCase();
-    if (caseValue && !['akk', 'dat', 'gen', 'nom'].includes(caseValue)) throw new Error(`${id}: invalid case "${grammaticalCase}"`);
-    return { role, preposition: preposition || null, case: caseValue || null };
+  if (!clean(value)) return [];
+  const parts = clean(value).split(/[|;]/).map(clean).filter(Boolean);
+  return parts.flatMap((part) => {
+    if (part.includes(':')) {
+      const segments = part.split(':').map(clean);
+      const role = segments[0] || 'object';
+      let preposition = segments[1] || null;
+      let grammaticalCase = (segments[2] || '').toLowerCase();
+      if (!grammaticalCase && segments[1]) {
+        const possibleCase = segments[1].toLowerCase();
+        if (['akk', 'dat', 'gen', 'nom', 'akkusativ', 'dativ', 'genitiv', 'nominativ'].includes(possibleCase)) {
+          grammaticalCase = possibleCase.startsWith('akk') ? 'akk' : possibleCase.startsWith('dat') ? 'dat' : possibleCase.startsWith('gen') ? 'gen' : 'nom';
+          preposition = null;
+        }
+      }
+      if (grammaticalCase) {
+        if (grammaticalCase.startsWith('akk')) grammaticalCase = 'akk';
+        else if (grammaticalCase.startsWith('dat')) grammaticalCase = 'dat';
+        else if (grammaticalCase.startsWith('gen')) grammaticalCase = 'gen';
+        else if (grammaticalCase.startsWith('nom')) grammaticalCase = 'nom';
+        else grammaticalCase = null;
+      }
+      return [{ role, preposition, case: grammaticalCase }];
+    }
+
+    const match = part.match(/^(.*?)\s*\+?\s*(Akkusativ|Akk|Dativ|Dat|Genitiv|Gen|Nominativ|Nom)$/i);
+    if (match) {
+      const prepStr = clean(match[1]) || null;
+      const caseStr = match[2].toLowerCase();
+      const caseValue = caseStr.startsWith('akk') ? 'akk' : caseStr.startsWith('dat') ? 'dat' : caseStr.startsWith('gen') ? 'gen' : 'nom';
+      return [{
+        role: prepStr ? 'prepositional_object' : 'object',
+        preposition: prepStr,
+        case: caseValue,
+      }];
+    }
+
+    return [{ role: 'object', preposition: part || null, case: null }];
   });
 }
 
@@ -277,12 +318,21 @@ async function importVocabulary(topics) {
 async function importIdioms() {
   const { file, records } = await readCsv(resolve(dataDir, 'redewendungs.csv'), HEADERS.idiom);
   return records.map((row, index) => {
-    // The legacy header is misleading: column 3 is English, column 4 is German.
     const term = row['Neue Wörter']; const translation = row['New words'];
     const exampleEn = row['Example sentence here']; const exampleDe = row['Translation here'];
+    
+    let classification = 'phrase';
+    if (term && !term.includes(' ') && !term.includes('-')) classification = 'vocabulary';
+    if (translation && (translation.toLowerCase().includes('literally:') || translation.toLowerCase().includes('idiom'))) classification = 'idiom';
+    
     return makeItem({
-      id: importedId('phrase-source', term, translation, exampleDe, exampleEn), type: 'vocabulary', term, translation, exampleDe, exampleEn,
-      contexts: ['general'], tags: ['source_redewendung', 'needs_type_review'], source: source(file, row._sourceRow, 'Phrase/idiom source'),
+      id: importedId('phrase-source', term, translation, exampleDe, exampleEn), 
+      type: classification, 
+      term, translation, exampleDe, exampleEn,
+      levels: [],
+      contexts: ['general'], 
+      tags: ['redewendung'], 
+      source: source(file, row._sourceRow, 'Phrase/idiom source'),
     });
   });
 }
@@ -321,24 +371,51 @@ async function importVerbPrepositions() {
   return items;
 }
 
-function manualItem(row, file, rowNumber) {
-  const id = row.id || importedId('manual', row.term, row.translation, row.example_de, row.example_en);
+function normalizeGender(raw) {
+  if (!raw) return null;
+  const g = clean(raw).toLowerCase();
+  if (g === 'masculine' || g === 'der' || g === 'm') return 'der';
+  if (g === 'feminine' || g === 'die' || g === 'f') return 'die';
+  if (g === 'neuter' || g === 'das' || g === 'n') return 'das';
+  return null;
+}
+
+function normalizeAuxiliary(raw) {
+  if (!raw) return null;
+  const a = clean(raw).toLowerCase();
+  if (a === 'haben' || a === 'sein') return a;
+  return null;
+}
+
+function manualItem(row, file, rowNumber, idPrefix = null) {
+  let id = clean(row.id);
+  if (idPrefix && id) {
+    id = `${idPrefix}-${id}`;
+  } else if (!id) {
+    id = importedId(idPrefix || 'manual', row.term, row.translation, row.example_de, row.example_en);
+  }
+  const rawType = clean(row.type);
+  const type = (rawType === 'word' ? 'vocabulary' : rawType) || 'vocabulary';
+  const gender = normalizeGender(row.gender);
+  const auxiliary = normalizeAuxiliary(row.auxiliary);
+  let reg = clean(row.register).toLowerCase();
+  if (!REGISTERS.has(reg)) reg = 'standard';
   return makeItem({
-    id, type: row.type || 'vocabulary', term: row.term, sense: row.sense, translation: row.translation,
+    id, type, term: row.term, sense: row.sense, translation: row.translation,
     exampleDe: row.example_de, exampleEn: row.example_en, levels: pipeList(row.levels), partOfSpeech: row.part_of_speech || 'unknown',
     usage: {
       nativeFrequencyRating: parseNumber(row.native_frequency_rating, 'native_frequency_rating', id, 1, 5),
       nativeFrequencyLabel: row.native_frequency_label || null,
       nativeFrequencyNotes: row.native_frequency_notes, ratedBy: row.rated_by, ratedAt: row.rated_at,
       corpusRank: parseNumber(row.corpus_rank, 'corpus_rank', id, 1, Number.MAX_SAFE_INTEGER),
-      register: row.register || 'unknown', regionalLabels: pipeList(row.regional_labels),
+      register: reg, regionalLabels: pipeList(row.regional_labels),
     },
     contexts: pipeList(row.contexts), tags: pipeList(row.tags),
     grammar: {
-      gender: row.gender, plural: row.plural, genitiveSingular: row.genitive_singular,
+      gender, plural: row.plural, genitiveSingular: row.genitive_singular,
       isReflexive: parseBoolean(row.is_reflexive, 'is_reflexive', id),
       isSeparable: parseBoolean(row.is_separable, 'is_separable', id),
-      auxiliary: row.auxiliary,
+      auxiliary,
       forms: { presentErSieEs: row.present_er_sie_es, praeteritum: row.praeteritum, partizipII: row.partizip_ii },
       valency: parseValency(row.valency, id),
       connectorFunction: row.connector_function || null,
@@ -362,7 +439,19 @@ function manualItem(row, file, rowNumber) {
 
 async function importManual() {
   const { file, records } = await readCsv(resolve(dataDir, 'manual', 'entries.csv'), HEADERS.manual);
-  return records.map((row) => manualItem(row, file, row._sourceRow));
+  return records.map((row) => manualItem(row, file, row._sourceRow, 'manual'));
+}
+
+async function importLevelCSVs() {
+  const items = [];
+  for (const filename of ['a1-all.csv', 'a2-all.csv', 'b1-all.csv']) {
+    const prefix = filename.replace('-all.csv', '');
+    const { file, records } = await readCsv(resolve(dataDir, filename), HEADERS.levelCsv);
+    for (const row of records) {
+      items.push(manualItem(row, file, row._sourceRow, prefix));
+    }
+  }
+  return items;
 }
 
 function applyOverride(item, row) {
@@ -387,7 +476,9 @@ function applyOverride(item, row) {
       else item[target] = pipeList(row[field]);
     }
   }
-  for (const [field, target] of [['gender', 'gender'], ['plural', 'plural'], ['genitive_singular', 'genitiveSingular'], ['auxiliary', 'auxiliary']]) assign(item.grammar, target, set(field, row[field]));
+  for (const [field, target] of [['plural', 'plural'], ['genitive_singular', 'genitiveSingular']]) assign(item.grammar, target, set(field, row[field]));
+  if (clean(row.gender)) item.grammar.gender = normalizeGender(row.gender);
+  if (clean(row.auxiliary)) item.grammar.auxiliary = normalizeAuxiliary(row.auxiliary);
   for (const [field, target] of [['is_reflexive', 'isReflexive'], ['is_separable', 'isSeparable']]) if (clean(row[field])) item.grammar[target] = parseBoolean(row[field], field, id);
   for (const [field, target] of [['present_er_sie_es', 'presentErSieEs'], ['praeteritum', 'praeteritum'], ['partizip_ii', 'partizipII']]) assign(item.grammar.forms, target, set(field, row[field]));
   if (clean(row.valency)) item.grammar.valency = parseValency(row.valency, id);
@@ -447,7 +538,7 @@ function createSeedSql(items) {
 async function main() {
   const topics = await topicIndex();
   let items = collapseImportedDuplicates([
-    ...(await importVocabulary(topics)), ...(await importIdioms()), ...(await importVerbPrepositions()), ...(await importManual()),
+    ...(await importLevelCSVs()), ...(await importVocabulary(topics)), ...(await importIdioms()), ...(await importVerbPrepositions()), ...(await importManual()),
   ]);
   items = await applyOverrides(items);
   items.sort((left, right) => left.id.localeCompare(right.id));

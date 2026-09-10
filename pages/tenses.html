@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>German Tenses Master Guide (Die 8 Zeitformen) | DE Trainer</title>
+  <meta name="description" content="Complete reference guide for all 8 German tenses: Präsens, Perfekt, Präteritum, Futur I, Plusquamperfekt, Futur II, Konjunktiv II, and Passiv with formulas, frequency ratings, and examples." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .page-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+    
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      transition: all 0.2s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--bg);
+      border-color: var(--text);
+      background: var(--text);
+    }
+    .nav-link.active {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .hero-banner {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      padding: 36px 32px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-dim);
+      max-width: 720px;
+      line-height: 1.6;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .quick-card {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      padding: 16px 20px;
+      transition: transform 0.2s, border-color 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .quick-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    .quick-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .quick-card-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .filter-tab {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 18px;
+      border-radius: 0px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-tab:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+    .filter-tab.active {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .tense-card {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 0px;
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: none;
+    }
+    .tense-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .tense-name-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .tense-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .tense-de-name {
+      font-size: 16px;
+      color: var(--text-dim);
+      font-weight: 500;
+    }
+    .badge-wrap {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .level-badge {
+      background: transparent;
+      border: 1px solid var(--akk);
+      color: var(--akk);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 0px;
+    }
+    .freq-badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 0px;
+    }
+    .freq-badge.essential {
+      background: transparent;
+      color: var(--freq-green);
+      border: 1px solid var(--freq-green);
+    }
+    .freq-badge.common {
+      background: transparent;
+      color: var(--freq-yellow);
+      border: 1px solid var(--freq-yellow);
+    }
+    .freq-badge.formal {
+      background: transparent;
+      color: var(--freq-gray);
+      border: 1px solid var(--freq-gray);
+    }
+
+    .formula-box {
+      background: transparent;
+      border-left: 4px solid var(--accent);
+      border-radius: 0px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      font-family: monospace;
+      font-size: 15px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .formula-tag {
+      background: transparent;
+      border: 1px solid var(--akk);
+      color: var(--akk);
+      padding: 4px 8px;
+      border-radius: 0px;
+      font-weight: 700;
+    }
+
+    .usage-list {
+      margin-bottom: 24px;
+      padding-left: 20px;
+      color: var(--text-dim);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+    .usage-list li {
+      margin-bottom: 6px;
+    }
+    .usage-list strong {
+      color: var(--text);
+    }
+
+    .example-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+    .example-table th, .example-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .example-table th {
+      background: var(--surface2);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .example-table tr:last-child td {
+      border-bottom: none;
+    }
+    .hl-verb {
+      color: var(--akk);
+      font-weight: 700;
+    }
+    .hl-aux {
+      color: var(--dat);
+      font-weight: 700;
+    }
+    .translation {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-de">DE</span>
+        <span class="logo-text">German Grammar Hub</span>
+      </div>
+    </div>
+    <!-- Nav Links -->
+    <nav class="nav-bar">
+      <a href="../index.html" class="nav-link">Trainer Home</a>
+      <a href="tenses.html" class="nav-link active">Die 8 Zeitformen</a>
+      <a href="word-order.html" class="nav-link">Word Order Rules</a>
+      <a href="connectors.html" class="nav-link">Connectors (Konnektoren)</a>
+    </nav>
+  </header>
+
+  <div class="page-container">
+
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <h1 class="hero-title">Die 8 Zeitformen im Deutschen</h1>
+      <p class="hero-subtitle">
+        Master all German tenses, passive constructions, and subjunctive forms. Understand exactly when native speakers use each tense in daily speech vs. formal writing.
+      </p>
+    </header>
+
+    <!-- Quick Navigation Grid -->
+    <div class="quick-grid">
+      <a href="#prasens" class="quick-card">
+        <div class="quick-card-title">1. Präsens</div>
+        <div class="quick-card-desc">Present / Future Actions (A1 - Daily Speech)</div>
+      </a>
+      <a href="#perfekt" class="quick-card">
+        <div class="quick-card-title">2. Perfekt</div>
+        <div class="quick-card-desc">Spoken Past Tense (A2 - Daily Speech)</div>
+      </a>
+      <a href="#prateritum" class="quick-card">
+        <div class="quick-card-title">3. Präteritum</div>
+        <div class="quick-card-desc">Written Past Tense (A2/B1 - Formal/News)</div>
+      </a>
+      <a href="#futur1" class="quick-card">
+        <div class="quick-card-title">4. Futur I</div>
+        <div class="quick-card-desc">Future Intentions / Assumptions (B1)</div>
+      </a>
+      <a href="#konjunktiv2" class="quick-card">
+        <div class="quick-card-title">5. Konjunktiv II</div>
+        <div class="quick-card-desc">Wishes, Hypotheses & Politeness (B1)</div>
+      </a>
+      <a href="#passiv" class="quick-card">
+        <div class="quick-card-title">6. Passiv</div>
+        <div class="quick-card-desc">Process & State Passive Voice (B1/B2)</div>
+      </a>
+      <a href="#plusquamperfekt" class="quick-card">
+        <div class="quick-card-title">7. Plusquamperfekt</div>
+        <div class="quick-card-desc">Past Before Past (B2)</div>
+      </a>
+      <a href="#futur2" class="quick-card">
+        <div class="quick-card-title">8. Futur II</div>
+        <div class="quick-card-desc">Completed Future Action / Conjecture (B2/C1)</div>
+      </a>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-bar">
+      <button class="filter-tab active" onclick="filterTenses('all')">All Tenses</button>
+      <button class="filter-tab" onclick="filterTenses('spoken')">Daily Spoken (A1–A2)</button>
+      <button class="filter-tab" onclick="filterTenses('written')">Written & Formal (B1–B2)</button>
+      <button class="filter-tab" onclick="filterTenses('advanced')">Advanced & Special (B2–C1)</button>
+    </div>
+
+    <!-- Tense 1: Präsens -->
+    <article class="tense-card" id="prasens" data-category="spoken">
+      <div class="tense-header">
+        <div class="tense-name-wrap">
+          <h2 class="tense-title">1. Präsens</h2>
+          <span class="tense-de-name">(Present Tense)</span>
+        </div>
+        <div class="badge-wrap">
+          <span class="level-badge">A1</span>
+          <span class="freq-badge essential">Essential (100% Daily Speech)</span>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="formula-tag">Formula</span> Subjekt + Verb (Präsens Konjugation) + ...
+      </div>
+
+      <ul class="usage-list">
+        <li><strong>Current state or ongoing action:</strong> <i>Ich lerne Deutsch.</i> (I am learning German).</li>
+        <li><strong>General truths & facts:</strong> <i>Die Sonne geht im Osten auf.</i> (The sun rises in the east).</li>
+        <li><strong>Near future actions with time marker (Very Common!):</strong> Natives often use Präsens instead of Futur I when a time marker is present: <i>Morgen fliege ich nach Berlin.</i></li>
+      </ul>
+
+      <table class="example-table">
+        <thead>
+          <tr>
+            <th>Sentence Structure</th>
+            <th>German Example</th>
+            <th>English Translation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Standard V2</td>
+            <td>Er <span class="hl-verb">arbeitet</span> heute im Büro.</td>
+            <td class="translation">He is working in the office today.</td>
+          </tr>
+          <tr>
+            <td>Future Context</td>
+            <td>Nächste Woche <span class="hl-verb">reisen</span> wir nach Wien.</td>
+            <td class="translation">Next week we are traveling to Vienna.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- Tense 2: Perfekt -->
+    <article class="tense-card" id="perfekt" data-category="spoken">
+      <div class="tense-header">
+        <div class="tense-name-wrap">
+          <h2 class="tense-title">2. Perfekt</h2>
+          <span class="tense-de-name">(Present Perfect - Spoken Past)</span>
+        </div>
+        <div class="badge-wrap">
+          <span class="level-badge">A2</span>
+          <span class="freq-badge essential">Essential (Primary Spoken Past)</span>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="formula-tag">Formula</span> Subjekt + <span class="hl-aux">haben / sein</span> (Pos 2) + ... + <span class="hl-verb">Partizip II</span> (End)
+      </div>
+
+      <ul class="usage-list">
+        <li><strong>Primary past tense in spoken German:</strong> Used in ~90% of everyday conversations, emails, and informal speech.</li>
+        <li><strong>Auxiliary Rule:</strong> Use <span class="hl-aux">sein</span> for movement/change of location (<i>gehen, fahren, kommen</i>) or change of state (<i>einschlafen, aufstehen</i>). Use <span class="hl-aux">haben</span> for transitive verbs and all other verbs.</li>
+      </ul>
+
+      <table class="example-table">
+        <thead>
+          <tr>
+            <th>Auxiliary</th>
+            <th>German Example</th>
+            <th>English Translation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="hl-aux">haben</span></td>
+            <td>Ich <span class="hl-aux">habe</span> gestern einen Apfel <span class="hl-verb">gegessen</span>.</td>
+            <td class="translation">I ate an apple yesterday.</td>
+          </tr>
+          <tr>
+            <td><span class="hl-aux">sein</span> (Movement)</td>
+            <td>Wir <span class="hl-aux">sind</span> um 8 Uhr nach Hause <span class="hl-verb">gekommen</span>.</td>
+            <td class="translation">We came home at 8 o'clock.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- Tense 3: Präteritum -->
+    <article class="tense-card" id="prateritum" data-category="written">
+      <div class="tense-header">
+        <div class="tense-name-wrap">
+          <h2 class="tense-title">3. Präteritum</h2>
+          <span class="tense-de-name">(Simple Past / Narrative Past)</span>
+        </div>
+        <div class="badge-wrap">
+          <span class="level-badge">A2/B1</span>
+          <span class="freq-badge formal">High (Written/Formal) + Spoken Auxiliaries</span>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="formula-tag">Formula</span> Subjekt + <span class="hl-verb">Verb (Präteritum Stamm + Endung)</span> (Pos 2) + ...
+      </div>
+
+      <ul class="usage-list">
+        <li><strong>Primary written past tense:</strong> Used in literature, newspapers, official reports, and formal storytelling.</li>
+        <li><strong>Native Spoken Exception:</strong> Auxiliary verbs (<i>war, hatte</i>) and modal verbs (<i>musste, konnte, wollte, durfte, sollte</i>) are ALWAYS preferred in Präteritum even in casual speech!</li>
+      </ul>
+
+      <table class="example-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>German Example</th>
+            <th>English Translation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Narrative Written</td>
+            <td>Der Mann <span class="hl-verb">ging</span> in den Park und <span class="hl-verb">las</span> ein Buch.</td>
+            <td class="translation">The man went to the park and read a book.</td>
+          </tr>
+          <tr>
+            <td>Spoken Auxiliary</td>
+            <td>Ich <span class="hl-verb">war</span> gestern sehr müde und <span class="hl-verb">hatte</span> keine Zeit.</td>
+            <td class="translation">I was very tired yesterday and had no time.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- Tense 4: Futur I -->
+    <article class="tense-card" id="futur1" data-category="written">
+      <div class="tense-header">
+        <div class="tense-name-wrap">
+          <h2 class="tense-title">4. Futur I</h2>
+          <span class="tense-de-name">(Future Tense / Intentions)</span>
+        </div>
+        <div class="badge-wrap">
+          <span class="level-badge">B1</span>
+          <span class="freq-badge common">Moderate (Formal Intentions / Assumptions)</span>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="formula-tag">Formula</span> Subjekt + <span class="hl-aux">werden</span> (Pos 2) + ... + <span class="hl-verb">Infinitiv</span> (End)
+      </div>
+
+      <ul class="usage-list">
+        <li><strong>Formal Future Intentions & Promises:</strong> Used when making explicit promises or solemn plans: <i>Ich werde dich immer unterstützen.</i></li>
+        <li><strong>Present Assumptions (Very Common Native Usage):</strong> Used with <i>wohl/wahrscheinlich</i> to express a present assumption: <i>Er wird wohl schlafen.</i> (He is probably sleeping right now).</li>
+      </ul>
+
+      <table class="example-table">
+        <thead>
+          <tr>
+            <th>Function</th>
+            <th>German Example</th>
+            <th>English Translation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Future Plan</td>
+            <td>Im Sommer <span class="hl-aux">werde</span> ich eine neue Sprache <span class="hl-verb">lernen</span>.</td>
+            <td class="translation">In summer I will learn a new language.</td>
+          </tr>
+          <tr>
+            <td>Present Assumption</td>
+            <td>Maria ist nicht da; sie <span class="hl-aux">wird</span> wohl im Stau <span class="hl-verb">stehen</span>.</td>
+            <td class="translation">Maria isn't here; she is probably stuck in traffic.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- Tense 5: Konjunktiv II -->
+    <article class="tense-card" id="konjunktiv2" data-category="advanced">
+      <div class="tense-header">
+        <div class="tense-name-wrap">
+          <h2 class="tense-title">5. Konjunktiv II</h2>
+          <span class="tense-de-name">(Subjunctive II - Hypothetical & Polite)</span>
+        </div>
+        <div class="badge-wrap">
+          <span class="level-badge">B1</span>
+          <span class="freq-badge essential">Essential (Politeness & Unreal Conditions)</span>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="formula-tag">Present Form</span> Subjekt + <span class="hl-aux">würde</span> + ... + <span class="hl-verb">Infinitiv</span> (or <i>wäre / hätte</i>)
+      </div>
+      <div class="formula-box" style="border-left-color: var(--dat);">
+        <span class="formula-tag" style="background: rgba(46,196,182,0.2); color: var(--dat-light);">Past Form</span> Subjekt + <span class="hl-aux">hätte / wäre</span> + ... + <span class="hl-verb">Partizip II</span>
+      </div>
+
+      <ul class="usage-list">
+        <li><strong>Polite requests:</strong> <i>Ich hätte gern einen Kaffee. / Könnten Sie mir helfen?</i></li>
+        <li><strong>Unreal wishes & conditions (Hypothetical):</strong> <i>Wenn ich reich wäre, würde ich eine Weltreise machen.</i></li>
+        <li><strong>Past regret (Irrealis Past):</strong> <i>Hätte ich doch mehr gelernt!</i> (If only I had studied more!)</li>
+      </ul>
+
+      <table class="example-table">
+        <thead>
+          <tr>
+            <th>Context</th>
+            <th>German Example</th>
+            <th>English Translation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Polite Request</td>
+            <td><span class="hl-aux">Könnten</span> Sie das bitte noch einmal <span class="hl-verb">erklären</span>?</td>
+            <td class="translation">Could you please explain that once more?</td>
+          </tr>
+          <tr>
+            <td>Hypothetical Past</td>
+            <td>Wenn es nicht geregnet hätte, <span class="hl-aux">wären</span> wir spazieren <span class="hl-verb">gegangen</span>.</td>
+            <td class="translation">If it hadn't rained, we would have gone for a walk.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- Tense 6: Passiv -->
+    <article class="tense-card" id="passiv" data-category="written">
+      <div class="tense-header">
+        <div class="tense-name-wrap">
+          <h2 class="tense-title">6. Passiv</h2>
+          <span class="tense-de-name">(Passive Voice - Vorgangspassiv & Zustandspassiv)</span>
+        </div>
+        <div class="badge-wrap">
+          <span class="level-badge">B1/B2</span>
+          <span class="freq-badge formal">High (News, Instructions & Formal Speech)</span>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="formula-tag">Vorgangspassiv</span> Subjekt + <span class="hl-aux">werden</span> + ... + <span class="hl-verb">Partizip II</span>
+      </div>
+      <div class="formula-box" style="border-left-color: var(--dat);">
+        <span class="formula-tag" style="background: rgba(46,196,182,0.2); color: var(--dat-light);">Zustandspassiv</span> Subjekt + <span class="hl-aux">sein</span> + ... + <span class="hl-verb">Partizip II</span>
+      </div>
+
+      <ul class="usage-list">
+        <li><strong>Vorgangspassiv (Action Passive):</strong> Emphasizes the process/action being done: <i>Das Haus wird gebaut.</i> (The house is being built).</li>
+        <li><strong>Zustandspassiv (State Passive):</strong> Emphasizes the resulting completed state: <i>Das Haus ist gebaut.</i> (The house is built).</li>
+      </ul>
+
+      <table class="example-table">
+        <thead>
+          <tr>
+            <th>Tense / Type</th>
+            <th>German Example</th>
+            <th>English Translation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Präsens Passiv</td>
+            <td>Der Brief <span class="hl-aux">wird</span> vom Chef <span class="hl-verb">unterschrieben</span>.</td>
+            <td class="translation">The letter is being signed by the boss.</td>
+          </tr>
+          <tr>
+            <td>Perfekt Passiv</td>
+            <td>Das Auto <span class="hl-aux">ist</span> gestern <span class="hl-verb">repariert worden</span>.</td>
+            <td class="translation">The car was repaired yesterday.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- Tense 7: Plusquamperfekt -->
+    <article class="tense-card" id="plusquamperfekt" data-category="advanced">
+      <div class="tense-header">
+        <div class="tense-name-wrap">
+          <h2 class="tense-title">7. Plusquamperfekt</h2>
+          <span class="tense-de-name">(Past Perfect - Past Before Past)</span>
+        </div>
+        <div class="badge-wrap">
+          <span class="level-badge">B2</span>
+          <span class="freq-badge formal">Moderate (Storytelling & Written Past Sequences)</span>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="formula-tag">Formula</span> Subjekt + <span class="hl-aux">hatte / war</span> (Präteritum) + ... + <span class="hl-verb">Partizip II</span>
+      </div>
+
+      <ul class="usage-list">
+        <li><strong>Sequence of past events:</strong> Used when describing an action that happened BEFORE another past action (often combined with <i>nachdem</i> + Präteritum).</li>
+      </ul>
+
+      <table class="example-table">
+        <thead>
+          <tr>
+            <th>Context</th>
+            <th>German Example</th>
+            <th>English Translation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sequence of Past</td>
+            <td>Nachdem er das Ticket <span class="hl-verb">gekauft hatte</span>, <span class="hl-aux">stieg</span> er in den Zug.</td>
+            <td class="translation">After he had bought the ticket, he boarded the train.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- Tense 8: Futur II -->
+    <article class="tense-card" id="futur2" data-category="advanced">
+      <div class="tense-header">
+        <div class="tense-name-wrap">
+          <h2 class="tense-title">8. Futur II</h2>
+          <span class="tense-de-name">(Future Perfect / Past Conjecture)</span>
+        </div>
+        <div class="badge-wrap">
+          <span class="level-badge">B2/C1</span>
+          <span class="freq-badge formal">Rare (Completed Future / Past Speculation)</span>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="formula-tag">Formula</span> Subjekt + <span class="hl-aux">werden</span> + ... + <span class="hl-verb">Partizip II</span> + <span class="hl-aux">haben / sein</span>
+      </div>
+
+      <ul class="usage-list">
+        <li><strong>Completed future action:</strong> <i>Bis morgen werde ich das Buch gelesen haben.</i> (By tomorrow I will have read the book).</li>
+        <li><strong>Assumption about a past action (Very Common in News/Formal German):</strong> <i>Er wird wohl den Zug verpasst haben.</i> (He probably missed the train).</li>
+      </ul>
+
+      <table class="example-table">
+        <thead>
+          <tr>
+            <th>Function</th>
+            <th>German Example</th>
+            <th>English Translation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Past Assumption</td>
+            <td>Sie <span class="hl-aux">wird</span> vermutlich schon angekommen <span class="hl-verb">sein</span>.</td>
+            <td class="translation">She will probably have arrived already.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </div>
+
+  <script>
+    function filterTenses(category) {
+      document.querySelectorAll('.filter-tab').forEach(tab => tab.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      const cards = document.querySelectorAll('.tense-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

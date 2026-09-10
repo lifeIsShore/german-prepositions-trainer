@@ -1,23 +1,49 @@
 {
   "schemaVersion": 1,
-  "buildId": "c4756b227f",
-  "totalItems": 2376,
+  "buildId": "66f8ed3e6c",
+  "totalItems": 5420,
   "byType": {
+    "konjunktion": 28,
+    "konnektor": 14,
+    "phrase": 583,
+    "reflexive_verb": 14,
     "verb_preposition": 300,
-    "vocabulary": 2076
+    "vocabulary": 4481
   },
   "byLevel": {
-    "B1": 50,
-    "B2": 1523,
+    "A1": 952,
+    "A2": 792,
+    "B1": 1345,
+    "B2": 1528,
     "C1": 329,
     "unassigned": 724
   },
   "byPartOfSpeech": {
-    "unknown": 2076,
-    "verb": 300
+    "abbreviation": 5,
+    "adjective": 453,
+    "adverb": 203,
+    "affix": 1,
+    "article": 2,
+    "conjunction": 17,
+    "connector": 42,
+    "indefinite_pronoun": 8,
+    "interjection": 10,
+    "noun": 1629,
+    "numeral": 33,
+    "participle": 1,
+    "particle": 7,
+    "phrase": 60,
+    "prefix": 27,
+    "preposition": 36,
+    "pronoun": 52,
+    "unknown": 1551,
+    "verb": 1283
   },
   "byReviewStatus": {
-    "unreviewed": 2376
+    "draft": 1272,
+    "reviewed": 774,
+    "unreviewed": 2376,
+    "verified": 998
   },
   "warnings": [
     {
