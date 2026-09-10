@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "German Reference content item",
+  "type": "object",
+  "required": ["id", "type", "term", "examples", "levels", "partOfSpeech", "usage", "contexts", "tags", "grammar", "collocations", "related", "source", "reviewStatus"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "type": { "enum": ["vocabulary", "idiom", "verb_preposition", "phrase", "grammar_note", "konnektor", "konjunktion", "reflexive_verb"] },
+    "term": { "type": "string", "minLength": 1 },
+    "sense": { "type": ["string", "null"] },
+    "translation": { "type": ["string", "null"] },
+    "examples": {
+      "type": "object",
+      "required": ["de", "en"],
+      "properties": { "de": { "type": ["string", "null"] }, "en": { "type": ["string", "null"] } }
+    },
+    "levels": { "type": "array", "items": { "enum": ["A1", "A2", "B1", "B2", "C1", "C2"] }, "uniqueItems": true },
+    "partOfSpeech": { "enum": ["verb", "noun", "adjective", "adverb", "pronoun", "preposition", "conjunction", "connector", "determiner", "interjection", "phrase", "idiom", "other", "unknown"] },
+    "usage": {
+      "type": "object",
+      "required": ["nativeFrequencyRating", "nativeFrequencyLabel", "nativeFrequencyNotes", "ratedBy", "ratedAt", "corpusRank", "editorialFrequencyHint", "register", "regionalLabels"],
+      "properties": {
+        "nativeFrequencyRating": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
+        "nativeFrequencyLabel": { "enum": ["essential", "very_common", "common", "occasional", "rare", null] },
+        "nativeFrequencyNotes": { "type": ["string", "null"] },
+        "ratedBy": { "type": ["string", "null"] },
+        "ratedAt": { "type": ["string", "null"] },
+        "corpusRank": { "type": ["integer", "null"], "minimum": 1 },
+        "editorialFrequencyHint": { "type": ["string", "null"] },
+        "register": { "enum": ["neutral", "formal", "informal", "slang", "regional", "technical", "literary", "unknown"] },
+        "regionalLabels": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "contexts": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "grammar": {
+      "type": "object",
+      "required": ["gender", "plural", "genitiveSingular", "isReflexive", "isSeparable", "auxiliary", "forms", "valency"],
+      "properties": {
+        "gender": { "enum": ["der", "die", "das", null] },
+        "plural": { "type": ["string", "null"] },
+        "genitiveSingular": { "type": ["string", "null"] },
+        "isReflexive": { "type": ["boolean", "null"] },
+        "isSeparable": { "type": ["boolean", "null"] },
+        "auxiliary": { "enum": ["haben", "sein", null] },
+        "auxiliaryPerfekt": { "enum": ["haben", "sein", null], "description": "Alias for auxiliary kept for clarity." },
+        "perfectForm": { "type": ["string", "null"] },
+        "forms": {
+          "type": "object",
+          "properties": {
+            "presentErSieEs": { "type": ["string", "null"] },
+            "praeteritum": { "type": ["string", "null"] },
+            "partizipII": { "type": ["string", "null"] }
+          }
+        },
+        "valency": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["role", "preposition", "case"],
+            "properties": {
+              "role": { "type": "string" },
+              "preposition": { "type": ["string", "null"] },
+              "case": { "enum": ["akk", "dat", "gen", "nom", null] }
+            }
+          }
+        },
+        "connectorFunction": {
+          "type": ["string", "null"],
+          "description": "For konnektor/konjunktion only. E.g. causal, adversative, temporal, additive, concessive, conditional, final."
+        },
+        "verbPositionEffect": {
+          "enum": ["position_0_normal", "position_1_inversion", "subordinate_verb_end", null],
+          "description": "How this connector affects verb position: position_0_normal (ADUSO), position_1_inversion (deshalb), or subordinate_verb_end (weil)."
+        },
+        "highlightedExample": {
+          "type": ["string", "null"],
+          "description": "The example sentence with the verb marked using **double asterisks** so the UI can highlight it."
+        },
+        "nounArticleRule": {
+          "type": ["string", "null"],
+          "description": "The der/die/das rule that applies to this noun, e.g. '-ung endings are always die'."
+        }
+      }
+    },
+    "collocations": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "related": {
+      "type": "object",
+      "required": ["synonyms", "antonyms", "falseFriends"],
+      "properties": {
+        "synonyms": { "type": "array", "items": { "type": "string" } },
+        "antonyms": { "type": "array", "items": { "type": "string" } },
+        "falseFriends": { "type": "array", "items": { "type": "string" } },
+        "wordFamily": { "type": "array", "items": { "type": "string" }, "description": "Related words from the same root, e.g. arbeiten -> Arbeit, Arbeiter, Arbeitsplatz." }
+      }
+    },
+    "editorial": {
+      "type": "object",
+      "properties": {
+        "mnemonicHint": { "type": ["string", "null"], "description": "Short memory trick, e.g. 'das Gift = POISON, not a gift!'." },
+        "approvedByNative": { "type": "boolean", "default": false, "description": "Set true after a native speaker has verified this entry." }
+      }
+    },
+    "source": { "type": "object" },
+    "reviewStatus": { "enum": ["unreviewed", "reviewed"] }
+  }
+}

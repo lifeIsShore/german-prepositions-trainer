@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "buildId": "c4756b227f",
+  "totalItems": 2376,
+  "byType": {
+    "verb_preposition": 300,
+    "vocabulary": 2076
+  },
+  "byLevel": {
+    "B1": 50,
+    "B2": 1523,
+    "C1": 329,
+    "unassigned": 724
+  },
+  "byPartOfSpeech": {
+    "unknown": 2076,
+    "verb": 300
+  },
+  "byReviewStatus": {
+    "unreviewed": 2376
+  },
+  "warnings": [
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/b2-all.csv",
+      "row": 82
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/b2-all.csv",
+      "row": 193
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/b2-all.csv",
+      "row": 352
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/b2-all.csv",
+      "row": 520
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/b2-all.csv",
+      "row": 684
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/b2-all.csv",
+      "row": 709
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/b2-all.csv",
+      "row": 732
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/b2-all.csv",
+      "row": 830
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/b2-all.csv",
+      "row": 928
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/b2-all.csv",
+      "row": 1113
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/redewendungs.csv",
+      "row": 95
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/redewendungs.csv",
+      "row": 164
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/redewendungs.csv",
+      "row": 219
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/redewendungs.csv",
+      "row": 303
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/redewendungs.csv",
+      "row": 382
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/redewendungs.csv",
+      "row": 502
+    },
+    {
+      "code": "embedded_header_skipped",
+      "file": "data/redewendungs.csv",
+      "row": 592
+    },
+    {
+      "code": "duplicate_record_collapsed",
+      "id": "vocab-c1-zielstrebig-b367f40b9c",
+      "kept": {
+        "kind": "local_source",
+        "name": "C1 work vocabulary",
+        "file": "data/c1-work.csv",
+        "row": 58
+      },
+      "skipped": {
+        "kind": "local_source",
+        "name": "C1 work vocabulary",
+        "file": "data/c1-work.csv",
+        "row": 130
+      }
+    }
+  ]
+}
