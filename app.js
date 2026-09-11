@@ -36,7 +36,11 @@ function buildDeck() {
   let source = ALL_CARDS;
   
   if (state.filterType !== 'all') {
-    source = source.filter(c => c.type === state.filterType);
+    if (state.filterType === 'verb') {
+      source = source.filter(c => c.partOfSpeech === 'verb' || (c.type && c.type.includes('verb')));
+    } else {
+      source = source.filter(c => c.type === state.filterType);
+    }
   }
   
   if (state.filterLevel !== 'all') {
