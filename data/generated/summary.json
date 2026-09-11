@@ -1,14 +1,15 @@
 {
   "schemaVersion": 1,
-  "buildId": "66f8ed3e6c",
-  "totalItems": 5420,
+  "buildId": "e756cc66c6",
+  "totalItems": 4746,
   "byType": {
+    "idiom": 50,
     "konjunktion": 28,
     "konnektor": 14,
-    "phrase": 583,
+    "phrase": 41,
     "reflexive_verb": 14,
     "verb_preposition": 300,
-    "vocabulary": 4481
+    "vocabulary": 4299
   },
   "byLevel": {
     "A1": 952,
@@ -16,7 +17,7 @@
     "B1": 1345,
     "B2": 1528,
     "C1": 329,
-    "unassigned": 724
+    "unassigned": 50
   },
   "byPartOfSpeech": {
     "abbreviation": 5,
@@ -36,13 +37,13 @@
     "prefix": 27,
     "preposition": 36,
     "pronoun": 52,
-    "unknown": 1551,
+    "unknown": 877,
     "verb": 1283
   },
   "byReviewStatus": {
     "draft": 1272,
     "reviewed": 774,
-    "unreviewed": 2376,
+    "unreviewed": 1702,
     "verified": 998
   },
   "warnings": [
@@ -95,41 +96,6 @@
       "code": "embedded_header_skipped",
       "file": "data/b2-all.csv",
       "row": 1113
-    },
-    {
-      "code": "embedded_header_skipped",
-      "file": "data/redewendungs.csv",
-      "row": 95
-    },
-    {
-      "code": "embedded_header_skipped",
-      "file": "data/redewendungs.csv",
-      "row": 164
-    },
-    {
-      "code": "embedded_header_skipped",
-      "file": "data/redewendungs.csv",
-      "row": 219
-    },
-    {
-      "code": "embedded_header_skipped",
-      "file": "data/redewendungs.csv",
-      "row": 303
-    },
-    {
-      "code": "embedded_header_skipped",
-      "file": "data/redewendungs.csv",
-      "row": 382
-    },
-    {
-      "code": "embedded_header_skipped",
-      "file": "data/redewendungs.csv",
-      "row": 502
-    },
-    {
-      "code": "embedded_header_skipped",
-      "file": "data/redewendungs.csv",
-      "row": 592
     },
     {
       "code": "duplicate_record_collapsed",
