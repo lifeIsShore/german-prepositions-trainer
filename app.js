@@ -130,6 +130,8 @@ async function buildDeck() {
         if (state.filterType !== 'all') {
           if (state.filterType === 'verb') {
             matchType = c.partOfSpeech === 'verb' || (c.type && c.type.includes('verb'));
+          } else if (state.filterType === 'phrase') {
+            matchType = c.type === 'phrase' || c.type === 'idiom';
           } else {
             matchType = c.type === state.filterType;
           }
@@ -214,7 +216,7 @@ function render() {
   if (card.partOfSpeech && card.partOfSpeech !== 'unknown') {
     const posDe = {
       'verb': 'Verb', 'noun': 'Nomen', 'adjective': 'Adjektiv', 'adverb': 'Adverb', 
-      'pronoun': 'Pronomen', 'preposition': 'Präposition', 'conjunction': 'Konjunktion', 'phrase': 'Redewendung'
+      'pronoun': 'Pronomen', 'preposition': 'Präposition', 'conjunction': 'Konjunktion', 'phrase': 'Redewendung', 'idiom': 'Redewendung'
     }[card.partOfSpeech] || card.partOfSpeech;
     const posSmall = document.createElement('small');
     posSmall.style.cssText = 'color: var(--text-muted); text-transform: uppercase;';
