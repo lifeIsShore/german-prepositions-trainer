@@ -55,3 +55,4 @@ build/
 *.log
 # Planning & Sprint Documents (private)
 sprints/
+docs/
