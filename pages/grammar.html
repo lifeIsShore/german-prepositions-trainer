@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>German Grammar Reference | DE Trainer</title>
+  <meta name="description"
+    content="Complete reference guide for all 8 German tenses: Präsens, Perfekt, Präteritum, Futur I, Plusquamperfekt, Futur II, Konjunktiv II, and Passiv with formulas, frequency ratings, and examples." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../grammar.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-de">DE</span>
+        <span class="logo-text">German Grammar Hub</span>
+      </div>
+    </div>
+    <!-- Nav Links -->
+    <nav class="nav-bar">
+      <a href="../index.html" class="nav-link">Trainer Startseite</a>
+      <a href="grammar.html" class="nav-link active">Grammar Reference</a>
+      <a href="word-order.html" class="nav-link">Satzbau & Wortstellung</a>
+      <a href="connectors.html" class="nav-link">Konnektoren</a>
+    </nav>
+  </header>
+
+  <div class="page-container">
+
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <h1 class="hero-title">German Grammar Reference</h1>
+      <p class="hero-subtitle">Search grammar topics, cases, pronouns, verb forms and sentence structures.</p>
+      <div style="margin-top: 24px;">
+        <input type="text" id="grammarSearch" placeholder="Search grammar..."
+          style="width: 100%; max-width: 600px; padding: 12px 16px; font-size: 16px; border: 1px solid var(--border); border-radius: 0px; background: var(--surface); color: var(--text);"
+          onkeyup="filterGrammar()">
+      </div>
+    </header>
+
+    <!-- Quick Navigation Grid -->
+
+    <div class="quick-grid">
+      <a href="#cases" class="quick-card">
+        <div class="quick-card-title">1. Cases & Articles</div>
+      </a>
+      <a href="#adjectives" class="quick-card">
+        <div class="quick-card-title">2. Adjective Declension</div>
+      </a>
+      <a href="#pronouns" class="quick-card">
+        <div class="quick-card-title">3. Pronouns</div>
+      </a>
+      <a href="#possessives" class="quick-card">
+        <div class="quick-card-title">4. Possessives</div>
+      </a>
+      <a href="#relative" class="quick-card">
+        <div class="quick-card-title">5. Relative Clauses</div>
+      </a>
+      <a href="#tenses" class="quick-card">
+        <div class="quick-card-title">6. Verbs & Tenses</div>
+      </a>
+      <a href="#konjunktiv" class="quick-card">
+        <div class="quick-card-title">7. Konjunktiv</div>
+      </a>
+      <a href="#passive" class="quick-card">
+        <div class="quick-card-title">8. Passive Voice</div>
+      </a>
+      <a href="#sentence" class="quick-card">
+        <div class="quick-card-title">9. Sentence Structure</div>
+      </a>
+      <a href="#prepositions" class="quick-card">
+        <div class="quick-card-title">10. Prepositions</div>
+      </a>
+      <a href="#conjunctions" class="quick-card">
+        <div class="quick-card-title">11. Conjunctions</div>
+      </a>
+      <a href="#negation" class="quick-card">
+        <div class="quick-card-title">12. Negation</div>
+      </a>
+      <a href="#special" class="quick-card">
+        <div class="quick-card-title">13. Special Verb Patterns</div>
+      </a>
+    </div>
+
+    <div class="quick-card-desc">Present / Future Actions (A1 - Daily Speech)</div>
+    </a>
+    <a href="#perfekt" class="quick-card">
+      <div class="quick-card-title">2. Perfekt</div>
+      <div class="quick-card-desc">Spoken Past Tense (A2 - Daily Speech)</div>
+    </a>
+    <a href="#prateritum" class="quick-card">
+      <div class="quick-card-title">3. Präteritum</div>
+      <div class="quick-card-desc">Written Past Tense (A2/B1 - Formal/News)</div>
+    </a>
+    <a href="#futur1" class="quick-card">
+      <div class="quick-card-title">4. Futur I</div>
+      <div class="quick-card-desc">Future Intentions / Assumptions (B1)</div>
+    </a>
+    <a href="#konjunktiv2" class="quick-card">
+      <div class="quick-card-title">5. Konjunktiv II</div>
+      <div class="quick-card-desc">Wishes, Hypotheses & Politeness (B1)</div>
+    </a>
+    <a href="#passiv" class="quick-card">
+      <div class="quick-card-title">6. Passiv</div>
+      <div class="quick-card-desc">Process & State Passive Voice (B1/B2)</div>
+    </a>
+    <a href="#plusquamperfekt" class="quick-card">
+      <div class="quick-card-title">7. Plusquamperfekt</div>
+      <div class="quick-card-desc">Past Before Past (B2)</div>
+    </a>
+    <a href="#futur2" class="quick-card">
+      <div class="quick-card-title">8. Futur II</div>
+      <div class="quick-card-desc">Completed Future Action / Conjecture (B2/C1)</div>
+    </a>
+  </div>
+
+  <!-- Filter Tabs -->
+
+
+
+  <!-- 1. Cases & Articles -->
+  <article class="tense-card grammar-section" id="cases"
+    data-title="Cases and Articles Nominativ Akkusativ Dativ Genitiv">
+    <div class="tense-header">
+      <h2 class="tense-title">1. Cases & Articles</h2>
+    </div>
+
+    <p class="hero-subtitle" style="margin-bottom:16px;">The core of German grammar. Cases define the role of a noun in
+      a sentence.</p>
+
+    <h3 style="margin-bottom:12px;">Unified Case Table (Definite Articles)</h3>
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th>Masculine</th>
+          <th>Feminine</th>
+          <th>Neuter</th>
+          <th>Plural</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Nom.</strong> (Subject)</td>
+          <td>der</td>
+          <td>die</td>
+          <td>das</td>
+          <td>die</td>
+        </tr>
+        <tr>
+          <td><strong>Akk.</strong> (Direct Obj)</td>
+          <td>den</td>
+          <td>die</td>
+          <td>das</td>
+          <td>die</td>
+        </tr>
+        <tr>
+          <td><strong>Dat.</strong> (Indirect Obj)</td>
+          <td>dem</td>
+          <td>der</td>
+          <td>dem</td>
+          <td>den</td>
+        </tr>
+        <tr>
+          <td><strong>Gen.</strong> (Possession)</td>
+          <td>des</td>
+          <td>der</td>
+          <td>des</td>
+          <td>der</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:24px; margin-bottom:12px;">Indefinite Articles (ein/eine)</h3>
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th>Masculine</th>
+          <th>Feminine</th>
+          <th>Neuter</th>
+          <th>Plural</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Nom.</strong></td>
+          <td>ein</td>
+          <td>eine</td>
+          <td>ein</td>
+          <td>keine</td>
+        </tr>
+        <tr>
+          <td><strong>Akk.</strong></td>
+          <td>einen</td>
+          <td>eine</td>
+          <td>ein</td>
+          <td>keine</td>
+        </tr>
+        <tr>
+          <td><strong>Dat.</strong></td>
+          <td>einem</td>
+          <td>einer</td>
+          <td>einem</td>
+          <td>keinen</td>
+        </tr>
+        <tr>
+          <td><strong>Gen.</strong></td>
+          <td>eines</td>
+          <td>einer</td>
+          <td>eines</td>
+          <td>keiner</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul class="usage-list" style="margin-top: 16px;">
+      <li><strong>Nominativ:</strong> <span class="translation">Der Mann</span> kauft ein Auto.</li>
+      <li><strong>Akkusativ:</strong> Ich sehe <span class="translation">den Mann</span>.</li>
+      <li><strong>Dativ:</strong> Ich helfe <span class="translation">dem Mann</span>.</li>
+      <li><strong>Genitiv:</strong> Das Auto <span class="translation">des Mannes</span> ist neu.</li>
+    </ul>
+  </article>
+
+  <!-- 2. Adjective Declension -->
+  <article class="tense-card grammar-section" id="adjectives"
+    data-title="Adjective Declension Endings Strong Weak Mixed">
+    <div class="tense-header">
+      <h2 class="tense-title">2. Adjective Declension</h2>
+    </div>
+
+    <ul class="usage-list">
+      <li><strong>Strong:</strong> The adjective carries the case/gender info (no article).</li>
+      <li><strong>Weak:</strong> The article already shows the case/gender (definite article).</li>
+      <li><strong>Mixed:</strong> The article shows some info, adjective supplies the rest (indefinite article).</li>
+    </ul>
+
+    <h3 style="margin-bottom:12px;">Weak Declension (after der, die, das)</h3>
+    <div class="formula-box">der gute Mann | die gute Frau | das gute Kind | die guten Kinder</div>
+
+    <h3 style="margin-top:24px; margin-bottom:12px;">Mixed Declension (after ein, eine, mein)</h3>
+    <div class="formula-box">ein guter Mann | eine gute Frau | ein gutes Kind | meine guten Kinder</div>
+
+    <h3 style="margin-top:24px; margin-bottom:12px;">Strong Declension (no article)</h3>
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th>Masculine</th>
+          <th>Feminine</th>
+          <th>Neuter</th>
+          <th>Plural</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Nom.</strong></td>
+          <td>guter</td>
+          <td>gute</td>
+          <td>gutes</td>
+          <td>gute</td>
+        </tr>
+        <tr>
+          <td><strong>Akk.</strong></td>
+          <td>guten</td>
+          <td>gute</td>
+          <td>gutes</td>
+          <td>gute</td>
+        </tr>
+        <tr>
+          <td><strong>Dat.</strong></td>
+          <td>gutem</td>
+          <td>guter</td>
+          <td>gutem</td>
+          <td>guten</td>
+        </tr>
+        <tr>
+          <td><strong>Gen.</strong></td>
+          <td>guten</td>
+          <td>guter</td>
+          <td>guten</td>
+          <td>guter</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- 3. Pronouns -->
+  <article class="tense-card grammar-section" id="pronouns" data-title="Personal Pronouns ich du er sie es wir ihr">
+    <div class="tense-header">
+      <h2 class="tense-title">3. Personal Pronouns</h2>
+    </div>
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Person</th>
+          <th>Nom.</th>
+          <th>Akk.</th>
+          <th>Dat.</th>
+          <th>Gen.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ich (I)</td>
+          <td>ich</td>
+          <td>mich</td>
+          <td>mir</td>
+          <td>meiner</td>
+        </tr>
+        <tr>
+          <td>du (you)</td>
+          <td>du</td>
+          <td>dich</td>
+          <td>dir</td>
+          <td>deiner</td>
+        </tr>
+        <tr>
+          <td>er (he)</td>
+          <td>er</td>
+          <td>ihn</td>
+          <td>ihm</td>
+          <td>seiner</td>
+        </tr>
+        <tr>
+          <td>sie (she)</td>
+          <td>sie</td>
+          <td>sie</td>
+          <td>ihr</td>
+          <td>ihrer</td>
+        </tr>
+        <tr>
+          <td>es (it)</td>
+          <td>es</td>
+          <td>es</td>
+          <td>ihm</td>
+          <td>seiner</td>
+        </tr>
+        <tr>
+          <td>wir (we)</td>
+          <td>wir</td>
+          <td>uns</td>
+          <td>uns</td>
+          <td>unser</td>
+        </tr>
+        <tr>
+          <td>ihr (you all)</td>
+          <td>ihr</td>
+          <td>euch</td>
+          <td>euch</td>
+          <td>euer</td>
+        </tr>
+        <tr>
+          <td>sie/Sie (they/You)</td>
+          <td>sie/Sie</td>
+          <td>sie/Sie</td>
+          <td>ihnen/Ihnen</td>
+          <td>ihrer/Ihrer</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul class="usage-list" style="margin-top: 16px;">
+      <li><strong>Ich</strong> sehe <strong>ihn</strong>.</li>
+      <li><strong>Er</strong> hilft <strong>mir</strong>.</li>
+      <li><strong>Wir</strong> besuchen <strong>sie</strong>.</li>
+    </ul>
+  </article>
+
+  <!-- 4. Possessives -->
+  <article class="tense-card grammar-section" id="possessives" data-title="Possessives mein dein sein ihr unser euer">
+    <div class="tense-header">
+      <h2 class="tense-title">4. Possessive Determiners</h2>
+    </div>
+    <div class="formula-box">ich → mein | du → dein | er → sein | sie → ihr | es → sein | wir → unser | ihr → euer | Sie
+      → Ihr</div>
+    <ul class="usage-list">
+      <li>They decline exactly like the indefinite article (ein/eine).</li>
+      <li>Nom: mein Vater | Akk: meinen Vater | Dat: meinem Vater | Gen: meines Vaters</li>
+    </ul>
+  </article>
+
+  <!-- 5. Relative Clauses -->
+  <article class="tense-card grammar-section" id="relative" data-title="Relative Clauses Pronouns der die das">
+    <div class="tense-header">
+      <h2 class="tense-title">5. Relative Clauses & Pronouns</h2>
+    </div>
+    <div class="formula-box">
+      <span class="formula-tag">Rule</span> Gender/Number from noun before it. Case from role in relative clause.
+    </div>
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th>Masculine</th>
+          <th>Feminine</th>
+          <th>Neuter</th>
+          <th>Plural</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Nom.</strong></td>
+          <td>der</td>
+          <td>die</td>
+          <td>das</td>
+          <td>die</td>
+        </tr>
+        <tr>
+          <td><strong>Akk.</strong></td>
+          <td>den</td>
+          <td>die</td>
+          <td>das</td>
+          <td>die</td>
+        </tr>
+        <tr>
+          <td><strong>Dat.</strong></td>
+          <td>dem</td>
+          <td>der</td>
+          <td>dem</td>
+          <td>denen</td>
+        </tr>
+        <tr>
+          <td><strong>Gen.</strong></td>
+          <td>dessen</td>
+          <td>deren</td>
+          <td>dessen</td>
+          <td>deren</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul class="usage-list" style="margin-top:16px;">
+      <li>Das ist der Mann, <strong>den</strong> ich gesehen habe. (Akk)</li>
+      <li>Das ist der Mann, <strong>dem</strong> ich geholfen habe. (Dat)</li>
+      <li>Das ist der Mann, <strong>dessen</strong> Auto gestohlen wurde. (Gen)</li>
+    </ul>
+  </article>
+
+  <!-- 6. Verbs & Tenses Wrapper -->
+  <div class="grammar-section" id="tenses" data-title="Verbs Tenses Präsens Perfekt Präteritum Futur Plusquamperfekt">
+    <h2 style="margin: 32px 0 16px; font-size: 28px;">6. Verbs & Tenses</h2>
+    <p style="color:var(--text-dim); margin-bottom: 24px;">Here is the core summary. The detailed tense cards follow
+      below.</p>
+
+    <table class="example-table" style="margin-bottom: 32px;">
+      <thead>
+        <tr>
+          <th>Tense</th>
+          <th>Example (machen)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Präsens</td>
+          <td>Ich mache die Arbeit.</td>
+        </tr>
+        <tr>
+          <td>Präteritum</td>
+          <td>Ich machte die Arbeit.</td>
+        </tr>
+        <tr>
+          <td>Perfekt</td>
+          <td>Ich habe die Arbeit gemacht.</td>
+        </tr>
+        <tr>
+          <td>Plusquamperfekt</td>
+          <td>Ich hatte die Arbeit gemacht.</td>
+        </tr>
+        <tr>
+          <td>Futur I</td>
+          <td>Ich werde die Arbeit machen.</td>
+        </tr>
+        <tr>
+          <td>Futur II</td>
+          <td>Ich werde die Arbeit gemacht haben.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- (Existing tense cards will fall under here) -->
+
+  <!-- Tense 1: Präsens -->
+  <article class="tense-card grammar-section" id="prasens" data-category="spoken">
+    <div class="tense-header">
+      <div class="tense-name-wrap">
+        <h2 class="tense-title">1. Präsens</h2>
+        <span class="tense-de-name">(Present Tense)</span>
+      </div>
+      <div class="badge-wrap">
+        <span class="level-badge">A1</span>
+        <span class="freq-badge essential">Essential (100% Daily Speech)</span>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-tag">Formula</span> Subjekt + Verb (Präsens Konjugation) + ...
+    </div>
+
+    <ul class="usage-list">
+      <li><strong>Aktueller Zustand oder laufende Handlung:</strong> <i>Ich lerne Deutsch.</i> (I am learning German).
+      </li>
+      <li><strong>Allgemeine Wahrheiten & Fakten:</strong> <i>Die Sonne geht im Osten auf.</i> (The sun rises in the
+        east).</li>
+      <li><strong>Near future actions with time marker (Very Common!):</strong> Natives often use Präsens instead of
+        Futur I when a time marker is present: <i>Morgen fliege ich nach Berlin.</i></li>
+    </ul>
+
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Satzbau</th>
+          <th>German Example</th>
+          <th>English Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Standard V2</td>
+          <td>Er <span class="hl-verb">arbeitet</span> heute im Büro.</td>
+          <td class="translation">He is working in the office today.</td>
+        </tr>
+        <tr>
+          <td>Future Context</td>
+          <td>Nächste Woche <span class="hl-verb">reisen</span> wir nach Wien.</td>
+          <td class="translation">Next week we are traveling to Vienna.</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- Tense 2: Perfekt -->
+  <article class="tense-card grammar-section" id="perfekt" data-category="spoken">
+    <div class="tense-header">
+      <div class="tense-name-wrap">
+        <h2 class="tense-title">2. Perfekt</h2>
+        <span class="tense-de-name">(Present Perfect - Spoken Past)</span>
+      </div>
+      <div class="badge-wrap">
+        <span class="level-badge">A2</span>
+        <span class="freq-badge essential">Essential (Primary Spoken Past)</span>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-tag">Formula</span> Subjekt + <span class="hl-aux">haben / sein</span> (Pos 2) + ... + <span
+        class="hl-verb">Partizip II</span> (End)
+    </div>
+
+    <ul class="usage-list">
+      <li><strong>Primary past tense in spoken German:</strong> Used in ~90% of everyday conversations, emails, and
+        informal speech.</li>
+      <li><strong>Auxiliary Rule:</strong> Use <span class="hl-aux">sein</span> for movement/change of location
+        (<i>gehen, fahren, kommen</i>) oder change of state (<i>einschlafen, aufstehen</i>). Use <span
+          class="hl-aux">haben</span> for transitive verbs and all other verbs.</li>
+    </ul>
+
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Auxiliary</th>
+          <th>German Example</th>
+          <th>English Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="hl-aux">haben</span></td>
+          <td>Ich <span class="hl-aux">habe</span> gestern einen Apfel <span class="hl-verb">gegessen</span>.</td>
+          <td class="translation">I ate an apple yesterday.</td>
+        </tr>
+        <tr>
+          <td><span class="hl-aux">sein</span> (Movement)</td>
+          <td>Wir <span class="hl-aux">sind</span> um 8 Uhr nach Hause <span class="hl-verb">gekommen</span>.</td>
+          <td class="translation">We came home at 8 o'clock.</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- Tense 3: Präteritum -->
+  <article class="tense-card grammar-section" id="prateritum" data-category="written">
+    <div class="tense-header">
+      <div class="tense-name-wrap">
+        <h2 class="tense-title">3. Präteritum</h2>
+        <span class="tense-de-name">(Simple Past / Narrative Past)</span>
+      </div>
+      <div class="badge-wrap">
+        <span class="level-badge">A2/B1</span>
+        <span class="freq-badge formal">High (Written/Formal) + Spoken Auxiliaries</span>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-tag">Formula</span> Subjekt + <span class="hl-verb">Verb (Präteritum Stamm + Endung)</span>
+      (Pos 2) + ...
+    </div>
+
+    <ul class="usage-list">
+      <li><strong>Primary written past tense:</strong> Used in literature, newspapers, official reports, and formal
+        storytelling.</li>
+      <li><strong>Native Spoken Exception:</strong> Hilfsverben (<i>war, hatte</i>) and modal verbs (<i>musste, konnte,
+          wollte, durfte, sollte</i>) are ALWAYS preferred in Präteritum even in casual speech!</li>
+    </ul>
+
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>German Example</th>
+          <th>English Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Narrative Written</td>
+          <td>Der Mann <span class="hl-verb">ging</span> in den Park und <span class="hl-verb">las</span> ein Buch.</td>
+          <td class="translation">The man went to the park and read a book.</td>
+        </tr>
+        <tr>
+          <td>Spoken Auxiliary</td>
+          <td>Ich <span class="hl-verb">war</span> gestern sehr müde und <span class="hl-verb">hatte</span> keine Zeit.
+          </td>
+          <td class="translation">I was very tired yesterday and had no time.</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- Tense 4: Futur I -->
+  <article class="tense-card grammar-section" id="futur1" data-category="written">
+    <div class="tense-header">
+      <div class="tense-name-wrap">
+        <h2 class="tense-title">4. Futur I</h2>
+        <span class="tense-de-name">(Future Tense / Intentions)</span>
+      </div>
+      <div class="badge-wrap">
+        <span class="level-badge">B1</span>
+        <span class="freq-badge common">Moderate (Formal Intentions / Assumptions)</span>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-tag">Formula</span> Subjekt + <span class="hl-aux">werden</span> (Pos 2) + ... + <span
+        class="hl-verb">Infinitiv</span> (End)
+    </div>
+
+    <ul class="usage-list">
+      <li><strong>Formal Future Intentions & Promises:</strong> Used when making explicit promises oder solemn plans:
+        <i>Ich werde dich immer unterstützen.</i></li>
+      <li><strong>Present Assumptions (Very Common Native Usage):</strong> Used with <i>wohl/wahrscheinlich</i> to
+        express a present assumption: <i>Er wird wohl schlafen.</i> (He is probably sleeping right now).</li>
+    </ul>
+
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Function</th>
+          <th>German Example</th>
+          <th>English Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Future Plan</td>
+          <td>Im Sommer <span class="hl-aux">werde</span> ich eine neue Sprache <span class="hl-verb">lernen</span>.
+          </td>
+          <td class="translation">In summer I will learn a new language.</td>
+        </tr>
+        <tr>
+          <td>Present Assumption</td>
+          <td>Maria ist nicht da; sie <span class="hl-aux">wird</span> wohl im Stau <span class="hl-verb">stehen</span>.
+          </td>
+          <td class="translation">Maria isn't here; she is probably stuck in traffic.</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+
+  <!-- 7. Konjunktiv I -->
+  <article class="tense-card grammar-section" id="konjunktiv1" data-title="Konjunktiv I Indirect Speech">
+    <div class="tense-header">
+      <h2 class="tense-title">7a. Konjunktiv I (Indirect Speech)</h2>
+    </div>
+    <div class="formula-box">Er sagt: "Ich bin müde." → Er sagt, er <strong>sei</strong> müde.</div>
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Infinitive</th>
+          <th>Konjunktiv I</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>sein</td>
+          <td>sei</td>
+        </tr>
+        <tr>
+          <td>haben</td>
+          <td>habe</td>
+        </tr>
+        <tr>
+          <td>werden</td>
+          <td>werde</td>
+        </tr>
+        <tr>
+          <td>können</td>
+          <td>könne</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- Tense 5: Konjunktiv II -->
+  <article class="tense-card grammar-section" id="konjunktiv2" data-category="advanced">
+    <div class="tense-header">
+      <div class="tense-name-wrap">
+        <h2 class="tense-title">5. Konjunktiv II</h2>
+        <span class="tense-de-name">(Subjunctive II - Hypothetical & Polite)</span>
+      </div>
+      <div class="badge-wrap">
+        <span class="level-badge">B1</span>
+        <span class="freq-badge essential">Essential (Politeness & Unreal Conditions)</span>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-tag">Present Form</span> Subjekt + <span class="hl-aux">würde</span> + ... + <span
+        class="hl-verb">Infinitiv</span> (or <i>wäre / hätte</i>)
+    </div>
+    <div class="formula-box" style="border-left-color: var(--dat);">
+      <span class="formula-tag" style="background: rgba(46,196,182,0.2); color: var(--dat-light);">Past Form</span>
+      Subjekt + <span class="hl-aux">hätte / wäre</span> + ... + <span class="hl-verb">Partizip II</span>
+    </div>
+
+    <ul class="usage-list">
+      <li><strong>Polite requests:</strong> <i>Ich hätte gern einen Kaffee. / Könnten Sie mir helfen?</i></li>
+      <li><strong>Unreal wishes & conditions (Hypothetical):</strong> <i>Wenn ich reich wäre, würde ich eine Weltreise
+          machen.</i></li>
+      <li><strong>Past regret (Irrealis Past):</strong> <i>Hätte ich doch mehr gelernt!</i> (If only I had studied
+        more!)</li>
+    </ul>
+
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Context</th>
+          <th>German Example</th>
+          <th>English Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Polite Request</td>
+          <td><span class="hl-aux">Könnten</span> Sie das bitte noch einmal <span class="hl-verb">erklären</span>?</td>
+          <td class="translation">Could you please explain that once more?</td>
+        </tr>
+        <tr>
+          <td>Hypothetical Past</td>
+          <td>Wenn es nicht geregnet hätte, <span class="hl-aux">wären</span> wir spazieren <span
+              class="hl-verb">gegangen</span>.</td>
+          <td class="translation">If it hadn't rained, we would have gone for a walk.</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- Tense 6: Passiv -->
+  <article class="tense-card grammar-section" id="passiv" data-category="written">
+    <div class="tense-header">
+      <div class="tense-name-wrap">
+        <h2 class="tense-title">6. Passiv</h2>
+        <span class="tense-de-name">(Passive Voice - Vorgangspassiv & Zustandspassiv)</span>
+      </div>
+      <div class="badge-wrap">
+        <span class="level-badge">B1/B2</span>
+        <span class="freq-badge formal">High (News, Instructions & Formal Speech)</span>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-tag">Vorgangspassiv</span> Subjekt + <span class="hl-aux">werden</span> + ... + <span
+        class="hl-verb">Partizip II</span>
+    </div>
+    <div class="formula-box" style="border-left-color: var(--dat);">
+      <span class="formula-tag" style="background: rgba(46,196,182,0.2); color: var(--dat-light);">Zustandspassiv</span>
+      Subjekt + <span class="hl-aux">sein</span> + ... + <span class="hl-verb">Partizip II</span>
+    </div>
+
+    <ul class="usage-list">
+      <li><strong>Vorgangspassiv (Action Passive):</strong> Emphasizes the process/action being done: <i>Das Haus wird
+          gebaut.</i> (The house is being built).</li>
+      <li><strong>Zustandspassiv (State Passive):</strong> Emphasizes the resulting completed state: <i>Das Haus ist
+          gebaut.</i> (The house is built).</li>
+    </ul>
+
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Tense / Type</th>
+          <th>German Example</th>
+          <th>English Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Präsens Passiv</td>
+          <td>Der Brief <span class="hl-aux">wird</span> vom Chef <span class="hl-verb">unterschrieben</span>.</td>
+          <td class="translation">The letter is being signed by the boss.</td>
+        </tr>
+        <tr>
+          <td>Perfekt Passiv</td>
+          <td>Das Auto <span class="hl-aux">ist</span> gestern <span class="hl-verb">repariert worden</span>.</td>
+          <td class="translation">The car was repaired yesterday.</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- Tense 7: Plusquamperfekt -->
+  <article class="tense-card grammar-section" id="plusquamperfekt" data-category="advanced">
+    <div class="tense-header">
+      <div class="tense-name-wrap">
+        <h2 class="tense-title">7. Plusquamperfekt</h2>
+        <span class="tense-de-name">(Past Perfect - Past Before Past)</span>
+      </div>
+      <div class="badge-wrap">
+        <span class="level-badge">B2</span>
+        <span class="freq-badge formal">Moderate (Storytelling & Written Past Sequences)</span>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-tag">Formula</span> Subjekt + <span class="hl-aux">hatte / war</span> (Präteritum) + ... +
+      <span class="hl-verb">Partizip II</span>
+    </div>
+
+    <ul class="usage-list">
+      <li><strong>Sequence of past events:</strong> Used when describing an action that happened BEFORE another past
+        action (often combined with <i>nachdem</i> + Präteritum).</li>
+    </ul>
+
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Context</th>
+          <th>German Example</th>
+          <th>English Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sequence of Past</td>
+          <td>Nachdem er das Ticket <span class="hl-verb">gekauft hatte</span>, <span class="hl-aux">stieg</span> er in
+            den Zug.</td>
+          <td class="translation">After he had bought the ticket, he boarded the train.</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- Tense 8: Futur II -->
+  <article class="tense-card grammar-section" id="futur2" data-category="advanced">
+    <div class="tense-header">
+      <div class="tense-name-wrap">
+        <h2 class="tense-title">8. Futur II</h2>
+        <span class="tense-de-name">(Future Perfect / Past Conjecture)</span>
+      </div>
+      <div class="badge-wrap">
+        <span class="level-badge">B2/C1</span>
+        <span class="freq-badge formal">Rare (Completed Future / Past Speculation)</span>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-tag">Formula</span> Subjekt + <span class="hl-aux">werden</span> + ... + <span
+        class="hl-verb">Partizip II</span> + <span class="hl-aux">haben / sein</span>
+    </div>
+
+    <ul class="usage-list">
+      <li><strong>Completed future action:</strong> <i>Bis morgen werde ich das Buch gelesen haben.</i> (By tomorrow I
+        will have read the book).</li>
+      <li><strong>Assumption about a past action (Very Common in News/Formal German):</strong> <i>Er wird wohl den Zug
+          verpasst haben.</i> (He probably missed the train).</li>
+    </ul>
+
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>Function</th>
+          <th>German Example</th>
+          <th>English Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Past Assumption</td>
+          <td>Sie <span class="hl-aux">wird</span> vermutlich schon angekommen <span class="hl-verb">sein</span>.</td>
+          <td class="translation">She will probably have arrived already.</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- 9. Sentence Structure -->
+  <article class="tense-card grammar-section" id="sentence"
+    data-title="Sentence Structure Word Order Satzklammer main subordinate clause">
+    <div class="tense-header">
+      <div style="display:flex; justify-content:space-between; width:100%; align-items:center;">
+        <h2 class="tense-title">9. Sentence Structure & Word Order</h2>
+        <a href="word-order.html" class="nav-link">View Detailed Guide</a>
+      </div>
+    </div>
+    <h3 style="margin-bottom:12px;">The "Satzklammer" (Sentence Bracket)</h3>
+    <div class="formula-box">Ich <span class="hl-aux">habe</span> gestern lange <span class="hl-verb">gearbeitet</span>.
+    </div>
+
+    <ul class="usage-list">
+      <li><strong>Main clause:</strong> Ich lerne heute Deutsch. (Verb pos 2)</li>
+      <li><strong>Yes/no question:</strong> Lernst du heute Deutsch? (Verb pos 1)</li>
+      <li><strong>W-question:</strong> Wann lernst du Deutsch?</li>
+      <li><strong>Modal verb:</strong> Ich <strong>muss</strong> heute Deutsch <strong>lernen</strong>.</li>
+      <li><strong>Separable verb:</strong> Ich <strong>stehe</strong> jeden Morgen um sieben Uhr <strong>auf</strong>.
+      </li>
+      <li><strong>Subordinate clause:</strong> ..., weil ich heute arbeiten <strong>muss</strong>. (Verb at end)</li>
+    </ul>
+  </article>
+
+  <!-- 10. Prepositions -->
+  <article class="tense-card grammar-section" id="prepositions"
+    data-title="Prepositions Akkusativ Dativ Wechselpräpositionen">
+    <div class="tense-header">
+      <h2 class="tense-title">10. Prepositions</h2>
+    </div>
+    <ul class="usage-list">
+      <li><strong>Akkusativ:</strong> durch, für, gegen, ohne, um <br><i>Das ist <strong>für meinen</strong> Bruder.</i>
+      </li>
+      <li><strong>Dativ:</strong> aus, bei, mit, nach, seit, von, zu <br><i>Ich fahre <strong>mit meinem</strong>
+          Freund.</i></li>
+    </ul>
+    <h3 style="margin-top:24px; margin-bottom:12px;">Two-way Prepositions (Wechselpräpositionen)</h3>
+    <div class="formula-box">an, auf, hinter, in, neben, über, unter, vor, zwischen</div>
+    <div class="formula-box" style="border-left-color: var(--dat);">
+      <span class="formula-tag" style="background: rgba(46,196,182,0.2); color: var(--dat-light);">Rule</span>
+      <strong>Wo? (Location) → Dativ</strong> | <strong>Wohin? (Movement) → Akkusativ</strong>
+    </div>
+    <ul class="usage-list">
+      <li>Ich bin <strong>in der</strong> Schule. (Dativ)</li>
+      <li>Ich gehe <strong>in die</strong> Schule. (Akkusativ)</li>
+    </ul>
+  </article>
+
+  <!-- 11. Conjunctions -->
+  <article class="tense-card grammar-section" id="conjunctions"
+    data-title="Conjunctions Connectors weil dass und aber deshalb">
+    <div class="tense-header">
+      <div style="display:flex; justify-content:space-between; width:100%; align-items:center;">
+        <h2 class="tense-title">11. Conjunctions & Connectors</h2>
+        <a href="connectors.html" class="nav-link">View Detailed Guide</a>
+      </div>
+    </div>
+    <ul class="usage-list">
+      <li><strong>Normal word order (Pos 0):</strong> und, aber, oder, denn, sondern <br><i>... <strong>aber</strong>
+          ich habe wenig Zeit.</i></li>
+      <li><strong>Verb goes to the end:</strong> weil, dass, obwohl, wenn, während, bevor, nachdem, damit <br><i>...
+          <strong>weil</strong> ich in Deutschland lebe.</i></li>
+      <li><strong>Verb immediately after (Pos 1):</strong> deshalb, deswegen, trotzdem, außerdem, danach, daher
+        <br><i>... <strong>Deshalb</strong> lerne ich heute.</i></li>
+    </ul>
+  </article>
+
+  <!-- 12. Negation -->
+  <article class="tense-card grammar-section" id="negation" data-title="Negation nicht kein">
+    <div class="tense-header">
+      <h2 class="tense-title">12. Negation</h2>
+    </div>
+    <ul class="usage-list">
+      <li><strong>nicht:</strong> Negates verbs, adjectives, or entire clauses.<br><i>Ich kaufe das Auto
+          <strong>nicht</strong>.</i></li>
+      <li><strong>kein:</strong> Negates nouns with indefinite or no articles. Declines like 'ein'.<br><i>Ich habe
+          <strong>kein</strong> Auto.</i></li>
+    </ul>
+  </article>
+
+  <!-- 13. Special Verb Patterns -->
+  <article class="tense-card grammar-section" id="special"
+    data-title="Special Verb Patterns helfen sehen warten auf sprechen mit">
+    <div class="tense-header">
+      <h2 class="tense-title">13. Special Verb Patterns</h2>
+    </div>
+    <p style="color:var(--text-dim); margin-bottom: 16px;">Many verbs require specific cases or prepositions.</p>
+    <ul class="usage-list">
+      <li><strong>helfen + Dativ:</strong> Ich helfe <strong>meinem Freund</strong>.</li>
+      <li><strong>sehen + Akkusativ:</strong> Ich sehe <strong>meinen Freund</strong>.</li>
+      <li><strong>warten auf + Akkusativ:</strong> Ich warte <strong>auf den Bus</strong>.</li>
+      <li><strong>sprechen mit + Dativ:</strong> Ich spreche <strong>mit meinem Lehrer</strong>.</li>
+      <li><strong>sich erinnern an + Akkusativ:</strong> Ich erinnere mich <strong>an den Termin</strong>.</li>
+      <li><strong>teilnehmen an + Dativ:</strong> Ich nehme <strong>an der Veranstaltung</strong> teil.</li>
+    </ul>
+  </article>
+
+  </div>
+
+
+  <script>
+    function filterGrammar() {
+      const input = document.getElementById('grammarSearch').value.toLowerCase();
+      const sections = document.querySelectorAll('.grammar-section');
+
+      sections.forEach(sec => {
+        const title = sec.getAttribute('data-title') || sec.innerText;
+        if (title.toLowerCase().includes(input)) {
+          sec.style.display = '';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>

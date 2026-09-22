@@ -1,197 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>German Word Order Master Guide (Satzbau & TeKaMoLo) | DE Trainer</title>
-  <meta name="description" content="Master German sentence structure: V2 rule, Subject-Verb inversion, Subordinate verb-end clauses, TeKaMoLo rule, questions, and imperatives with visual sentence diagrams." />
+  <meta name="description"
+    content="Master German sentence structure: V2 rule, Subject-Verb inversion, Subordinate verb-end clauses, TeKaMoLo rule, questions, and imperatives with visual sentence diagrams." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
-  <style>
-    .page-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 32px 24px 64px;
-    }
-
-    .nav-bar {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 32px;
-      flex-wrap: wrap;
-    }
-    .nav-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--text-dim);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 8px 16px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 0px;
-      transition: all 0.2s ease;
-    }
-    .nav-link:hover, .nav-link.active {
-      color: var(--bg);
-      border-color: var(--text);
-      background: var(--text);
-    }
-    .nav-link.active {
-      background: var(--text);
-      color: var(--bg);
-      border-color: var(--text);
-    }
-
-    .hero-banner {
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: 0px;
-      padding: 36px 32px;
-      margin-bottom: 40px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-title {
-      font-size: clamp(28px, 4vw, 42px);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 12px;
-      color: var(--text);
-    }
-    .hero-subtitle {
-      font-size: 16px;
-      color: var(--text-dim);
-      max-width: 720px;
-      line-height: 1.6;
-    }
-
-    .section-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 0px;
-      padding: 32px;
-      margin-bottom: 32px;
-      box-shadow: none;
-    }
-    .section-title-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .section-title {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--text);
-    }
-    .badge-v2 {
-      background: transparent;
-      border: 1px solid var(--akk);
-      color: var(--akk);
-      padding: 4px 12px;
-      border-radius: 0px;
-      font-weight: 700;
-      font-size: 13px;
-    }
-    .badge-end {
-      background: transparent;
-      border: 1px solid var(--wrong);
-      color: var(--wrong);
-      padding: 4px 12px;
-      border-radius: 0px;
-      font-weight: 700;
-      font-size: 13px;
-    }
-
-    /* Diagram Spaces Layout */
-    .sentence-diagram {
-      display: flex;
-      gap: 16px;
-      margin: 24px 0;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      border-left: 2px solid var(--border);
-      padding-left: 20px;
-    }
-    .block {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .block-pos {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--text-muted);
-    }
-    .block.pos1 .block-pos { color: var(--dat); }
-    .block.pos2 .block-pos { color: var(--akk); }
-    .block.end .block-pos  { color: var(--wrong); }
-    
-    .block-text {
-      font-weight: 700;
-      font-size: 18px;
-      color: var(--text);
-    }
-    .block.pos2 .block-text { color: var(--akk); border-bottom: 2px solid var(--akk); display: inline-block; }
-
-    .tekamolo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin: 20px 0;
-    }
-    .tekamolo-card {
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: 0px;
-      padding: 16px;
-    }
-    .tekamolo-letter {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--akk);
-      margin-bottom: 4px;
-    }
-    .tekamolo-type {
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-    .tekamolo-question {
-      font-size: 12px;
-      color: var(--dat);
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    .tekamolo-example {
-      font-size: 13px;
-      color: var(--text-dim);
-      font-style: italic;
-    }
-
-    .rule-box {
-      background: transparent;
-      border-left: 4px solid var(--accent);
-      border-radius: 0px;
-      padding: 16px 20px;
-      margin: 16px 0;
-      color: var(--text-dim);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    .rule-box strong { color: var(--text); }
-  </style>
+  <link rel="stylesheet" href="../grammar.css" />
 </head>
+
 <body>
   <header class="header">
     <div class="header-inner">
@@ -202,7 +24,7 @@
     </div>
     <nav class="nav-bar">
       <a href="../index.html" class="nav-link">Trainer Startseite</a>
-      <a href="tenses.html" class="nav-link">Die 8 Zeitformen</a>
+      <a href="grammar.html" class="nav-link">Grammar Reference</a>
       <a href="word-order.html" class="nav-link active">Satzbau & Wortstellung</a>
       <a href="connectors.html" class="nav-link">Konnektoren</a>
     </nav>
@@ -213,7 +35,8 @@
     <header class="hero-banner">
       <h1 class="hero-title">Deutscher Satzbau & Wortstellung</h1>
       <p class="hero-subtitle">
-        Verstehen Sie die Grundstruktur deutscher Sätze: die goldene V2-Regel, Inversion an Position 1, Nebensätze mit Verb am Ende und die TeKaMoLo-Regel.
+        Verstehen Sie die Grundstruktur deutscher Sätze: die goldene V2-Regel, Inversion an Position 1, Nebensätze mit
+        Verb am Ende und die TeKaMoLo-Regel.
       </p>
     </header>
 
@@ -224,7 +47,9 @@
         <span class="badge-v2">Goldene Regel: Verb = Position 2</span>
       </div>
       <p class="rule-box">
-        In deutschen Aussagesätzen steht das konjugierte Verb <strong>IMMER an Position 2</strong>. Position 1 kann durch das Subjekt, eine Zeitangabe, einen Ort oder ein Objekt belegt sein. Position 1 zählt als EIN grammatikalisches Element (nicht unbedingt ein einzelnes Wort!).
+        In deutschen Aussagesätzen steht das konjugierte Verb <strong>IMMER an Position 2</strong>. Position 1 kann
+        durch das Subjekt, eine Zeitangabe, einen Ort oder ein Objekt belegt sein. Position 1 zählt als EIN
+        grammatikalisches Element (nicht unbedingt ein einzelnes Wort!).
       </p>
 
       <div class="sentence-diagram">
@@ -254,7 +79,9 @@
         <span class="badge-v2">Inversion: Subjekt rückt auf Position 3</span>
       </div>
       <p class="rule-box">
-        Wenn ein anderes Element als das Subjekt an Position 1 steht (z. B. eine Zeitangabe, ein Ort oder eine Präpositionalphrase), BLEIBT das Verb an Position 2, und das Subjekt rückt sofort auf <strong>Position 3</strong>.
+        Wenn ein anderes Element als das Subjekt an Position 1 steht (z. B. eine Zeitangabe, ein Ort oder eine
+        Präpositionalphrase), BLEIBT das Verb an Position 2, und das Subjekt rückt sofort auf <strong>Position
+          3</strong>.
       </p>
 
       <div class="sentence-diagram">
@@ -284,7 +111,8 @@
         <span class="badge-end">Unterordnende Konjunktion → Verb am Ende</span>
       </div>
       <p class="rule-box">
-        Unterordnende Konjunktionen (z. B. <i>weil, dass, obwohl, wenn, als, da</i>) schieben das konjugierte Verb ganz an das <strong>Ende des Satzes</strong>.
+        Unterordnende Konjunktionen (z. B. <i>weil, dass, obwohl, wenn, als, da</i>) schieben das konjugierte Verb ganz
+        an das <strong>Ende des Satzes</strong>.
       </p>
 
       <div class="sentence-diagram">
@@ -314,7 +142,8 @@
         <span class="badge-v2">Temporal → Kausal → Modal → Lokal</span>
       </div>
       <p class="rule-box">
-        Wenn ein Satz mehrere adverbiale Bestimmungen (Zeit, Grund, Art und Weise, Ort) enthält, ordnen Muttersprachler diese in der strengen <strong>TeKaMoLo</strong>-Reihenfolge an:
+        Wenn ein Satz mehrere adverbiale Bestimmungen (Zeit, Grund, Art und Weise, Ort) enthält, ordnen Muttersprachler
+        diese in der strengen <strong>TeKaMoLo</strong>-Reihenfolge an:
       </p>
 
       <div class="tekamolo-grid">
@@ -347,10 +176,14 @@
       <div class="sentence-diagram">
         <div class="block pos1"><span class="block-pos">Subj</span><span class="block-text">Ich</span></div>
         <div class="block pos2"><span class="block-pos">Verb</span><span class="block-text">fahre</span></div>
-        <div class="block middle"><span class="block-pos">Temporal (Te)</span><span class="block-text">heute</span></div>
-        <div class="block middle"><span class="block-pos">Kausal (Ka)</span><span class="block-text">aus Freude</span></div>
-        <div class="block middle"><span class="block-pos">Modal (Mo)</span><span class="block-text">mit dem Fahrrad</span></div>
-        <div class="block end"><span class="block-pos">Lokal (Lo)</span><span class="block-text">in den Park.</span></div>
+        <div class="block middle"><span class="block-pos">Temporal (Te)</span><span class="block-text">heute</span>
+        </div>
+        <div class="block middle"><span class="block-pos">Kausal (Ka)</span><span class="block-text">aus Freude</span>
+        </div>
+        <div class="block middle"><span class="block-pos">Modal (Mo)</span><span class="block-text">mit dem
+            Fahrrad</span></div>
+        <div class="block end"><span class="block-pos">Lokal (Lo)</span><span class="block-text">in den Park.</span>
+        </div>
       </div>
     </section>
 
@@ -368,11 +201,14 @@
       </div>
 
       <div class="sentence-diagram">
-        <div class="block pos2"><span class="block-pos">Position 1 (Verb)</span><span class="block-text">Kommst</span></div>
+        <div class="block pos2"><span class="block-pos">Position 1 (Verb)</span><span class="block-text">Kommst</span>
+        </div>
         <div class="block middle"><span class="block-pos">Subject</span><span class="block-text">du</span></div>
-        <div class="block middle"><span class="block-pos">Middle</span><span class="block-text">heute Abend mit?</span></div>
+        <div class="block middle"><span class="block-pos">Middle</span><span class="block-text">heute Abend mit?</span>
+        </div>
       </div>
     </section>
   </div>
 </body>
+
 </html>

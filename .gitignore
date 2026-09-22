@@ -53,3 +53,6 @@ build/
 *.tmp
 *.temp
 *.log
+# Planning & Sprint Documents (private)
+sprints/
+docs/
