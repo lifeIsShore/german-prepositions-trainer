@@ -288,7 +288,7 @@ html, body {
   border-radius: 0px;
   padding: 16px 20px;
   width: 100%;
-  border-left: 3px solid var(--accent);
+  border-left: 4px solid var(--accent);
 }
 
 /* answer buttons */
