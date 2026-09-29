@@ -230,11 +230,11 @@
     }
 
     .example-table {
-      /* Size to content — don't stretch across the full container on wide screens */
+      /* Size to content and center on wide screens */
       width: auto;
       max-width: 100%;
       border-collapse: collapse;
-      margin-top: 16px;
+      margin: 16px auto 0;
       font-size: 14px;
       table-layout: auto;
     }
@@ -383,12 +383,14 @@
     /* Diagram Spaces Layout */
     .sentence-diagram {
       display: flex;
-      gap: 16px;
+      gap: clamp(8px, 1.5vw, 16px);
       margin: 24px 0;
-      flex-wrap: wrap;
+      /* Never wrap — all blocks must stay on one line */
+      flex-wrap: nowrap;
       align-items: flex-start;
       border-left: 2px solid var(--border);
       padding-left: 20px;
+      overflow-x: auto;
     }
     .block {
       display: flex;
@@ -396,11 +398,12 @@
       gap: 4px;
     }
     .block-pos {
-      font-size: 11px;
+      font-size: clamp(8px, 1vw, 11px);
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       color: var(--text-muted);
+      white-space: nowrap;
     }
     .block.pos1 .block-pos { color: var(--dat); }
     .block.pos2 .block-pos { color: var(--akk); }
@@ -408,8 +411,9 @@
     
     .block-text {
       font-weight: 700;
-      font-size: 18px;
+      font-size: clamp(12px, 2vw, 18px);
       color: var(--text);
+      white-space: nowrap;
     }
     .block.pos2 .block-text { color: var(--akk); border-bottom: 2px solid var(--akk); display: inline-block; }
 
@@ -643,10 +647,10 @@
     .example-box {
       background: transparent;
       border-radius: 0px;
-      padding: 12px 0px;
+      padding: 12px 20px;
       font-size: clamp(10px, 1.4vw, 13.5px);
       line-height: 1.6;
-      border-left: 3px solid var(--accent);
+      border-left: 4px solid var(--accent);
       /* Prevent connector example sentences from wrapping */
       overflow: hidden;
     }
