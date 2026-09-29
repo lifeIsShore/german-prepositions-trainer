@@ -191,12 +191,15 @@
       padding: 16px 20px;
       margin-bottom: 20px;
       font-family: monospace;
-      font-size: 15px;
+      font-size: clamp(10px, 1.5vw, 15px);
       color: var(--text);
       display: flex;
       align-items: center;
       gap: 8px;
-      flex-wrap: wrap;
+      /* Never wrap — keep formula on one line */
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      overflow: hidden;
     }
     .formula-tag {
       background: transparent;
@@ -212,7 +215,7 @@
       padding-left: 20px;
       color: var(--text-dim);
       line-height: 1.7;
-      font-size: 14px;
+      font-size: clamp(11px, 1.3vw, 14px);
     }
     .usage-list li {
       margin-bottom: 6px;
@@ -220,25 +223,44 @@
     .usage-list strong {
       color: var(--text);
     }
+    /* Keep inline italic sentence examples on one line */
+    .usage-list li i {
+      white-space: nowrap;
+      font-size: clamp(10px, 1.3vw, 14px);
+    }
 
     .example-table {
-      width: 100%;
+      /* Size to content — don't stretch across the full container on wide screens */
+      width: auto;
+      max-width: 100%;
       border-collapse: collapse;
       margin-top: 16px;
       font-size: 14px;
+      table-layout: auto;
     }
     .example-table th, .example-table td {
-      padding: 12px 16px;
+      padding: 10px 18px;
       text-align: left;
       border-bottom: 1px solid var(--border);
+      /* Keep sentences on one line — shrink font instead of wrapping */
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: clamp(9px, 1.35vw, 14px);
+    }
+    /* Label columns (first column) stay compact */
+    .example-table td:first-child {
+      white-space: nowrap;
+      font-size: clamp(9px, 1.2vw, 13px);
+      padding-right: 24px;
     }
     .example-table th {
       background: var(--surface2);
       color: var(--text-muted);
       font-weight: 600;
-      font-size: 12px;
+      font-size: clamp(9px, 1.1vw, 12px);
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      white-space: nowrap;
     }
     .example-table tr:last-child td {
       border-bottom: none;
@@ -622,13 +644,18 @@
       background: transparent;
       border-radius: 0px;
       padding: 12px 0px;
-      font-size: 13.5px;
+      font-size: clamp(10px, 1.4vw, 13.5px);
       line-height: 1.6;
       border-left: 3px solid var(--accent);
+      /* Prevent connector example sentences from wrapping */
+      overflow: hidden;
     }
     .example-de {
       color: var(--text);
       margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: clamp(10px, 1.4vw, 13.5px);
     }
     .example-de mark {
       background: transparent;
@@ -639,7 +666,44 @@
       border-bottom: 2px solid var(--akk);
     }
     .example-en {
-      font-size: 12px;
+      font-size: clamp(9px, 1.1vw, 12px);
       color: var(--text-muted);
       font-style: italic;
+      white-space: nowrap;
+      overflow: hidden;
     }
+
+/* ─── Responsive: give sentences maximum horizontal room ─── */
+@media (max-width: 700px) {
+  .tense-card,
+  .section-card {
+    padding: 16px 12px;
+  }
+  .example-table th,
+  .example-table td {
+    padding: 8px 6px;
+  }
+  .formula-box {
+    padding: 10px 12px;
+  }
+  .page-container {
+    padding: 16px 10px 48px;
+  }
+  .connector-card {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .example-table th,
+  .example-table td {
+    padding: 6px 4px;
+  }
+  .tense-card,
+  .section-card {
+    padding: 12px 8px;
+  }
+  .page-container {
+    padding: 12px 6px 32px;
+  }
+}
