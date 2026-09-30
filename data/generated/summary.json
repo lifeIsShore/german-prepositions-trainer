@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 1,
-  "buildId": "071294da45",
+  "contentVersion": 2,
+  "buildId": "b3ed77f9fe",
   "totalItems": 4632,
   "byType": {
     "idiom": 52,
@@ -390,9 +390,9 @@
     }
   },
   "previousBuild": {
-    "contentVersion": null,
-    "buildId": "e756cc66c6",
-    "totalItems": 4746,
-    "totalItemsDelta": -114
+    "contentVersion": 1,
+    "buildId": "071294da45",
+    "totalItems": 4632,
+    "totalItemsDelta": 0
   }
 }

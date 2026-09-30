@@ -15,19 +15,19 @@
       "properties": { "de": { "type": ["string", "null"] }, "en": { "type": ["string", "null"] } }
     },
     "levels": { "type": "array", "items": { "enum": ["A1", "A2", "B1", "B2", "C1", "C2"] }, "uniqueItems": true },
-    "partOfSpeech": { "enum": ["verb", "noun", "adjective", "adverb", "pronoun", "preposition", "conjunction", "connector", "determiner", "interjection", "phrase", "idiom", "other", "unknown"] },
+    "partOfSpeech": { "enum": ["verb", "noun", "adjective", "adverb", "pronoun", "preposition", "conjunction", "connector", "determiner", "interjection", "phrase", "idiom", "other", "unknown", "article", "indefinite_pronoun", "participle", "affix", "numeral", "particle", "prefix", "suffix", "abbreviation"] },
     "usage": {
       "type": "object",
       "required": ["nativeFrequencyRating", "nativeFrequencyLabel", "nativeFrequencyNotes", "ratedBy", "ratedAt", "corpusRank", "editorialFrequencyHint", "register", "regionalLabels"],
       "properties": {
         "nativeFrequencyRating": { "type": ["integer", "null"], "minimum": 1, "maximum": 5 },
-        "nativeFrequencyLabel": { "enum": ["essential", "very_common", "common", "occasional", "rare", null] },
+        "nativeFrequencyLabel": { "enum": ["essential", "very_common", "common", "occasional", "rare", "less_common", null] },
         "nativeFrequencyNotes": { "type": ["string", "null"] },
         "ratedBy": { "type": ["string", "null"] },
         "ratedAt": { "type": ["string", "null"] },
         "corpusRank": { "type": ["integer", "null"], "minimum": 1 },
         "editorialFrequencyHint": { "type": ["string", "null"] },
-        "register": { "enum": ["neutral", "formal", "informal", "slang", "regional", "technical", "literary", "unknown"] },
+        "register": { "enum": ["neutral", "standard", "formal", "informal", "slang", "regional", "technical", "literary", "unknown"] },
         "regionalLabels": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
       }
     },
@@ -102,6 +102,6 @@
       }
     },
     "source": { "type": "object" },
-    "reviewStatus": { "enum": ["unreviewed", "reviewed"] }
+    "reviewStatus": { "enum": ["unreviewed", "draft", "needs_review", "reviewed", "verified"] }
   }
 }

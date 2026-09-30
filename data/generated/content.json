@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 1,
-  "buildId": "071294da45",
+  "contentVersion": 2,
+  "buildId": "b3ed77f9fe",
   "items": [
     {
       "id": "idiom-auf-dem-holzweg-sein-416631f2e5",
@@ -207359,8 +207359,8 @@
     {
       "id": "w-3058",
       "type": "vocabulary",
-      "term": "word",
-      "sense": "(un-)organisiert",
+      "term": "(un-)organisiert",
+      "sense": null,
       "translation": "organised or disorganised, (dis)organised",
       "examples": {
         "de": "Ein unorganisierter Arbeitsplatz kostet Zeit.",
