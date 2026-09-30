@@ -19,7 +19,7 @@
     <div class="header-inner">
       <div class="logo">
         <span class="logo-de">DE</span>
-        <span class="logo-text">German Grammar Hub</span>
+        <span class="logo-text">German Grammar</span>
       </div>
     </div>
     <nav class="nav-bar">
@@ -41,11 +41,11 @@
     </header>
 
     <div class="filter-bar">
-      <button class="filter-tab active" onclick="filterGroup('all')">Alle Gruppen</button>
-      <button class="filter-tab" onclick="filterGroup('group1')">Gruppe 1: ADUSO (Position 0)</button>
-      <button class="filter-tab" onclick="filterGroup('group2')">Gruppe 2: Nebensatz (Verb am Ende)</button>
-      <button class="filter-tab" onclick="filterGroup('group3')">Gruppe 3: Inversion (Position 1)</button>
-      <button class="filter-tab" onclick="filterGroup('group4')">Gruppe 4: Doppelkonjunktionen</button>
+      <button class="filter-tab active" onclick="filterGroup('all', this)">Alle Gruppen</button>
+      <button class="filter-tab" onclick="filterGroup('group1', this)">Gruppe 1: ADUSO (Position 0)</button>
+      <button class="filter-tab" onclick="filterGroup('group2', this)">Gruppe 2: Nebensatz (Verb am Ende)</button>
+      <button class="filter-tab" onclick="filterGroup('group3', this)">Gruppe 3: Inversion (Position 1)</button>
+      <button class="filter-tab" onclick="filterGroup('group4', this)">Gruppe 4: Doppelkonjunktionen</button>
     </div>
 
     <!-- Group 1: ADUSO -->
@@ -327,9 +327,9 @@
   </div>
 
   <script>
-    function filterGroup(groupId) {
+    function filterGroup(groupId, btn) {
       document.querySelectorAll('.filter-tab').forEach(tab => tab.classList.remove('active'));
-      event.target.classList.add('active');
+      btn.classList.add('active');
 
       const sections = document.querySelectorAll('.group-section');
       sections.forEach(sec => {

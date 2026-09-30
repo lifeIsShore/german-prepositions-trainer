@@ -1,0 +1,977 @@
+[
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "anfangen",
+    "csvRow": 28,
+    "vpMatches": [
+      {
+        "id": "vp-002",
+        "val": "mit + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "ankommen",
+    "csvRow": 31,
+    "vpMatches": [
+      {
+        "id": "vp-003",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "arbeiten",
+    "csvRow": 55,
+    "vpMatches": [
+      {
+        "id": "vp-081",
+        "val": "an + Dat."
+      },
+      {
+        "id": "vp-082",
+        "val": "mit + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "beginnen",
+    "csvRow": 111,
+    "vpMatches": [
+      {
+        "id": "vp-006",
+        "val": "mit + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "bitten",
+    "csvRow": 141,
+    "vpMatches": [
+      {
+        "id": "vp-011",
+        "val": "um + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "fragen",
+    "csvRow": 307,
+    "vpMatches": [
+      {
+        "id": "vp-024",
+        "val": "nach + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "gehören",
+    "csvRow": 345,
+    "vpMatches": [
+      {
+        "id": "vp-029",
+        "val": "zu + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "glauben",
+    "csvRow": 367,
+    "vpMatches": [
+      {
+        "id": "vp-028",
+        "val": "an + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "gratulieren",
+    "csvRow": 375,
+    "vpMatches": [
+      {
+        "id": "vp-112",
+        "val": "zu + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "liegen",
+    "csvRow": 538,
+    "vpMatches": [
+      {
+        "id": "vp-042",
+        "val": "an + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "riechen",
+    "csvRow": 689,
+    "vpMatches": [
+      {
+        "id": "vp-048",
+        "val": "nach + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "schließen",
+    "csvRow": 712,
+    "vpMatches": [
+      {
+        "id": "vp-133",
+        "val": "aus + Dat."
+      },
+      {
+        "id": "vp-134",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "schreiben",
+    "csvRow": 720,
+    "vpMatches": [
+      {
+        "id": "vp-050",
+        "val": "an + Akk."
+      },
+      {
+        "id": "vp-051",
+        "val": "über + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "sprechen",
+    "csvRow": 774,
+    "vpMatches": [
+      {
+        "id": "vp-055",
+        "val": "über + Akk."
+      },
+      {
+        "id": "vp-056",
+        "val": "mit + Dat."
+      },
+      {
+        "id": "vp-057",
+        "val": "von + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a1-all.csv",
+    "csvTerm": "warten",
+    "csvRow": 875,
+    "vpMatches": [
+      {
+        "id": "vp-072",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "aufpassen",
+    "csvRow": 49,
+    "vpMatches": [
+      {
+        "id": "vp-205",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "ausgehen",
+    "csvRow": 54,
+    "vpMatches": [
+      {
+        "id": "vp-083",
+        "val": "von + Dat."
+      },
+      {
+        "id": "vp-288",
+        "val": "von + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "berichten",
+    "csvRow": 87,
+    "vpMatches": [
+      {
+        "id": "vp-007",
+        "val": "über + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "bestehen",
+    "csvRow": 94,
+    "vpMatches": [
+      {
+        "id": "vp-008",
+        "val": "aus + Dat."
+      },
+      {
+        "id": "vp-009",
+        "val": "auf + Dat."
+      },
+      {
+        "id": "vp-210",
+        "val": "in + Dat."
+      },
+      {
+        "id": "vp-298",
+        "val": "auf + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "bestehen",
+    "csvRow": 95,
+    "vpMatches": [
+      {
+        "id": "vp-008",
+        "val": "aus + Dat."
+      },
+      {
+        "id": "vp-009",
+        "val": "auf + Dat."
+      },
+      {
+        "id": "vp-210",
+        "val": "in + Dat."
+      },
+      {
+        "id": "vp-298",
+        "val": "auf + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "denken",
+    "csvRow": 133,
+    "vpMatches": [
+      {
+        "id": "vp-017",
+        "val": "an + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "diskutieren",
+    "csvRow": 143,
+    "vpMatches": [
+      {
+        "id": "vp-018",
+        "val": "über + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "hängen",
+    "csvRow": 262,
+    "vpMatches": [
+      {
+        "id": "vp-115",
+        "val": "von + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "hoffen",
+    "csvRow": 278,
+    "vpMatches": [
+      {
+        "id": "vp-032",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "rechnen",
+    "csvRow": 490,
+    "vpMatches": [
+      {
+        "id": "vp-046",
+        "val": "mit + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "reden",
+    "csvRow": 492,
+    "vpMatches": [
+      {
+        "id": "vp-044",
+        "val": "über + Akk."
+      },
+      {
+        "id": "vp-047",
+        "val": "mit + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "sterben",
+    "csvRow": 581,
+    "vpMatches": [
+      {
+        "id": "vp-058",
+        "val": "an + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "teilnehmen",
+    "csvRow": 616,
+    "vpMatches": [
+      {
+        "id": "vp-061",
+        "val": "an + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "vergleichen",
+    "csvRow": 662,
+    "vpMatches": [
+      {
+        "id": "vp-068",
+        "val": "mit + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "a2-all.csv",
+    "csvTerm": "zurückkommen",
+    "csvRow": 771,
+    "vpMatches": [
+      {
+        "id": "vp-170",
+        "val": "auf + Akk."
+      },
+      {
+        "id": "vp-275",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "abhängen",
+    "csvRow": 8,
+    "vpMatches": [
+      {
+        "id": "vp-076",
+        "val": "von + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "achten",
+    "csvRow": 30,
+    "vpMatches": [
+      {
+        "id": "vp-001",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "entstehen",
+    "csvRow": 376,
+    "vpMatches": [
+      {
+        "id": "vp-021",
+        "val": "aus + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "erkennen",
+    "csvRow": 401,
+    "vpMatches": [
+      {
+        "id": "vp-023",
+        "val": "an + Dat."
+      },
+      {
+        "id": "vp-100",
+        "val": "an + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "erwarten",
+    "csvRow": 420,
+    "vpMatches": [
+      {
+        "id": "vp-103",
+        "val": "von + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "fliehen",
+    "csvRow": 483,
+    "vpMatches": [
+      {
+        "id": "vp-224",
+        "val": "vor + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "folgen",
+    "csvRow": 491,
+    "vpMatches": [
+      {
+        "id": "vp-107",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "führen",
+    "csvRow": 521,
+    "vpMatches": [
+      {
+        "id": "vp-027",
+        "val": "zu + Dat."
+      },
+      {
+        "id": "vp-185",
+        "val": "zu + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "gelten",
+    "csvRow": 567,
+    "vpMatches": [
+      {
+        "id": "vp-111",
+        "val": "für + Akk."
+      },
+      {
+        "id": "vp-228",
+        "val": "als + Nom."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "genügen",
+    "csvRow": 575,
+    "vpMatches": [
+      {
+        "id": "vp-229",
+        "val": "für + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "greifen",
+    "csvRow": 610,
+    "vpMatches": [
+      {
+        "id": "vp-232",
+        "val": "nach + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "gründen",
+    "csvRow": 616,
+    "vpMatches": [
+      {
+        "id": "vp-231",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "handeln",
+    "csvRow": 633,
+    "vpMatches": [
+      {
+        "id": "vp-113",
+        "val": "von + Dat."
+      },
+      {
+        "id": "vp-114",
+        "val": "mit + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "hinweisen",
+    "csvRow": 668,
+    "vpMatches": [
+      {
+        "id": "vp-118",
+        "val": "auf + Akk."
+      },
+      {
+        "id": "vp-234",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "kämpfen",
+    "csvRow": 741,
+    "vpMatches": [
+      {
+        "id": "vp-035",
+        "val": "für + Akk."
+      },
+      {
+        "id": "vp-036",
+        "val": "gegen + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "klagen",
+    "csvRow": 765,
+    "vpMatches": [
+      {
+        "id": "vp-037",
+        "val": "über + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "leiden",
+    "csvRow": 857,
+    "vpMatches": [
+      {
+        "id": "vp-040",
+        "val": "an + Dat."
+      },
+      {
+        "id": "vp-041",
+        "val": "unter + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "messen",
+    "csvRow": 922,
+    "vpMatches": [
+      {
+        "id": "vp-245",
+        "val": "an + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "nachdenken",
+    "csvRow": 969,
+    "vpMatches": [
+      {
+        "id": "vp-043",
+        "val": "über + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "protestieren",
+    "csvRow": 1102,
+    "vpMatches": [
+      {
+        "id": "vp-128",
+        "val": "gegen + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "reagieren",
+    "csvRow": 1125,
+    "vpMatches": [
+      {
+        "id": "vp-045",
+        "val": "auf + Akk."
+      },
+      {
+        "id": "vp-129",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "schreiben",
+    "csvRow": 1222,
+    "vpMatches": [
+      {
+        "id": "vp-050",
+        "val": "an + Akk."
+      },
+      {
+        "id": "vp-051",
+        "val": "über + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "schützen",
+    "csvRow": 1237,
+    "vpMatches": [
+      {
+        "id": "vp-049",
+        "val": "vor + Dat."
+      },
+      {
+        "id": "vp-052",
+        "val": "vor + Dat."
+      },
+      {
+        "id": "vp-192",
+        "val": "vor + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich bedanken",
+    "csvRow": 1243,
+    "vpMatches": [
+      {
+        "id": "vp-005",
+        "val": "bei + Dat. / für + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich bemühen",
+    "csvRow": 1246,
+    "vpMatches": [
+      {
+        "id": "vp-294",
+        "val": "um + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich beschweren",
+    "csvRow": 1247,
+    "vpMatches": [
+      {
+        "id": "vp-012",
+        "val": "bei + Dat. / über + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich beteiligen",
+    "csvRow": 1248,
+    "vpMatches": [
+      {
+        "id": "vp-016",
+        "val": "an + Dat."
+      },
+      {
+        "id": "vp-211",
+        "val": "an + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich bewerben",
+    "csvRow": 1249,
+    "vpMatches": [
+      {
+        "id": "vp-010",
+        "val": "um + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich eignen",
+    "csvRow": 1250,
+    "vpMatches": [
+      {
+        "id": "vp-091",
+        "val": "für + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich einigen",
+    "csvRow": 1251,
+    "vpMatches": [
+      {
+        "id": "vp-094",
+        "val": "mit + Dat."
+      },
+      {
+        "id": "vp-180",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich entschließen",
+    "csvRow": 1252,
+    "vpMatches": [
+      {
+        "id": "vp-182",
+        "val": "zu + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich erholen",
+    "csvRow": 1254,
+    "vpMatches": [
+      {
+        "id": "vp-102",
+        "val": "von + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich erkundigen",
+    "csvRow": 1256,
+    "vpMatches": [
+      {
+        "id": "vp-222",
+        "val": "nach + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich freuen",
+    "csvRow": 1258,
+    "vpMatches": [
+      {
+        "id": "vp-025",
+        "val": "auf + Akk."
+      },
+      {
+        "id": "vp-026",
+        "val": "über + Akk."
+      },
+      {
+        "id": "vp-226",
+        "val": "an + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich fürchten",
+    "csvRow": 1259,
+    "vpMatches": [
+      {
+        "id": "vp-106",
+        "val": "vor + Dat."
+      },
+      {
+        "id": "vp-227",
+        "val": "um + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich irren",
+    "csvRow": 1261,
+    "vpMatches": [
+      {
+        "id": "vp-034",
+        "val": "in + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich konzentrieren",
+    "csvRow": 1262,
+    "vpMatches": [
+      {
+        "id": "vp-038",
+        "val": "auf + Akk."
+      },
+      {
+        "id": "vp-189",
+        "val": "auf + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b1-all.csv",
+    "csvTerm": "sich kümmern",
+    "csvRow": 1263,
+    "vpMatches": [
+      {
+        "id": "vp-039",
+        "val": "um + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b2-all.csv",
+    "csvTerm": "sich erkundigen",
+    "csvRow": 137,
+    "vpMatches": [
+      {
+        "id": "vp-222",
+        "val": "nach + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b2-all.csv",
+    "csvTerm": "sich beschweren",
+    "csvRow": 218,
+    "vpMatches": [
+      {
+        "id": "vp-012",
+        "val": "bei + Dat. / über + Akk."
+      }
+    ]
+  },
+  {
+    "csvFile": "b2-all.csv",
+    "csvTerm": "zustimmen",
+    "csvRow": 390,
+    "vpMatches": [
+      {
+        "id": "vp-171",
+        "val": "zu + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b2-all.csv",
+    "csvTerm": "widersprechen",
+    "csvRow": 574,
+    "vpMatches": [
+      {
+        "id": "vp-271",
+        "val": "+ Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b2-all.csv",
+    "csvTerm": "stammen",
+    "csvRow": 727,
+    "vpMatches": [
+      {
+        "id": "vp-144",
+        "val": "aus + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b2-all.csv",
+    "csvTerm": "entstehen",
+    "csvRow": 833,
+    "vpMatches": [
+      {
+        "id": "vp-021",
+        "val": "aus + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b2-all.csv",
+    "csvTerm": "greifen",
+    "csvRow": 862,
+    "vpMatches": [
+      {
+        "id": "vp-232",
+        "val": "nach + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b2-all.csv",
+    "csvTerm": "zusammenstoßen",
+    "csvRow": 994,
+    "vpMatches": [
+      {
+        "id": "vp-278",
+        "val": "mit + Dat."
+      }
+    ]
+  },
+  {
+    "csvFile": "b2-all.csv",
+    "csvTerm": "hervorgehen",
+    "csvRow": 1112,
+    "vpMatches": [
+      {
+        "id": "vp-240",
+        "val": "aus + Dat."
+      },
+      {
+        "id": "vp-241",
+        "val": "aus + Dat."
+      }
+    ]
+  }
+]

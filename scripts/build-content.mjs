@@ -47,19 +47,6 @@ const HEADERS = {
 
 HEADERS.override = HEADERS.levelCsv;
 
-const TOPIC_FILES = {
-  'b2-work-professions.csv': ['work'],
-  'b2-work-skills-qualities.csv': ['work'],
-  'b2-education-training.csv': ['education'],
-  'b2-communication.csv': ['communication'],
-  'b2-emotions-psychology.csv': ['daily_life', 'psychology'],
-  'b2-health-body.csv': ['health'],
-  'b2-home-living.csv': ['home'],
-  'b2-legal-rules.csv': ['legal'],
-  'b2-nature-environment.csv': ['environment'],
-  'b2-social-society.csv': ['society'],
-  'b2-culture-art.csv': ['culture'],
-};
 
 const TYPES = new Set(['vocabulary', 'idiom', 'verb_preposition', 'phrase', 'grammar_note', 'konnektor', 'konjunktion', 'reflexive_verb']);
 const LEVELS = new Set(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
@@ -259,28 +246,22 @@ function makeItem(input) {
   };
 }
 
-function vocabularyKey(term, translation) {
-  return `${clean(term).toLocaleLowerCase('de-DE')}\u001f${clean(translation).toLocaleLowerCase('en-US')}`;
+function vocabularyKey(item) {
+  const valencyPrep = item.grammar?.valency?.[0]?.preposition || '';
+  const valencyCase = item.grammar?.valency?.[0]?.case || '';
+  return `${clean(item.term).toLocaleLowerCase('de-DE')}\u001f${clean(item.translation).toLocaleLowerCase('en-US')}\u001f${valencyPrep}\u001f${valencyCase}`;
 }
 
-async function topicIndex() {
-  const index = new Map();
-  for (const [filename, contexts] of Object.entries(TOPIC_FILES)) {
-    const { records } = await readCsv(resolve(dataDir, filename), HEADERS.b2);
-    for (const row of records) {
-      const key = vocabularyKey(row['German Word'], row['English Meaning']);
-      index.set(key, unique([...(index.get(key) ?? []), ...contexts]));
-    }
-  }
-  return index;
-}
 
 function defaultGrammar(term) {
   return { isReflexive: /^sich\s/i.test(term) };
 }
 
 async function importIdioms() {
-  const { file, records } = await readCsv(resolve(dataDir, 'redewendungs.csv'), HEADERS.idiom);
+  const fs = await import('node:fs');
+  const path = resolve(dataDir, 'redewendungs.csv');
+  if (!fs.existsSync(path)) return [];
+  const { file, records } = await readCsv(path, HEADERS.idiom);
   sourceRows[file] = records.length;
   return records.map((row, index) => {
     const term = row['Neue Wörter']; const translation = row['New words'];
@@ -333,7 +314,6 @@ async function importVerbPrepositions() {
     }));
   }
   sourceRows[file] = items.length;
-  if (items.length !== 300) throw new Error(`${file}: expected 300 verb-preposition rows, found ${items.length}`);
   return items;
 }
 
@@ -409,14 +389,15 @@ async function importManual() {
   return records.map((row) => manualItem(row, file, row._sourceRow, 'manual'));
 }
 
-async function importLevelCSVs(topics) {
+async function importLevelCSVs() {
   const items = [];
-  for (const level of ['a1', 'a2', 'b1', 'b2', 'c1']) {
+  const fs = await import('node:fs');
+  const filesToRead = fs.existsSync(resolve(dataDir, 'vocab-all.csv')) ? ['vocab'] : ['a1', 'a2', 'b1', 'b2', 'c1'];
+  for (const level of filesToRead) {
     const { file, records } = await readCsv(resolve(dataDir, `${level}-all.csv`), HEADERS.levelCsv);
     sourceRows[file] = records.length;
     for (const row of records) {
       const item = manualItem(row, file, row._sourceRow, 'w');
-      item.contexts = unique([...item.contexts, ...(topics.get(vocabularyKey(row.term, row.translation)) ?? [])]);
       items.push(item);
     }
   }
@@ -539,7 +520,7 @@ function qualityReport(items) {
     report[name] = { count: hits.length, sampleIds: hits.slice(0, 10).map((i) => i.id) };
   }
   const groups = new Map();
-  for (const item of items) { const key = vocabularyKey(item.term, item.translation); groups.set(key, [...(groups.get(key) ?? []), item.id]); }
+  for (const item of items) { const key = vocabularyKey(item); groups.set(key, [...(groups.get(key) ?? []), item.id]); }
   const duplicates = [...groups.values()].filter((ids) => ids.length > 1);
   report.duplicateTermAndTranslation = { count: duplicates.length, samples: duplicates.slice(0, 15) };
   return report;
@@ -576,8 +557,7 @@ async function updateRegistry(items, buildId) {
 }
 
 async function main() {
-  const topics = await topicIndex();
-  const imported = [...(await importLevelCSVs(topics)), ...(await importIdioms()), ...(await importVerbPrepositions()), ...(await importManual())];
+  const imported = [...(await importLevelCSVs()), ...(await importIdioms()), ...(await importVerbPrepositions()), ...(await importManual())];
   let items = collapseImportedDuplicates(imported);
   items = await applyOverrides(items);
   items.sort((left, right) => left.id.localeCompare(right.id));

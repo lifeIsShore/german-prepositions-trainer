@@ -14,6 +14,10 @@ let state = {
   wrongCards: [], 
 };
 
+// Must match the .card transform transition in style.css (0.55s).
+const FLIP_MS = 550;
+let backTimer = null;
+
 // ── DB INITIALIZATION ────────────────────────────────────────────────────────
 const DB_NAME = 'DePrepsTrainer';
 const DB_VERSION = 1;
@@ -160,7 +164,12 @@ async function buildDeck() {
 function getCard() { return state.deck[state.index]; }
 
 // ── RENDER ───────────────────────────────────────────────────────────────────
-function render() {
+// deferBack: when the card is flipping back to its front, the back face stays
+// visible for the first half of the rotation, so its text must not change until
+// the flip has finished (otherwise the next answer is briefly visible).
+// The front face is hidden until the midpoint, so it can update immediately.
+function render(deferBack = false) {
+  clearTimeout(backTimer);
   const card = getCard();
   if (!card) { showDone(); return; }
 
@@ -168,7 +177,8 @@ function render() {
   DOM.verbDisplay.textContent = card.term;
   DOM.cardNumber.textContent = `#${state.index + 1} / ${state.deck.length}`;
 
-  // Back
+  // Back (painted separately so it can be deferred while the card flips back)
+  const paintBack = () => {
   DOM.backVerb.textContent = card.term;
   
   // Clear previous state
@@ -273,6 +283,10 @@ function render() {
     DOM.extraEl.appendChild(document.createElement('br'));
   }
 
+  };
+  if (deferBack) backTimer = setTimeout(paintBack, FLIP_MS + 10);
+  else paintBack();
+
   // Flip state
   DOM.card.classList.toggle('flipped', state.flipped);
 
@@ -289,6 +303,7 @@ function render() {
 
 // ── FLIP ─────────────────────────────────────────────────────────────────────
 function flipCard() {
+  if (!state.deck.length) return; // nothing to flip (empty filter result)
   if (state.flipped) return; // only flip to back from front
   state.flipped = true;
   render();
@@ -296,12 +311,14 @@ function flipCard() {
 
 // ── ANSWER ───────────────────────────────────────────────────────────────────
 function markCorrect() {
+  if (!getCard()) return;
   state.correct++;
   nextCard();
 }
 function markWrong() {
-  state.wrong++;
   const card = getCard();
+  if (!card) return;
+  state.wrong++;
   // Prevent duplicate wrong cards
   if (!state.wrongCards.some(c => c.id === card.id)) {
     state.wrongCards.push(card);
@@ -310,17 +327,20 @@ function markWrong() {
 }
 
 function nextCard() {
+  if (!state.deck.length) return;
+  const wasFlipped = state.flipped;
   state.index++;
   state.flipped = false;
   if (state.index >= state.deck.length) { showDone(); return; }
-  render();
+  render(wasFlipped);
 }
 
 function prevCard() {
   if (state.index <= 0) return;
+  const wasFlipped = state.flipped;
   state.index--;
   state.flipped = false;
-  render();
+  render(wasFlipped);
 }
 
 // ── DONE ─────────────────────────────────────────────────────────────────────
@@ -339,6 +359,7 @@ function hideDone() {
 }
 
 async function restart(deck) {
+  const wasFlipped = state.flipped;
   DOM.verbDisplay.textContent = "Loading cards...";
   state.deck = deck || await buildDeck();
   state.index = 0;
@@ -350,8 +371,15 @@ async function restart(deck) {
   
   if (state.deck.length === 0) {
     DOM.verbDisplay.textContent = "No cards match filter.";
+    DOM.card.classList.remove('flipped');
+    DOM.cardNumber.textContent = '';
+    DOM.progressBar.style.setProperty('--pct', '0%');
+    DOM.progressText.textContent = '0 / 0';
+    DOM.totalCount.textContent = 0;
+    DOM.correctCount.textContent = 0;
+    DOM.wrongCount.textContent = 0;
   } else {
-    render();
+    render(wasFlipped);
   }
 }
 
