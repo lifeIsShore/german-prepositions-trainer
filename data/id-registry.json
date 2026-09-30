@@ -1,172 +1,490 @@
 {
  "schemaVersion": 1,
- "contentVersion": 3,
- "buildId": "be9ff7ee8f",
+ "contentVersion": 11,
+ "buildId": "a99fcfc1d7",
  "ids": {
   "idiom-auf-dem-holzweg-sein-416631f2e5": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-auf-grossem-fuss-leben-fd3081bfe9": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-auf-nummer-sicher-gehen-4420068545": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-aus-der-haut-fahren-440d3e3984": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-aus-einer-muecke-einen-elefanten-machen-987b4411b3": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-bock-haben-1da752229a": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-da-liegt-der-hund-begraben-f4867ce1a4": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-das-haar-in-der-suppe-suchen-53ea1f6935": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-das-handtuch-werfen-56563d329c": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-das-ist-mir-wurst-150e4aa474": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-den-faden-verlieren-8a7ff27ec2": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-den-guertel-enger-schnallen-3ee2a8a513": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-die-daumen-druecken-ad22580665": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-die-kalte-schulter-zeigen-6a47e1f6c2": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-die-katze-im-sack-kaufen-2cf01c5dce": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-die-kirche-im-dorf-lassen-f991e029a1": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-die-nase-voll-haben-8e2e555895": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-die-ohren-steif-halten-7c1c7aa584": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-ein-auge-zudruecken-7b49b70c2c": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-ein-brett-vor-dem-kopf-haben-9ee19155fc": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-ein-tropfen-auf-den-heissen-stein-3c95eafc5e": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-einen-bock-schiessen-f353b6c23c": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-einen-kater-haben-2bbac93ac4": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-einen-zahn-zulegen-3c84cdfb96": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-es-faellt-kein-meister-vom-himmel-105dbe7d40": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-etwas-auf-die-lange-bank-schieben-d01690b451": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-hals-und-beinbruch-01fc0f4b5d": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-in-den-sauren-apfel-beissen-81175f845b": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-ins-fettnaepfchen-treten-ebe3f68eec": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-ins-gras-beissen-0bf68c9b93": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-jemandem-auf-den-keks-gehen-b9a891906c": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-jemandem-auf-die-schliche-kommen-863567e496": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-jemandem-die-daumen-druecken-fe0d9a5bee": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-jemandem-die-stirn-bieten-34f9469ed4": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-jemandem-ein-dorn-im-auge-sein-4a636f0580": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-jemandem-einen-baeren-aufbinden-a045121f98": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-jemanden-im-regen-stehen-lassen-c14a55b207": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-mit-dem-falschen-fuss-aufstehen-4c91cab6ee": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-nicht-alle-tassen-im-schrank-haben-6e0822eb2d": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-nur-bahnhof-verstehen-7cc0e6b032": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-schnee-von-gestern-de92233b3c": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-schwein-haben-9f88a24cb7": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-sich-ein-herz-fassen-302a0d842a": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-sich-etwas-aus-den-fingern-saugen-be789ad352": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-sich-in-die-haare-kriegen-bce25d0be0": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-sich-zum-affen-machen-8a2c55b4b2": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-tomaten-auf-den-augen-haben-03cb441b99": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-um-den-heissen-brei-herumreden-b963bfac1e": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-unter-aller-kanone-d8bdb5a09e": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "idiom-zwei-fliegen-mit-einer-klappe-schlagen-9a40707044": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 10
   },
   "manual-1": {
    "firstSeenVersion": 1
   },
   "manual-10": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-11": {
    "firstSeenVersion": 1
   },
   "manual-12": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-13": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-14": {
    "firstSeenVersion": 1
@@ -178,10 +496,22 @@
    "firstSeenVersion": 1
   },
   "manual-17": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-18": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-19": {
    "firstSeenVersion": 1
@@ -193,7 +523,13 @@
    "firstSeenVersion": 1
   },
   "manual-21": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-22": {
    "firstSeenVersion": 1
@@ -220,13 +556,25 @@
    "firstSeenVersion": 1
   },
   "manual-3": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-30": {
    "firstSeenVersion": 1
   },
   "manual-31": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-32": {
    "firstSeenVersion": 1
@@ -286,10 +634,22 @@
    "firstSeenVersion": 1
   },
   "manual-5": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-50": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-51": {
    "firstSeenVersion": 1
@@ -298,7 +658,13 @@
    "firstSeenVersion": 1
   },
   "manual-53": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-54": {
    "firstSeenVersion": 1
@@ -310,7 +676,13 @@
    "firstSeenVersion": 1
   },
   "manual-6": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "manual-7": {
    "firstSeenVersion": 1
@@ -319,7 +691,13 @@
    "firstSeenVersion": 1
   },
   "manual-9": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-001": {
    "firstSeenVersion": 1
@@ -475,7 +853,13 @@
    "firstSeenVersion": 1
   },
   "vp-052": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-053": {
    "firstSeenVersion": 1
@@ -577,7 +961,13 @@
    "firstSeenVersion": 1
   },
   "vp-086": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-087": {
    "firstSeenVersion": 1
@@ -619,7 +1009,13 @@
    "firstSeenVersion": 1
   },
   "vp-100": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-101": {
    "firstSeenVersion": 1
@@ -706,7 +1102,13 @@
    "firstSeenVersion": 1
   },
   "vp-129": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-130": {
    "firstSeenVersion": 1
@@ -730,7 +1132,13 @@
    "firstSeenVersion": 1
   },
   "vp-137": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-138": {
    "firstSeenVersion": 1
@@ -742,7 +1150,13 @@
    "firstSeenVersion": 1
   },
   "vp-141": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-142": {
    "firstSeenVersion": 1
@@ -754,7 +1168,13 @@
    "firstSeenVersion": 1
   },
   "vp-145": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-146": {
    "firstSeenVersion": 1
@@ -769,7 +1189,13 @@
    "firstSeenVersion": 1
   },
   "vp-150": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-151": {
    "firstSeenVersion": 1
@@ -787,7 +1213,13 @@
    "firstSeenVersion": 1
   },
   "vp-156": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-157": {
    "firstSeenVersion": 1
@@ -814,7 +1246,13 @@
    "firstSeenVersion": 1
   },
   "vp-165": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-166": {
    "firstSeenVersion": 1
@@ -835,7 +1273,13 @@
    "firstSeenVersion": 1
   },
   "vp-172": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-173": {
    "firstSeenVersion": 1
@@ -847,7 +1291,13 @@
    "firstSeenVersion": 1
   },
   "vp-176": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-177": {
    "firstSeenVersion": 1
@@ -856,7 +1306,13 @@
    "firstSeenVersion": 1
   },
   "vp-179": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-180": {
    "firstSeenVersion": 1
@@ -868,13 +1324,25 @@
    "firstSeenVersion": 1
   },
   "vp-183": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-184": {
    "firstSeenVersion": 1
   },
   "vp-185": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-186": {
    "firstSeenVersion": 1
@@ -886,19 +1354,49 @@
    "firstSeenVersion": 1
   },
   "vp-189": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-190": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-191": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-192": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-193": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-194": {
    "firstSeenVersion": 1
@@ -907,7 +1405,13 @@
    "firstSeenVersion": 1
   },
   "vp-196": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-197": {
    "firstSeenVersion": 1
@@ -925,7 +1429,13 @@
    "firstSeenVersion": 1
   },
   "vp-202": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-203": {
    "firstSeenVersion": 1
@@ -952,10 +1462,22 @@
    "firstSeenVersion": 1
   },
   "vp-211": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-212": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-213": {
    "firstSeenVersion": 1
@@ -973,7 +1495,13 @@
    "firstSeenVersion": 1
   },
   "vp-218": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-219": {
    "firstSeenVersion": 1
@@ -1021,10 +1549,22 @@
    "firstSeenVersion": 1
   },
   "vp-234": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-235": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-236": {
    "firstSeenVersion": 1
@@ -1042,10 +1582,22 @@
    "firstSeenVersion": 1
   },
   "vp-241": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-242": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-243": {
    "firstSeenVersion": 1
@@ -1060,7 +1612,13 @@
    "firstSeenVersion": 1
   },
   "vp-247": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-248": {
    "firstSeenVersion": 1
@@ -1081,7 +1639,13 @@
    "firstSeenVersion": 1
   },
   "vp-254": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-255": {
    "firstSeenVersion": 1
@@ -1093,7 +1657,13 @@
    "firstSeenVersion": 1
   },
   "vp-258": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-259": {
    "firstSeenVersion": 1
@@ -1105,16 +1675,40 @@
    "firstSeenVersion": 1
   },
   "vp-262": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-263": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-264": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-265": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-266": {
    "firstSeenVersion": 1
@@ -1123,34 +1717,70 @@
    "firstSeenVersion": 1
   },
   "vp-268": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-269": {
    "firstSeenVersion": 1
   },
   "vp-270": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-271": {
    "firstSeenVersion": 1
   },
   "vp-272": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-273": {
    "firstSeenVersion": 1
   },
   "vp-274": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-275": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-276": {
    "firstSeenVersion": 1
   },
   "vp-277": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-278": {
    "firstSeenVersion": 1
@@ -1168,10 +1798,22 @@
    "firstSeenVersion": 1
   },
   "vp-283": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-284": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-285": {
    "firstSeenVersion": 1
@@ -1183,19 +1825,43 @@
    "firstSeenVersion": 1
   },
   "vp-288": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-289": {
    "firstSeenVersion": 1
   },
   "vp-290": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-291": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-292": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-293": {
    "firstSeenVersion": 1
@@ -1204,22 +1870,52 @@
    "firstSeenVersion": 1
   },
   "vp-295": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-296": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-297": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-298": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "vp-299": {
    "firstSeenVersion": 1
   },
   "vp-300": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 5
   },
   "w-1": {
    "firstSeenVersion": 1
@@ -1801,7 +2497,13 @@
    "firstSeenVersion": 1
   },
   "w-1172": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-1173": {
    "firstSeenVersion": 1
@@ -2209,7 +2911,13 @@
    "firstSeenVersion": 1
   },
   "w-1295": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-1296": {
    "firstSeenVersion": 1
@@ -2470,7 +3178,13 @@
    "firstSeenVersion": 1
   },
   "w-1373": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-1374": {
    "firstSeenVersion": 1
@@ -2515,7 +3229,13 @@
    "firstSeenVersion": 1
   },
   "w-1387": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-1388": {
    "firstSeenVersion": 1
@@ -3355,7 +4075,13 @@
    "firstSeenVersion": 1
   },
   "w-1639": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-164": {
    "firstSeenVersion": 1
@@ -3364,7 +4090,13 @@
    "firstSeenVersion": 1
   },
   "w-1641": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-1642": {
    "firstSeenVersion": 1
@@ -3484,7 +4216,13 @@
    "firstSeenVersion": 1
   },
   "w-1678": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-1679": {
    "firstSeenVersion": 1
@@ -6907,7 +7645,13 @@
    "firstSeenVersion": 1
   },
   "w-2704": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-2705": {
    "firstSeenVersion": 1
@@ -6943,7 +7687,13 @@
    "firstSeenVersion": 1
   },
   "w-2715": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-2716": {
    "firstSeenVersion": 1
@@ -7066,7 +7816,13 @@
    "firstSeenVersion": 1
   },
   "w-2752": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-2753": {
    "firstSeenVersion": 1
@@ -8074,13 +8830,25 @@
    "firstSeenVersion": 1
   },
   "w-3054": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3055": {
    "firstSeenVersion": 1
   },
   "w-3056": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3057": {
    "firstSeenVersion": 1
@@ -8578,7 +9346,13 @@
    "firstSeenVersion": 1
   },
   "w-3205": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3206": {
    "firstSeenVersion": 1
@@ -8641,7 +9415,13 @@
    "firstSeenVersion": 1
   },
   "w-3224": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3225": {
    "firstSeenVersion": 1
@@ -8848,7 +9628,13 @@
    "firstSeenVersion": 1
   },
   "w-3287": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3288": {
    "firstSeenVersion": 1
@@ -9133,7 +9919,13 @@
    "firstSeenVersion": 1
   },
   "w-3372": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3373": {
    "firstSeenVersion": 1
@@ -9409,7 +10201,13 @@
    "firstSeenVersion": 1
   },
   "w-3455": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3456": {
    "firstSeenVersion": 1
@@ -9673,7 +10471,13 @@
    "firstSeenVersion": 1
   },
   "w-3534": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3535": {
    "firstSeenVersion": 1
@@ -9712,7 +10516,13 @@
    "firstSeenVersion": 1
   },
   "w-3546": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3547": {
    "firstSeenVersion": 1
@@ -10282,7 +11092,13 @@
    "firstSeenVersion": 1
   },
   "w-3717": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3718": {
    "firstSeenVersion": 1
@@ -10318,10 +11134,22 @@
    "firstSeenVersion": 1
   },
   "w-3728": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3729": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-373": {
    "firstSeenVersion": 1
@@ -10501,7 +11329,13 @@
    "firstSeenVersion": 1
   },
   "w-3783": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3784": {
    "firstSeenVersion": 1
@@ -10648,7 +11482,13 @@
    "firstSeenVersion": 1
   },
   "w-3827": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3828": {
    "firstSeenVersion": 1
@@ -10840,7 +11680,13 @@
    "firstSeenVersion": 1
   },
   "w-3885": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3886": {
    "firstSeenVersion": 1
@@ -10852,25 +11698,55 @@
    "firstSeenVersion": 1
   },
   "w-3889": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-389": {
    "firstSeenVersion": 1
   },
   "w-3890": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3891": {
    "firstSeenVersion": 1
   },
   "w-3892": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3893": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3894": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3895": {
    "firstSeenVersion": 1
@@ -10897,7 +11773,13 @@
    "firstSeenVersion": 1
   },
   "w-3901": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3902": {
    "firstSeenVersion": 1
@@ -10906,10 +11788,22 @@
    "firstSeenVersion": 1
   },
   "w-3904": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3905": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3906": {
    "firstSeenVersion": 1
@@ -10969,13 +11863,31 @@
    "firstSeenVersion": 1
   },
   "w-3923": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3924": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3925": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3926": {
    "firstSeenVersion": 1
@@ -11194,7 +12106,13 @@
    "firstSeenVersion": 1
   },
   "w-3991": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-3992": {
    "firstSeenVersion": 1
@@ -11656,7 +12574,13 @@
    "firstSeenVersion": 1
   },
   "w-4129": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-413": {
    "firstSeenVersion": 1
@@ -11797,16 +12721,34 @@
    "firstSeenVersion": 1
   },
   "w-4171": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-4172": {
    "firstSeenVersion": 1
   },
   "w-4173": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-4174": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-4175": {
    "firstSeenVersion": 1
@@ -11947,7 +12889,13 @@
    "firstSeenVersion": 1
   },
   "w-4216": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-4217": {
    "firstSeenVersion": 1
@@ -11956,7 +12904,13 @@
    "firstSeenVersion": 1
   },
   "w-4219": {
-   "firstSeenVersion": 1
+   "firstSeenVersion": 1,
+   "retired": {
+    "retiredAt": "2026-09-30",
+    "replacedBy": null,
+    "reason": "removed (--allow-removals)"
+   },
+   "retiredInVersion": 6
   },
   "w-422": {
    "firstSeenVersion": 1
@@ -13898,6 +14852,201 @@
   },
   "w-999": {
    "firstSeenVersion": 1
+  },
+  "w-4227": {
+   "firstSeenVersion": 10
+  },
+  "w-4228": {
+   "firstSeenVersion": 10
+  },
+  "w-4229": {
+   "firstSeenVersion": 10
+  },
+  "w-4230": {
+   "firstSeenVersion": 10
+  },
+  "w-4231": {
+   "firstSeenVersion": 10
+  },
+  "w-4232": {
+   "firstSeenVersion": 10
+  },
+  "w-4233": {
+   "firstSeenVersion": 10
+  },
+  "w-4234": {
+   "firstSeenVersion": 10
+  },
+  "w-4235": {
+   "firstSeenVersion": 10
+  },
+  "w-4236": {
+   "firstSeenVersion": 10
+  },
+  "w-4237": {
+   "firstSeenVersion": 10
+  },
+  "w-4238": {
+   "firstSeenVersion": 10
+  },
+  "w-4239": {
+   "firstSeenVersion": 10
+  },
+  "w-4240": {
+   "firstSeenVersion": 10
+  },
+  "w-4241": {
+   "firstSeenVersion": 10
+  },
+  "w-4242": {
+   "firstSeenVersion": 10
+  },
+  "w-4243": {
+   "firstSeenVersion": 10
+  },
+  "w-4244": {
+   "firstSeenVersion": 10
+  },
+  "w-4245": {
+   "firstSeenVersion": 10
+  },
+  "w-4246": {
+   "firstSeenVersion": 10
+  },
+  "w-4247": {
+   "firstSeenVersion": 10
+  },
+  "w-4248": {
+   "firstSeenVersion": 10
+  },
+  "w-4249": {
+   "firstSeenVersion": 10
+  },
+  "w-4250": {
+   "firstSeenVersion": 10
+  },
+  "w-4251": {
+   "firstSeenVersion": 10
+  },
+  "w-4252": {
+   "firstSeenVersion": 10
+  },
+  "w-4253": {
+   "firstSeenVersion": 10
+  },
+  "w-4254": {
+   "firstSeenVersion": 10
+  },
+  "w-4255": {
+   "firstSeenVersion": 10
+  },
+  "w-4256": {
+   "firstSeenVersion": 10
+  },
+  "w-4257": {
+   "firstSeenVersion": 10
+  },
+  "w-4258": {
+   "firstSeenVersion": 10
+  },
+  "w-4259": {
+   "firstSeenVersion": 10
+  },
+  "w-4260": {
+   "firstSeenVersion": 10
+  },
+  "w-4261": {
+   "firstSeenVersion": 10
+  },
+  "w-4262": {
+   "firstSeenVersion": 10
+  },
+  "w-4263": {
+   "firstSeenVersion": 10
+  },
+  "w-4264": {
+   "firstSeenVersion": 10
+  },
+  "w-4265": {
+   "firstSeenVersion": 10
+  },
+  "w-4266": {
+   "firstSeenVersion": 10
+  },
+  "w-4267": {
+   "firstSeenVersion": 10
+  },
+  "w-4268": {
+   "firstSeenVersion": 10
+  },
+  "w-4269": {
+   "firstSeenVersion": 10
+  },
+  "w-4270": {
+   "firstSeenVersion": 10
+  },
+  "w-4271": {
+   "firstSeenVersion": 10
+  },
+  "w-4272": {
+   "firstSeenVersion": 10
+  },
+  "w-4273": {
+   "firstSeenVersion": 10
+  },
+  "w-4274": {
+   "firstSeenVersion": 10
+  },
+  "w-4275": {
+   "firstSeenVersion": 10
+  },
+  "w-4276": {
+   "firstSeenVersion": 10
+  },
+  "w-4277": {
+   "firstSeenVersion": 10
+  },
+  "w-4278": {
+   "firstSeenVersion": 10
+  },
+  "w-4279": {
+   "firstSeenVersion": 10
+  },
+  "w-4280": {
+   "firstSeenVersion": 10
+  },
+  "w-4281": {
+   "firstSeenVersion": 10
+  },
+  "w-4282": {
+   "firstSeenVersion": 10
+  },
+  "w-4283": {
+   "firstSeenVersion": 10
+  },
+  "w-4284": {
+   "firstSeenVersion": 10
+  },
+  "w-4285": {
+   "firstSeenVersion": 10
+  },
+  "w-4286": {
+   "firstSeenVersion": 10
+  },
+  "w-4287": {
+   "firstSeenVersion": 10
+  },
+  "w-4288": {
+   "firstSeenVersion": 10
+  },
+  "w-4289": {
+   "firstSeenVersion": 10
+  },
+  "w-4290": {
+   "firstSeenVersion": 10
+  },
+  "w-4291": {
+   "firstSeenVersion": 10
   }
  }
 }

@@ -1,398 +1,121 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 3,
-  "buildId": "be9ff7ee8f",
-  "totalItems": 4632,
+  "contentVersion": 11,
+  "buildId": "a99fcfc1d7",
+  "totalItems": 4538,
   "byType": {
-    "idiom": 52,
-    "konjunktion": 28,
-    "konnektor": 16,
-    "phrase": 355,
-    "reflexive_verb": 20,
-    "verb_preposition": 305,
-    "vocabulary": 3856
+    "idiom": 67,
+    "konjunktion": 18,
+    "konnektor": 15,
+    "phrase": 349,
+    "reflexive_verb": 18,
+    "verb_preposition": 252,
+    "vocabulary": 3819
   },
   "byLevel": {
-    "A1": 952,
-    "A2": 820,
-    "B1": 1346,
-    "B2": 1396,
-    "C1": 349,
-    "unassigned": 51
+    "A1": 950,
+    "A2": 808,
+    "B1": 1367,
+    "B2": 1377,
+    "C1": 301
   },
   "byPartOfSpeech": {
     "abbreviation": 5,
-    "adjective": 510,
-    "adverb": 218,
-    "affix": 1,
+    "adjective": 500,
+    "adverb": 217,
     "article": 2,
     "conjunction": 20,
-    "connector": 42,
-    "idiom": 9,
-    "interjection": 10,
-    "noun": 2161,
+    "connector": 31,
+    "idiom": 74,
+    "interjection": 9,
+    "noun": 2147,
     "numeral": 33,
-    "participle": 1,
+    "other": 11,
     "particle": 7,
-    "phrase": 340,
+    "phrase": 339,
     "prefix": 27,
     "preposition": 39,
-    "pronoun": 53,
-    "unknown": 67,
-    "verb": 1087
+    "pronoun": 49,
+    "verb": 1028
   },
   "byReviewStatus": {
-    "draft": 2503,
-    "needs_review": 8,
-    "reviewed": 773,
-    "unreviewed": 350,
-    "verified": 998
+    "draft": 2467,
+    "reviewed": 839,
+    "unreviewed": 247,
+    "verified": 985
   },
   "reconciliation": {
-    "data/a1-all.csv": {
-      "sourceRows": 942,
-      "items": 942
-    },
-    "data/a2-all.csv": {
-      "sourceRows": 774,
-      "items": 774
-    },
-    "data/b1-all.csv": {
-      "sourceRows": 1272,
-      "items": 1272
-    },
-    "data/b2-all.csv": {
-      "sourceRows": 1120,
-      "items": 1120
-    },
-    "data/c1-all.csv": {
-      "sourceRows": 118,
-      "items": 118
-    },
-    "data/redewendungs.csv": {
-      "sourceRows": 50,
-      "items": 50
+    "data/vocab-all.csv": {
+      "sourceRows": 4248,
+      "items": 4248
     },
     "words.md": {
-      "sourceRows": 300,
-      "items": 300
+      "sourceRows": 247,
+      "items": 247
     },
     "data/manual/entries.csv": {
-      "sourceRows": 56,
-      "items": 56
+      "sourceRows": 43,
+      "items": 43
     }
   },
   "registry": {
-    "registeredIds": 4632,
-    "retiredIds": 0
+    "registeredIds": 4697,
+    "retiredIds": 159
   },
   "quality": {
     "unknownPartOfSpeech": {
-      "count": 67,
-      "sampleIds": [
-        "idiom-auf-dem-holzweg-sein-416631f2e5",
-        "idiom-auf-grossem-fuss-leben-fd3081bfe9",
-        "idiom-auf-nummer-sicher-gehen-4420068545",
-        "idiom-aus-der-haut-fahren-440d3e3984",
-        "idiom-aus-einer-muecke-einen-elefanten-machen-987b4411b3",
-        "idiom-bock-haben-1da752229a",
-        "idiom-da-liegt-der-hund-begraben-f4867ce1a4",
-        "idiom-das-haar-in-der-suppe-suchen-53ea1f6935",
-        "idiom-das-handtuch-werfen-56563d329c",
-        "idiom-das-ist-mir-wurst-150e4aa474"
-      ]
+      "count": 0,
+      "sampleIds": []
     },
     "verbWithoutAuxiliary": {
-      "count": 305,
-      "sampleIds": [
-        "vp-001",
-        "vp-002",
-        "vp-003",
-        "vp-004",
-        "vp-005",
-        "vp-006",
-        "vp-007",
-        "vp-008",
-        "vp-009",
-        "vp-010"
-      ]
+      "count": 0,
+      "sampleIds": []
     },
     "verbWithoutForms": {
-      "count": 301,
-      "sampleIds": [
-        "vp-001",
-        "vp-002",
-        "vp-003",
-        "vp-004",
-        "vp-005",
-        "vp-006",
-        "vp-007",
-        "vp-008",
-        "vp-009",
-        "vp-010"
-      ]
+      "count": 0,
+      "sampleIds": []
     },
     "nounWithoutGender": {
-      "count": 35,
-      "sampleIds": [
-        "w-1047",
-        "w-1062",
-        "w-1142",
-        "w-1167",
-        "w-1234",
-        "w-1254",
-        "w-1289",
-        "w-1341",
-        "w-1499",
-        "w-3030"
-      ]
+      "count": 0,
+      "sampleIds": []
     },
     "nounWithoutPlural": {
-      "count": 82,
-      "sampleIds": [
-        "w-119",
-        "w-133",
-        "w-152",
-        "w-166",
-        "w-172",
-        "w-181",
-        "w-194",
-        "w-219",
-        "w-247",
-        "w-266"
-      ]
+      "count": 0,
+      "sampleIds": []
     },
     "missingTranslation": {
-      "count": 300,
-      "sampleIds": [
-        "vp-001",
-        "vp-002",
-        "vp-003",
-        "vp-004",
-        "vp-005",
-        "vp-006",
-        "vp-007",
-        "vp-008",
-        "vp-009",
-        "vp-010"
-      ]
+      "count": 0,
+      "sampleIds": []
     },
     "missingExample": {
-      "count": 301,
-      "sampleIds": [
-        "vp-001",
-        "vp-002",
-        "vp-003",
-        "vp-004",
-        "vp-005",
-        "vp-006",
-        "vp-007",
-        "vp-008",
-        "vp-009",
-        "vp-010"
-      ]
+      "count": 0,
+      "sampleIds": []
     },
     "noLevel": {
-      "count": 51,
-      "sampleIds": [
-        "idiom-auf-dem-holzweg-sein-416631f2e5",
-        "idiom-auf-grossem-fuss-leben-fd3081bfe9",
-        "idiom-auf-nummer-sicher-gehen-4420068545",
-        "idiom-aus-der-haut-fahren-440d3e3984",
-        "idiom-aus-einer-muecke-einen-elefanten-machen-987b4411b3",
-        "idiom-bock-haben-1da752229a",
-        "idiom-da-liegt-der-hund-begraben-f4867ce1a4",
-        "idiom-das-haar-in-der-suppe-suchen-53ea1f6935",
-        "idiom-das-handtuch-werfen-56563d329c",
-        "idiom-das-ist-mir-wurst-150e4aa474"
-      ]
+      "count": 0,
+      "sampleIds": []
     },
     "noFrequencyRating": {
-      "count": 350,
-      "sampleIds": [
-        "idiom-auf-dem-holzweg-sein-416631f2e5",
-        "idiom-auf-grossem-fuss-leben-fd3081bfe9",
-        "idiom-auf-nummer-sicher-gehen-4420068545",
-        "idiom-aus-der-haut-fahren-440d3e3984",
-        "idiom-aus-einer-muecke-einen-elefanten-machen-987b4411b3",
-        "idiom-bock-haben-1da752229a",
-        "idiom-da-liegt-der-hund-begraben-f4867ce1a4",
-        "idiom-das-haar-in-der-suppe-suchen-53ea1f6935",
-        "idiom-das-handtuch-werfen-56563d329c",
-        "idiom-das-ist-mir-wurst-150e4aa474"
-      ]
+      "count": 0,
+      "sampleIds": []
     },
     "needsReview": {
-      "count": 8,
-      "sampleIds": [
-        "w-1615",
-        "w-1996",
-        "w-2850",
-        "w-3095",
-        "w-3248",
-        "w-3535",
-        "w-4168",
-        "w-4204"
-      ]
+      "count": 0,
+      "sampleIds": []
     },
     "duplicateTermAndTranslation": {
-      "count": 131,
-      "samples": [
-        [
-          "manual-10",
-          "w-2733"
-        ],
-        [
-          "manual-12",
-          "w-1072"
-        ],
-        [
-          "manual-13",
-          "w-2729"
-        ],
-        [
-          "manual-17",
-          "w-1904"
-        ],
-        [
-          "manual-18",
-          "w-2683"
-        ],
-        [
-          "manual-21",
-          "w-3751"
-        ],
-        [
-          "manual-3",
-          "w-835"
-        ],
-        [
-          "manual-31",
-          "w-2436"
-        ],
-        [
-          "manual-5",
-          "w-619"
-        ],
-        [
-          "manual-50",
-          "w-2964"
-        ],
-        [
-          "manual-53",
-          "w-2975"
-        ],
-        [
-          "manual-6",
-          "w-1660"
-        ],
-        [
-          "manual-9",
-          "w-2162"
-        ],
-        [
-          "vp-008",
-          "vp-009",
-          "vp-210",
-          "vp-298"
-        ],
-        [
-          "vp-014",
-          "vp-086",
-          "vp-212",
-          "vp-300"
-        ]
-      ]
+      "count": 0,
+      "samples": []
     }
   },
   "warnings": {
-    "counts": {
-      "valency_unparsed": 268
-    },
-    "samples": {
-      "valency_unparsed": [
-        {
-          "code": "valency_unparsed",
-          "id": "w-35",
-          "text": "sich anmelden"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-47",
-          "text": "sich anziehen"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-86",
-          "text": "sich ausziehen"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-218",
-          "text": "+ Infinitiv"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-221",
-          "text": "sich duschen"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-410",
-          "text": "+ Prädikativ"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-489",
-          "text": "+ Infinitiv"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-520",
-          "text": "+ Akkusativ + Direktiv"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-582",
-          "text": "+ Infinitiv"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-592",
-          "text": "+ Infinitiv"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-740",
-          "text": "+ Prädikativ"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-756",
-          "text": "+ Infinitiv"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-779",
-          "text": "+ Akkusativ + Direktiv"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-870",
-          "text": "sich vorstellen"
-        },
-        {
-          "code": "valency_unparsed",
-          "id": "w-878",
-          "text": "sich waschen"
-        }
-      ]
-    }
+    "counts": {},
+    "samples": {}
   },
   "previousBuild": {
-    "contentVersion": 2,
-    "buildId": "b3ed77f9fe",
-    "totalItems": 4632,
+    "contentVersion": 10,
+    "buildId": "ef0821f5ce",
+    "totalItems": 4538,
     "totalItemsDelta": 0
   }
 }

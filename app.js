@@ -289,6 +289,7 @@ function render() {
 
 // ── FLIP ─────────────────────────────────────────────────────────────────────
 function flipCard() {
+  if (!state.deck.length) return; // nothing to flip (empty filter result)
   if (state.flipped) return; // only flip to back from front
   state.flipped = true;
   render();
@@ -296,12 +297,14 @@ function flipCard() {
 
 // ── ANSWER ───────────────────────────────────────────────────────────────────
 function markCorrect() {
+  if (!getCard()) return;
   state.correct++;
   nextCard();
 }
 function markWrong() {
-  state.wrong++;
   const card = getCard();
+  if (!card) return;
+  state.wrong++;
   // Prevent duplicate wrong cards
   if (!state.wrongCards.some(c => c.id === card.id)) {
     state.wrongCards.push(card);
@@ -310,6 +313,7 @@ function markWrong() {
 }
 
 function nextCard() {
+  if (!state.deck.length) return;
   state.index++;
   state.flipped = false;
   if (state.index >= state.deck.length) { showDone(); return; }
@@ -350,6 +354,13 @@ async function restart(deck) {
   
   if (state.deck.length === 0) {
     DOM.verbDisplay.textContent = "No cards match filter.";
+    DOM.card.classList.remove('flipped');
+    DOM.cardNumber.textContent = '';
+    DOM.progressBar.style.setProperty('--pct', '0%');
+    DOM.progressText.textContent = '0 / 0';
+    DOM.totalCount.textContent = 0;
+    DOM.correctCount.textContent = 0;
+    DOM.wrongCount.textContent = 0;
   } else {
     render();
   }

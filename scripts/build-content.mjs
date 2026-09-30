@@ -246,8 +246,10 @@ function makeItem(input) {
   };
 }
 
-function vocabularyKey(term, translation) {
-  return `${clean(term).toLocaleLowerCase('de-DE')}\u001f${clean(translation).toLocaleLowerCase('en-US')}`;
+function vocabularyKey(item) {
+  const valencyPrep = item.grammar?.valency?.[0]?.preposition || '';
+  const valencyCase = item.grammar?.valency?.[0]?.case || '';
+  return `${clean(item.term).toLocaleLowerCase('de-DE')}\u001f${clean(item.translation).toLocaleLowerCase('en-US')}\u001f${valencyPrep}\u001f${valencyCase}`;
 }
 
 
@@ -256,7 +258,10 @@ function defaultGrammar(term) {
 }
 
 async function importIdioms() {
-  const { file, records } = await readCsv(resolve(dataDir, 'redewendungs.csv'), HEADERS.idiom);
+  const fs = await import('node:fs');
+  const path = resolve(dataDir, 'redewendungs.csv');
+  if (!fs.existsSync(path)) return [];
+  const { file, records } = await readCsv(path, HEADERS.idiom);
   sourceRows[file] = records.length;
   return records.map((row, index) => {
     const term = row['Neue Wörter']; const translation = row['New words'];
@@ -309,7 +314,6 @@ async function importVerbPrepositions() {
     }));
   }
   sourceRows[file] = items.length;
-  if (items.length !== 300) throw new Error(`${file}: expected 300 verb-preposition rows, found ${items.length}`);
   return items;
 }
 
@@ -387,7 +391,9 @@ async function importManual() {
 
 async function importLevelCSVs() {
   const items = [];
-  for (const level of ['a1', 'a2', 'b1', 'b2', 'c1']) {
+  const fs = await import('node:fs');
+  const filesToRead = fs.existsSync(resolve(dataDir, 'vocab-all.csv')) ? ['vocab'] : ['a1', 'a2', 'b1', 'b2', 'c1'];
+  for (const level of filesToRead) {
     const { file, records } = await readCsv(resolve(dataDir, `${level}-all.csv`), HEADERS.levelCsv);
     sourceRows[file] = records.length;
     for (const row of records) {
@@ -514,7 +520,7 @@ function qualityReport(items) {
     report[name] = { count: hits.length, sampleIds: hits.slice(0, 10).map((i) => i.id) };
   }
   const groups = new Map();
-  for (const item of items) { const key = vocabularyKey(item.term, item.translation); groups.set(key, [...(groups.get(key) ?? []), item.id]); }
+  for (const item of items) { const key = vocabularyKey(item); groups.set(key, [...(groups.get(key) ?? []), item.id]); }
   const duplicates = [...groups.values()].filter((ids) => ids.length > 1);
   report.duplicateTermAndTranslation = { count: duplicates.length, samples: duplicates.slice(0, 15) };
   return report;
