@@ -45,6 +45,8 @@ const HEADERS = {
   ],
 };
 
+HEADERS.override = HEADERS.levelCsv;
+
 const TOPIC_FILES = {
   'b2-work-professions.csv': ['work'],
   'b2-work-skills-qualities.csv': ['work'],
@@ -67,6 +69,8 @@ const FREQUENCY_LABELS = new Set(['essential', 'very_common', 'common', 'occasio
 const VERB_POSITION_EFFECTS = new Set(['position_0_normal', 'position_1_inversion', 'subordinate_verb_end']);
 const REVIEW_STATUSES = new Set(['unreviewed', 'reviewed', 'verified', 'draft', 'needs_review']);
 const buildWarnings = [];
+const sourceRows = {};
+const ALLOW_REMOVALS = process.argv.includes('--allow-removals');
 
 const clean = (value) => String(value ?? '').trim().replace(/\s+/g, ' ');
 const pipeList = (value) => clean(value).split('|').map(clean).filter(Boolean);
@@ -156,45 +160,29 @@ function parseNumber(value, field, id, min, max) {
   return number;
 }
 
+const CASES = { akk: 'akk', akkusativ: 'akk', acc: 'akk', dat: 'dat', dativ: 'dat', gen: 'gen', genitiv: 'gen', nom: 'nom', nominativ: 'nom' };
+const NO_VALENCY = new Set(['intransitive', 'transitive', 'none', '-', 'n/a', 'reflexive']);
+
 function parseValency(value, id) {
   if (!clean(value)) return [];
-  const parts = clean(value).split(/[|;]/).map(clean).filter(Boolean);
-  return parts.flatMap((part) => {
+  return clean(value).split(/[|;]|\s\/\s/).map(clean).filter(Boolean).flatMap((part) => {
+    const lower = part.toLowerCase().replace(/\.$/, '');
+    if (NO_VALENCY.has(lower)) return [];
+    if (CASES[lower]) return [{ role: 'object', preposition: null, case: CASES[lower] }];
     if (part.includes(':')) {
-      const segments = part.split(':').map(clean);
-      const role = segments[0] || 'object';
-      let preposition = segments[1] || null;
-      let grammaticalCase = (segments[2] || '').toLowerCase();
-      if (!grammaticalCase && segments[1]) {
-        const possibleCase = segments[1].toLowerCase();
-        if (['akk', 'dat', 'gen', 'nom', 'akkusativ', 'dativ', 'genitiv', 'nominativ'].includes(possibleCase)) {
-          grammaticalCase = possibleCase.startsWith('akk') ? 'akk' : possibleCase.startsWith('dat') ? 'dat' : possibleCase.startsWith('gen') ? 'gen' : 'nom';
-          preposition = null;
-        }
-      }
-      if (grammaticalCase) {
-        if (grammaticalCase.startsWith('akk')) grammaticalCase = 'akk';
-        else if (grammaticalCase.startsWith('dat')) grammaticalCase = 'dat';
-        else if (grammaticalCase.startsWith('gen')) grammaticalCase = 'gen';
-        else if (grammaticalCase.startsWith('nom')) grammaticalCase = 'nom';
-        else grammaticalCase = null;
-      }
-      return [{ role, preposition, case: grammaticalCase }];
+      const [role, second, third] = part.split(':').map(clean);
+      const caseKey = (third || (CASES[(second || '').toLowerCase()] ? second : '')).toLowerCase().replace(/\.$/, '');
+      const preposition = CASES[(second || '').toLowerCase()] && !third ? null : second || null;
+      return [{ role: role || 'object', preposition, case: CASES[caseKey] ?? null }];
     }
-
-    const match = part.match(/^(.*?)\s*\+?\s*(Akkusativ|Akk|Dativ|Dat|Genitiv|Gen|Nominativ|Nom)$/i);
+    const match = part.match(/^(.*?)\s*\+?\s*(Akkusativ|Akk|Dativ|Dat|Genitiv|Gen|Nominativ|Nom)\.?$/i);
     if (match) {
-      const prepStr = clean(match[1]) || null;
-      const caseStr = match[2].toLowerCase();
-      const caseValue = caseStr.startsWith('akk') ? 'akk' : caseStr.startsWith('dat') ? 'dat' : caseStr.startsWith('gen') ? 'gen' : 'nom';
-      return [{
-        role: prepStr ? 'prepositional_object' : 'object',
-        preposition: prepStr,
-        case: caseValue,
-      }];
+      const preposition = clean(match[1]) || null;
+      return [{ role: preposition ? 'prepositional_object' : 'object', preposition, case: CASES[match[2].toLowerCase()] }];
     }
-
-    return [{ role: 'object', preposition: part || null, case: null }];
+    // Free text that is not a valency pattern: keep it (nothing is lost) but flag it for cleanup.
+    buildWarnings.push({ code: 'valency_unparsed', id, text: part });
+    return [{ role: 'pattern', preposition: null, case: null, text: part }];
   });
 }
 
@@ -291,32 +279,9 @@ function defaultGrammar(term) {
   return { isReflexive: /^sich\s/i.test(term) };
 }
 
-async function importVocabulary(topics) {
-  const items = [];
-  const b2 = await readCsv(resolve(dataDir, 'b2-all.csv'), HEADERS.b2);
-  for (const [index, row] of b2.records.entries()) {
-    const term = row['German Word']; const translation = row['English Meaning'];
-    const exampleDe = row['German Example Sentence']; const exampleEn = row['English Translation'];
-    items.push(makeItem({
-      id: importedId('vocab-b2', term, translation, exampleDe, exampleEn), type: 'vocabulary', term, translation, exampleDe, exampleEn,
-      levels: ['B2'], contexts: topics.get(vocabularyKey(term, translation)) ?? [], grammar: defaultGrammar(term),
-      source: source(b2.file, row._sourceRow, 'B2 vocabulary'),
-    }));
-  }
-  const c1 = await readCsv(resolve(dataDir, 'c1-work.csv'), HEADERS.c1);
-  for (const [index, row] of c1.records.entries()) {
-    const term = row.german_words; const translation = row.meaning_in_english;
-    const exampleDe = row.sentence; const exampleEn = row.sentence_meaning;
-    items.push(makeItem({
-      id: importedId('vocab-c1', term, translation, exampleDe, exampleEn), type: 'vocabulary', term, translation, exampleDe, exampleEn,
-      levels: ['C1'], contexts: ['work'], grammar: defaultGrammar(term), source: source(c1.file, row._sourceRow, 'C1 work vocabulary'),
-    }));
-  }
-  return items;
-}
-
 async function importIdioms() {
   const { file, records } = await readCsv(resolve(dataDir, 'redewendungs.csv'), HEADERS.idiom);
+  sourceRows[file] = records.length;
   return records.map((row, index) => {
     const term = row['Neue Wörter']; const translation = row['New words'];
     const exampleEn = row['Example sentence here']; const exampleDe = row['Translation here'];
@@ -326,7 +291,7 @@ async function importIdioms() {
     if (translation && (translation.toLowerCase().includes('literally:') || translation.toLowerCase().includes('idiom'))) classification = 'idiom';
     
     return makeItem({
-      id: importedId('phrase-source', term, translation, exampleDe, exampleEn), 
+      id: `idiom-${slug(term)}-${fingerprint(term)}`, 
       type: classification, 
       term, translation, exampleDe, exampleEn,
       levels: [],
@@ -362,11 +327,12 @@ async function importVerbPrepositions() {
     if (!match) continue;
     const [, number, term, grammarText, exampleDe] = match.map(clean);
     items.push(makeItem({
-      id: importedId('verb-preposition', term, grammarText, exampleDe, number), type: 'verb_preposition', term, exampleDe,
+      id: `vp-${number.padStart(3, '0')}`, type: 'verb_preposition', term, exampleDe,
       levels, partOfSpeech: 'verb', usage: { editorialFrequencyHint }, grammar: { isReflexive: /^sich\s/i.test(term), valency: parseMarkdownValency(grammarText) },
       tags: ['verb_with_preposition'], source: source(file, lineIndex + 1, 'Verb-preposition reference'),
     }));
   }
+  sourceRows[file] = items.length;
   if (items.length !== 300) throw new Error(`${file}: expected 300 verb-preposition rows, found ${items.length}`);
   return items;
 }
@@ -439,16 +405,19 @@ function manualItem(row, file, rowNumber, idPrefix = null) {
 
 async function importManual() {
   const { file, records } = await readCsv(resolve(dataDir, 'manual', 'entries.csv'), HEADERS.manual);
+  sourceRows[file] = records.length;
   return records.map((row) => manualItem(row, file, row._sourceRow, 'manual'));
 }
 
-async function importLevelCSVs() {
+async function importLevelCSVs(topics) {
   const items = [];
-  for (const filename of ['a1-all.csv', 'a2-all.csv', 'b1-all.csv']) {
-    const prefix = filename.replace('-all.csv', '');
-    const { file, records } = await readCsv(resolve(dataDir, filename), HEADERS.levelCsv);
+  for (const level of ['a1', 'a2', 'b1', 'b2', 'c1']) {
+    const { file, records } = await readCsv(resolve(dataDir, `${level}-all.csv`), HEADERS.levelCsv);
+    sourceRows[file] = records.length;
     for (const row of records) {
-      items.push(manualItem(row, file, row._sourceRow, prefix));
+      const item = manualItem(row, file, row._sourceRow, 'w');
+      item.contexts = unique([...item.contexts, ...(topics.get(vocabularyKey(row.term, row.translation)) ?? [])]);
+      items.push(item);
     }
   }
   return items;
@@ -459,6 +428,11 @@ function applyOverride(item, row) {
   const set = (field, value, transform = optional) => clean(value) ? transform(value) : undefined;
   const assign = (object, key, value) => { if (value !== undefined) object[key] = value; };
   assign(item, 'type', set('type', row.type));
+  assign(item, 'sense', set('sense', row.sense));
+  assign(item, 'translation', set('translation', row.translation));
+  if (clean(row.example_de)) item.examples.de = clean(row.example_de);
+  if (clean(row.example_en)) item.examples.en = clean(row.example_en);
+  if (clean(row.levels)) item.levels = pipeList(row.levels);
   assign(item, 'partOfSpeech', set('part_of_speech', row.part_of_speech));
   if (!TYPES.has(item.type)) throw new Error(`${id}: invalid type`);
   if (clean(row.part_of_speech) && !POS.has(item.partOfSpeech)) throw new Error(`${id}: invalid part of speech`);
@@ -491,7 +465,7 @@ function applyOverride(item, row) {
   assign(item.editorial, 'mnemonicHint', set('mnemonic_hint', row.mnemonic_hint));
   if (clean(row.approved_by_native)) item.editorial.approvedByNative = parseBoolean(row.approved_by_native, 'approved_by_native', id) ?? false;
   if (clean(row.review_status)) item.reviewStatus = row.review_status;
-  return makeItem(item);
+  return makeItem({ ...item, exampleDe: item.examples.de, exampleEn: item.examples.en });
 }
 
 async function applyOverrides(items) {
@@ -535,27 +509,108 @@ function createSeedSql(items) {
   return ['-- Generated by scripts/build-content.mjs. Do not edit by hand.', 'BEGIN TRANSACTION;', ...rows, 'COMMIT;', ''].join('\n');
 }
 
+function aggregateWarnings() {
+  const counts = {}; const samples = {};
+  for (const warning of buildWarnings) {
+    counts[warning.code] = (counts[warning.code] ?? 0) + 1;
+    const list = (samples[warning.code] ??= []);
+    if (list.length < 15) list.push(warning);
+  }
+  return { counts, samples };
+}
+
+// Data-quality gaps (US-3.x / 6.x): counts plus a few example IDs so they can be worked off in batches.
+function qualityReport(items) {
+  const checks = {
+    unknownPartOfSpeech: (i) => i.partOfSpeech === 'unknown',
+    verbWithoutAuxiliary: (i) => i.partOfSpeech === 'verb' && !i.grammar.auxiliary,
+    verbWithoutForms: (i) => i.partOfSpeech === 'verb' && !i.grammar.forms.partizipII,
+    nounWithoutGender: (i) => i.partOfSpeech === 'noun' && !i.grammar.gender,
+    nounWithoutPlural: (i) => i.partOfSpeech === 'noun' && !i.grammar.plural,
+    missingTranslation: (i) => !i.translation,
+    missingExample: (i) => !i.examples.de || !i.examples.en,
+    noLevel: (i) => !i.levels.length,
+    noFrequencyRating: (i) => i.usage.nativeFrequencyRating === null,
+    needsReview: (i) => i.reviewStatus === 'needs_review',
+  };
+  const report = {};
+  for (const [name, test] of Object.entries(checks)) {
+    const hits = items.filter(test);
+    report[name] = { count: hits.length, sampleIds: hits.slice(0, 10).map((i) => i.id) };
+  }
+  const groups = new Map();
+  for (const item of items) { const key = vocabularyKey(item.term, item.translation); groups.set(key, [...(groups.get(key) ?? []), item.id]); }
+  const duplicates = [...groups.values()].filter((ids) => ids.length > 1);
+  report.duplicateTermAndTranslation = { count: duplicates.length, samples: duplicates.slice(0, 15) };
+  return report;
+}
+
+// Stable-ID registry (US-7.1 / 7.4). IDs are never reused; removing one needs a retirement record.
+async function updateRegistry(items, buildId) {
+  const path = resolve(dataDir, 'id-registry.json');
+  let registry = { schemaVersion: 1, contentVersion: 0, buildId: null, ids: {} };
+  try { registry = JSON.parse(await readFile(path, 'utf8')); } catch { /* first build */ }
+  const retirementPath = resolve(dataDir, 'retirements.csv');
+  const retirements = new Map();
+  try {
+    const { records } = await readCsv(retirementPath, ['id', 'retired_at', 'replaced_by', 'reason']);
+    for (const row of records) retirements.set(row.id, { retiredAt: row.retired_at || null, replacedBy: row.replaced_by || null, reason: row.reason || null });
+  } catch (error) { if (error.code !== 'ENOENT') throw error; }
+  const current = new Set(items.map((item) => item.id));
+  const nextVersion = registry.buildId === buildId ? registry.contentVersion : registry.contentVersion + 1;
+  let changed = registry.buildId !== buildId;
+  for (const id of current) if (!registry.ids[id]) { registry.ids[id] = { firstSeenVersion: nextVersion }; changed = true; }
+  const missing = [];
+  for (const [id, entry] of Object.entries(registry.ids)) {
+    if (current.has(id)) { if (entry.retired) throw new Error(`${id} is retired in the registry but present in the content; IDs must never be reused`); continue; }
+    if (entry.retired) continue;
+    const record = retirements.get(id) ?? (ALLOW_REMOVALS ? { retiredAt: new Date().toISOString().slice(0, 10), replacedBy: null, reason: 'removed (--allow-removals)' } : null);
+    if (!record) { missing.push(id); continue; }
+    if (record.replacedBy && !current.has(record.replacedBy)) throw new Error(`retirement of ${id}: replacement ${record.replacedBy} does not exist`);
+    entry.retired = record; entry.retiredInVersion = nextVersion; changed = true;
+  }
+  if (missing.length) throw new Error(`${missing.length} published ID(s) disappeared without a retirement record (first: ${missing.slice(0, 5).join(', ')}). Add them to data/retirements.csv (id,retired_at,replaced_by,reason) or run with --allow-removals while the content is still pre-release.`);
+  registry.contentVersion = nextVersion; registry.buildId = buildId;
+  if (changed) await writeFile(path, `${JSON.stringify(registry, null, 1)}\n`);
+  return { contentVersion: nextVersion, retiredIds: Object.values(registry.ids).filter((e) => e.retired).length, registeredIds: Object.keys(registry.ids).length };
+}
+
 async function main() {
   const topics = await topicIndex();
-  let items = collapseImportedDuplicates([
-    ...(await importLevelCSVs()), ...(await importVocabulary(topics)), ...(await importIdioms()), ...(await importVerbPrepositions()), ...(await importManual()),
-  ]);
+  const imported = [...(await importLevelCSVs(topics)), ...(await importIdioms()), ...(await importVerbPrepositions()), ...(await importManual())];
+  let items = collapseImportedDuplicates(imported);
   items = await applyOverrides(items);
   items.sort((left, right) => left.id.localeCompare(right.id));
+
+  // Reconciliation (US-6.1): every source row must end up as exactly one item.
+  const produced = {};
+  for (const item of items) produced[item.source.file] = (produced[item.source.file] ?? 0) + 1;
+  const reconciliation = Object.fromEntries(Object.entries(sourceRows).map(([file, rows]) => [file, { sourceRows: rows, items: produced[file] ?? 0 }]));
+  const mismatched = Object.entries(reconciliation).filter(([, r]) => r.sourceRows !== r.items).map(([file]) => file);
+  if (mismatched.length) throw new Error(`source rows and built items differ for: ${mismatched.join(', ')}`);
+
   const buildId = fingerprint(JSON.stringify(items));
+  const registry = await updateRegistry(items, buildId);
+  const warnings = aggregateWarnings();
   const summary = {
-    schemaVersion: 1, buildId, totalItems: items.length,
+    schemaVersion: 1, contentVersion: registry.contentVersion, buildId, totalItems: items.length,
     byType: countBy(items, (item) => [item.type]),
     byLevel: countBy(items, (item) => item.levels.length ? item.levels : ['unassigned']),
     byPartOfSpeech: countBy(items, (item) => [item.partOfSpeech]),
     byReviewStatus: countBy(items, (item) => [item.reviewStatus]),
-    warnings: buildWarnings,
+    reconciliation, registry: { registeredIds: registry.registeredIds, retiredIds: registry.retiredIds },
+    quality: qualityReport(items), warnings,
   };
   await mkdir(generatedDir, { recursive: true });
-  await writeFile(resolve(generatedDir, 'content.json'), `${JSON.stringify({ schemaVersion: 1, buildId, items }, null, 2)}\n`);
+  try {
+    const previous = JSON.parse(await readFile(resolve(generatedDir, 'summary.json'), 'utf8'));
+    summary.previousBuild = { contentVersion: previous.contentVersion ?? null, buildId: previous.buildId, totalItems: previous.totalItems, totalItemsDelta: items.length - previous.totalItems };
+  } catch { /* no previous summary */ }
+  await writeFile(resolve(generatedDir, 'content.json'), `${JSON.stringify({ schemaVersion: 1, contentVersion: registry.contentVersion, buildId, items }, null, 2)}\n`);
   await writeFile(resolve(generatedDir, 'summary.json'), `${JSON.stringify(summary, null, 2)}\n`);
   await writeFile(resolve(generatedDir, 'content.seed.sql'), createSeedSql(items));
-  console.log(`Built ${items.length} entries: ${Object.entries(summary.byType).map(([type, count]) => `${count} ${type}`).join(', ')}.`);
+  console.log(`Built ${items.length} entries (content version ${registry.contentVersion}): ${Object.entries(summary.byType).map(([type, count]) => `${count} ${type}`).join(', ')}.`);
+  console.log(`Warnings: ${JSON.stringify(warnings.counts)}. Quality gaps: ${Object.entries(summary.quality).map(([k, v]) => `${k}=${v.count}`).join(', ')}`);
 }
 
 main().catch((error) => { console.error(`Content build failed: ${error.message}`); process.exitCode = 1; });
