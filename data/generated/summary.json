@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 2,
-  "buildId": "b3ed77f9fe",
+  "contentVersion": 3,
+  "buildId": "be9ff7ee8f",
   "totalItems": 4632,
   "byType": {
     "idiom": 52,
     "konjunktion": 28,
     "konnektor": 16,
-    "phrase": 287,
+    "phrase": 355,
     "reflexive_verb": 20,
     "verb_preposition": 305,
-    "vocabulary": 3924
+    "vocabulary": 3856
   },
   "byLevel": {
     "A1": 952,
@@ -390,8 +390,8 @@
     }
   },
   "previousBuild": {
-    "contentVersion": 1,
-    "buildId": "071294da45",
+    "contentVersion": 2,
+    "buildId": "b3ed77f9fe",
     "totalItems": 4632,
     "totalItemsDelta": 0
   }

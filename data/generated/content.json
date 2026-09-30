@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 2,
-  "buildId": "b3ed77f9fe",
+  "contentVersion": 3,
+  "buildId": "be9ff7ee8f",
   "items": [
     {
       "id": "idiom-auf-dem-holzweg-sein-416631f2e5",
@@ -49157,7 +49157,7 @@
     },
     {
       "id": "w-1226",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "in der Nacht",
       "sense": "during the hours of darkness and sleep",
       "translation": "at night / in the night",
@@ -60376,7 +60376,7 @@
     },
     {
       "id": "w-1355",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "nach Hause",
       "sense": "in the direction of one's domestic residence",
       "translation": "home / homewards",
@@ -80711,7 +80711,7 @@
     },
     {
       "id": "w-1586",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "um Mitternacht",
       "sense": "at precisely twelve o'clock at night",
       "translation": "at midnight",
@@ -84078,7 +84078,7 @@
     },
     {
       "id": "w-1623",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "von zu Hause",
       "sense": "originating from one's own residence",
       "translation": "from home",
@@ -91085,7 +91085,7 @@
     },
     {
       "id": "w-1702",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "zu Fuß",
       "sense": "moving by walking on one's own feet",
       "translation": "on foot",
@@ -91164,7 +91164,7 @@
     },
     {
       "id": "w-1703",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "zu Hause",
       "sense": "at one's own domestic residence",
       "translation": "at home",
@@ -204227,7 +204227,7 @@
     },
     {
       "id": "w-3023",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "mehr als",
       "sense": "more than",
       "translation": "more than",
@@ -204307,7 +204307,7 @@
     },
     {
       "id": "w-3024",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "weniger als",
       "sense": "less than",
       "translation": "fewer than",
@@ -204387,7 +204387,7 @@
     },
     {
       "id": "w-3025",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "(fast) alle",
       "sense": "all or almost all",
       "translation": "(almost) all",
@@ -204701,7 +204701,7 @@
     },
     {
       "id": "w-3029",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "jeder Zehnte",
       "sense": "one person out of ten",
       "translation": "one in ten",
@@ -205891,7 +205891,7 @@
     },
     {
       "id": "w-3042",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "einen Beruf ausüben",
       "sense": "to practise or perform a profession",
       "translation": "to practise a profession",
@@ -205984,7 +205984,7 @@
     },
     {
       "id": "w-3043",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "anerkennen lassen",
       "sense": "to have something officially recognised",
       "translation": "to have recognised",
@@ -206076,7 +206076,7 @@
     },
     {
       "id": "w-3044",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "finanzielle Unterstützung beantragen",
       "sense": "to formally request financial assistance",
       "translation": "to apply for financial support",
@@ -206255,7 +206255,7 @@
     },
     {
       "id": "w-3046",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "Pflicht sein",
       "sense": "to be mandatory",
       "translation": "to be mandatory",
@@ -206337,7 +206337,7 @@
     },
     {
       "id": "w-3047",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "in der Verwaltung arbeiten",
       "sense": "to work in administration",
       "translation": "to work in administration",
@@ -206422,7 +206422,7 @@
     },
     {
       "id": "w-3048",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "sich selbstständig machen",
       "sense": "to become self-employed",
       "translation": "to become self-employed",
@@ -206515,7 +206515,7 @@
     },
     {
       "id": "w-3049",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "zuständig sein",
       "sense": "to be responsible for something",
       "translation": "to be responsible",
@@ -209143,7 +209143,7 @@
     },
     {
       "id": "w-3078",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "der gefragte Beruf",
       "sense": "profession for which there is strong demand",
       "translation": "sought-after profession",
@@ -209223,7 +209223,7 @@
     },
     {
       "id": "w-3079",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "der Umgang mit Kunden",
       "sense": "way of interacting with customers",
       "translation": "dealing with customers",
@@ -209864,7 +209864,7 @@
     },
     {
       "id": "w-3086",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "die Meisterprüfung machen",
       "sense": "to take the master craftsman examination",
       "translation": "to take the master craftsman's examination",
@@ -209948,7 +209948,7 @@
     },
     {
       "id": "w-3087",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "persönlich vorbeikommen",
       "sense": "to come somewhere oneself",
       "translation": "to come by in person",
@@ -210039,7 +210039,7 @@
     },
     {
       "id": "w-3088",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "sich beruflich neu orientieren",
       "sense": "to change one's professional direction",
       "translation": "to set out in a new professional direction",
@@ -210371,7 +210371,7 @@
     },
     {
       "id": "w-3091",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "die berufliche Anerkennung beantragen",
       "sense": "to request official recognition of a professional qualification",
       "translation": "to apply for professional recognition",
@@ -210778,7 +210778,7 @@
     },
     {
       "id": "w-3096",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "gut/schlecht anlaufen",
       "sense": "to begin successfully or unsuccessfully",
       "translation": "to start well/badly",
@@ -210952,7 +210952,7 @@
     },
     {
       "id": "w-3098",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "ein Unternehmen gründen",
       "sense": "to establish a business",
       "translation": "to start a company",
@@ -211691,7 +211691,7 @@
     },
     {
       "id": "w-3105",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "das mittelständische Unternehmen",
       "sense": "medium-sized company",
       "translation": "medium-sized company",
@@ -211774,7 +211774,7 @@
     },
     {
       "id": "w-3106",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "nach dem aktuellen Stand fragen",
       "sense": "to ask about the current status or progress",
       "translation": "to ask about the current progress",
@@ -211864,7 +211864,7 @@
     },
     {
       "id": "w-3107",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "sich an jmdn. wenden",
       "sense": "to contact or approach someone for help or information",
       "translation": "to contact someone",
@@ -211957,7 +211957,7 @@
     },
     {
       "id": "w-3108",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "sich auf eine Anzeige beziehen",
       "sense": "to refer to an advertisement",
       "translation": "to refer to an ad",
@@ -212049,7 +212049,7 @@
     },
     {
       "id": "w-3109",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "sich um eine Stelle bewerben",
       "sense": "to apply for a position",
       "translation": "to apply for a job",
@@ -212697,7 +212697,7 @@
     },
     {
       "id": "w-3116",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "die ausgeschriebene Stelle",
       "sense": "job position publicly advertised",
       "translation": "advertised position",
@@ -212776,7 +212776,7 @@
     },
     {
       "id": "w-3117",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "ein Bewerbungsschreiben verfassen",
       "sense": "to write a formal job application letter",
       "translation": "to write a letter of application",
@@ -212868,7 +212868,7 @@
     },
     {
       "id": "w-3118",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "zur Verfügung stehen",
       "sense": "to be available or at someone's disposal",
       "translation": "to be available / on hand",
@@ -212960,7 +212960,7 @@
     },
     {
       "id": "w-3119",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "den Interessen entsprechen",
       "sense": "to match someone's interests",
       "translation": "to match the interests",
@@ -213297,7 +213297,7 @@
     },
     {
       "id": "w-3122",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "einen guten Eindruck machen",
       "sense": "to create a positive impression",
       "translation": "to make a good impression",
@@ -213383,7 +213383,7 @@
     },
     {
       "id": "w-3123",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "eine schwierige Situation meistern",
       "sense": "to successfully deal with a difficult situation",
       "translation": "to master a difficult situation",
@@ -213566,7 +213566,7 @@
     },
     {
       "id": "w-3125",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "sich für einen Bewerber entscheiden",
       "sense": "to choose one applicant",
       "translation": "to decide on an applicant",
@@ -213657,7 +213657,7 @@
     },
     {
       "id": "w-3126",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "eine Stelle antreten",
       "sense": "to begin working in a new position",
       "translation": "to take up a position",
@@ -218044,7 +218044,7 @@
     },
     {
       "id": "w-3174",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "antibakterielle Seife",
       "sense": "antibacterial soap",
       "translation": "antibacterial soap",
@@ -221280,7 +221280,7 @@
     },
     {
       "id": "w-3209",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "provisorische Füllung",
       "sense": "temporary filling",
       "translation": "temporary filling",
@@ -222823,7 +222823,7 @@
     },
     {
       "id": "w-3226",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "öffentlicher Dienst",
       "sense": "public service",
       "translation": "public service",
@@ -222980,7 +222980,7 @@
     },
     {
       "id": "w-3228",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "Transport und Logistik",
       "sense": "transport and logistics",
       "translation": "transport and logistics",
@@ -225234,7 +225234,7 @@
     },
     {
       "id": "w-3253",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "phrase",
       "sense": "das Du anbieten",
       "translation": "offer the informal Du",
@@ -230892,7 +230892,7 @@
     },
     {
       "id": "w-3317",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "die monotone Aufgabe",
       "sense": "task that is repetitive and lacks variety",
       "translation": "monotonous task",
@@ -231449,7 +231449,7 @@
     },
     {
       "id": "w-3323",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "die 40-Stunden-Woche",
       "sense": "standard working week consisting of forty hours",
       "translation": "40-hour week",
@@ -233861,7 +233861,7 @@
     },
     {
       "id": "w-3351",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "die Zimmer-/Hotelkategorie",
       "sense": "classification of a hotel room or hotel",
       "translation": "room/hotel category",
@@ -239712,7 +239712,7 @@
     },
     {
       "id": "w-3419",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "die Liefer- und Zahlungsbedingungen",
       "sense": "conditions governing delivery and payment",
       "translation": "terms of delivery and payment",
@@ -283349,7 +283349,7 @@
     },
     {
       "id": "w-3922",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "mehr als / weniger als",
       "sense": "more than / less than",
       "translation": "more than / less than",
@@ -283423,7 +283423,7 @@
     },
     {
       "id": "w-3923",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "Pflicht sein",
       "sense": "to be mandatory",
       "translation": "to be mandatory",
@@ -301859,7 +301859,7 @@
     },
     {
       "id": "w-4135",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "bunter Lebenslauf",
       "sense": "varied CV",
       "translation": "varied CV",
@@ -302564,7 +302564,7 @@
     },
     {
       "id": "w-4143",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "sich in Geduld fassen",
       "sense": "to be patient",
       "translation": "to be patient",
@@ -302640,7 +302640,7 @@
     },
     {
       "id": "w-4144",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "genaue Beschreibung des beruflichen Werdegangs",
       "sense": "detailed description of professional career",
       "translation": "detailed description of professional career",
@@ -304347,7 +304347,7 @@
     },
     {
       "id": "w-4164",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "analytisches und logisches Denken",
       "sense": "analytical and logical thinking",
       "translation": "analytical and logical thinking",
@@ -358495,7 +358495,7 @@
     },
     {
       "id": "w-955",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Abend",
       "sense": "during the closing hours of daylight",
       "translation": "in the evening",
@@ -358574,7 +358574,7 @@
     },
     {
       "id": "w-956",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Dienstag",
       "sense": "occurring on the second day of the week",
       "translation": "on Tuesday",
@@ -358650,7 +358650,7 @@
     },
     {
       "id": "w-957",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Donnerstag",
       "sense": "occurring on the fourth day of the week",
       "translation": "on Thursday",
@@ -358726,7 +358726,7 @@
     },
     {
       "id": "w-958",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Freitag",
       "sense": "occurring on the fifth day of the week",
       "translation": "on Friday",
@@ -358802,7 +358802,7 @@
     },
     {
       "id": "w-959",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Mittag",
       "sense": "around twelve o'clock in the day",
       "translation": "at noon / midday",
@@ -358963,7 +358963,7 @@
     },
     {
       "id": "w-960",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Mittwoch",
       "sense": "occurring on the third day of the week",
       "translation": "on Wednesday",
@@ -359039,7 +359039,7 @@
     },
     {
       "id": "w-961",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Montag",
       "sense": "occurring on the first day of work week",
       "translation": "on Monday",
@@ -359115,7 +359115,7 @@
     },
     {
       "id": "w-962",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Morgen",
       "sense": "during the early hours of the day",
       "translation": "in the morning",
@@ -359194,7 +359194,7 @@
     },
     {
       "id": "w-963",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Nachmittag",
       "sense": "during the hours after noon until evening",
       "translation": "in the afternoon",
@@ -359272,7 +359272,7 @@
     },
     {
       "id": "w-964",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Samstag",
       "sense": "occurring on the sixth day of the week",
       "translation": "on Saturday",
@@ -359349,7 +359349,7 @@
     },
     {
       "id": "w-965",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Sonntag",
       "sense": "occurring on the seventh day of the week",
       "translation": "on Sunday",
@@ -359425,7 +359425,7 @@
     },
     {
       "id": "w-966",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Vormittag",
       "sense": "during the hours between dawn and noon",
       "translation": "in the morning / forenoon",
@@ -359503,7 +359503,7 @@
     },
     {
       "id": "w-967",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "am Wochenende",
       "sense": "occurring during Saturday and Sunday",
       "translation": "at the weekend / on the weekend",
@@ -361095,7 +361095,7 @@
     },
     {
       "id": "w-985",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "auf Deutsch",
       "sense": "expressed in the German language",
       "translation": "in German",
@@ -361327,7 +361327,7 @@
     },
     {
       "id": "w-988",
-      "type": "vocabulary",
+      "type": "phrase",
       "term": "auf Wiedersehen",
       "sense": "parting farewell formula spoken in person",
       "translation": "goodbye / see you again",
